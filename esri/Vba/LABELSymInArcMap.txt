@@ -1,0 +1,20 @@
+Function FindLabel ( [NOM_DIA_MM], [MATERIAL], [STATUS], [OWNER], [SERVICE], [INSTALLED] )
+  IF ([STATUS]="RM") THEN
+	FindLabel = "<CLR RED='500'>" & [STATUS] & [NOM_DIA_MM] & "</CLR>"
+ END IF
+  IF ([STATUS]="AB") THEN
+	FindLabel = "<CLR MAGENTA='100'>" & [STATUS] & [NOM_DIA_MM] & "</CLR>"
+ END IF
+
+  IF ([STATUS]="IN") THEN
+	FindLabel = "<CLR GREEN='500'>" & [STATUS] & [NOM_DIA_MM] & "</CLR>"
+ END IF
+End Function
+
+
+
+
+Function FindLabel ( [SUBTYPE], [NOM_DIA_MM], [MATERIAL], [STATUS], [OWNER], [INSTALLED] , [DIS_DS_FIT] )
+  FindLabel = [SUBTYPE]   &  "   "  & [NOM_DIA_MM] &"mm" &vbNewLine&  [MATERIAL] &  "  "  &  [STATUS] &  "  "  &  [OWNER] &vbNewLine&  [INSTALLED]& "  DIS " & [DIS_DS_FIT] 
+
+End Function
