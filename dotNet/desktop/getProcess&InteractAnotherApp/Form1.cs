@@ -41,6 +41,102 @@ namespace getProcess
             InitializeComponent();
         }
 
+        #region "InteractHansen"
+
+        //Gets the Hansen window
+        private void getHansenHandle()
+        {
+            Process[] vProcesses = Process.GetProcessesByName("IMSV732");
+            vPWProc = vProcesses[0];
+        }
+
+        private void closeWindowHandle()
+        {
+            vPWProc = null;
+        }
+        //Set the foreground
+        private void sendMsg(Process inProc)
+        {
+            IntPtr vPointer = inProc.MainWindowHandle;
+            SetForegroundWindow(vPointer);
+        }
+
+        private void openLoadForm()
+        {
+            if (!(vPWProc == null))
+            {
+                sendMsg(vPWProc);
+                SendKeys.SendWait("{TAB 1}");
+                SendKeys.SendWait("^{l}");
+                System.Threading.Thread.Sleep(cDelayTime);
+                SendKeys.SendWait("^{s}");
+
+            }
+        }
+        private void copyContends()
+        {
+            if (!(vPWProc == null))
+            {
+                sendMsg(vPWProc);
+                //Key press Home + Shift + End + Copy   (Select All-copy)
+                SendKeys.SendWait("{HOME}");
+                SendKeys.SendWait("+{END}");
+                SendKeys.SendWait("^{INS}");
+
+                System.Threading.Thread.Sleep(cDelayTime);
+
+                txtUnitId.Text = Clipboard.GetText();
+
+                System.Threading.Thread.Sleep(cDelayTime);
+                //Key press &T
+                SendKeys.SendWait("%(T)");
+                //Key press TAB
+                SendKeys.SendWait("{TAB 1}");
+                //Key press Home + Shift + End + Copy   (Select All-copy)
+                SendKeys.SendWait("{HOME}");
+                SendKeys.SendWait("+{END}");
+                SendKeys.SendWait("^{INS}");
+                txtUnitType.Text = Clipboard.GetText();
+                System.Threading.Thread.Sleep(cDelayTime);
+                SendKeys.SendWait("^{F4}");
+            }
+        }
+
+        private void openAssetWindow(string inCompKey)
+        {
+            if (!(vPWProc == null))
+            {
+                sendMsg(vPWProc);
+                //SendKeys.SendWait("{TAB 1}");
+                //Click the menu of hansen form
+                //Key press &T
+                SendKeys.SendWait("%{A}");
+                //Godown 3 menus
+                SendKeys.SendWait("{DOWN 3}");
+                //Go right 1 menus
+                SendKeys.SendWait("{RIGHT 1}");
+                Application.DoEvents();
+                //Go down 3 menus
+                SendKeys.SendWait("{DOWN 3}");
+                //Activates the menu
+                SendKeys.SendWait("{ENTER 1}");
+                Application.DoEvents();
+                //Key press &O
+                SendKeys.SendWait("^{O}");
+                //Key press &G
+                SendKeys.SendWait("%{G}");
+                Application.DoEvents();
+                System.Threading.Thread.Sleep(cDelayTime);
+                SendKeys.SendWait(inCompKey);
+                Application.DoEvents();
+                System.Threading.Thread.Sleep(cDelayTime);
+                //Key press TAB1
+                SendKeys.SendWait("{TAB 1}");
+            }
+        }
+
+        #endregion
+
         private void button1_Click(object sender, EventArgs e)
         {
             string vLstMsg = "";
