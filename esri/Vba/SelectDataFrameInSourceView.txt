@@ -1,0 +1,22 @@
+
+Sub SelectDataFrameInSourceView()
+
+
+' selects the first data frame in the TOC's source view
+
+
+    Dim pMxDoc As IMxDocument
+    Set pMxDoc = ThisDocument
+    Dim pTOC As IContentsView
+    Set pTOC = pMxDoc.ContentsView(1) ' Source View
+    
+    Dim pMaps As IMaps
+    Set pMaps = pMxDoc.Maps
+    Dim pMap As IMap
+    Set pMap = pMaps.Item(0) ' first data frame
+        
+    pTOC.SelectedItem = Nothing
+    pTOC.SelectedItem = pMap
+    pTOC.Refresh pMap
+End Sub
+

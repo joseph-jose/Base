@@ -1,0 +1,19 @@
+Public Sub getStandAloneLayers()
+'------iterate layers------------
+    Dim vDoc As IMxDocument
+    Set vDoc = ThisDocument
+    Dim vMap As IMap
+    
+    Set vMap = vDoc.FocusMap
+    
+    Dim pSTC As IStandaloneTableCollection
+    Set pSTC = vMap
+    Dim pST As IStandaloneTable
+    Set pST = pSTC.StandaloneTable(X) ' x is index number
+    
+    MsgBox pSTC.StandaloneTableCount
+    
+    MsgBox pST.Name
+'    pSTC.RemoveStandaloneTable (pST)
+End Sub
+
