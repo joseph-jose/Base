@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="FacilityInput.aspx.cs" Inherits="FacilityInput" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="MasterPage.master" AutoEventWireup="true" CodeFile="FacilityInput.aspx.cs" Inherits="FacilityInput" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
            <asp:Label ID="LabelSide" runat="server" Font-Italic="true" ForeColor="#186C9D"
@@ -47,6 +47,16 @@
                            <asp:Button ID="CancelBtn" runat="server" CommandName="Cancel" BackColor="#CCCCFF" BorderColor="#80FF80"
                                Height="37px" Style="z-index: 140; left: 244px;"
                                Text="Cancel" Width="115px" OnClick="CancelBtn_Click" />
+            </td>
+        </tr>
+
+        <tr>
+            <td width="50%">&nbsp;</td>
+            <td width="50%">
+                    <asp:TextBox ID="TextBox1" runat="server" Width="216px"></asp:TextBox>
+                    <asp:Button ID="Button7" runat="server" OnClick="Button7_Click" Text="Button" />
+                    <br />
+                    <asp:Calendar ID="Calendar1" runat="server" OnSelectionChanged="Calendar1_SelectionChanged"></asp:Calendar>
             </td>
         </tr>
 

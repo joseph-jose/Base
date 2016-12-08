@@ -73,7 +73,7 @@ public partial class FacilityUpdate : System.Web.UI.Page
     }
     protected void LinkButton2_Click(object sender, EventArgs e)
     {
-        Response.Redirect("..\\GAdmin\\FacilityInput.aspx");
+        Response.Redirect("~\\FacilityInput.aspx");
     }
 
     protected void GrdLst_PageIndexChanging(object sender, GridViewPageEventArgs e)
