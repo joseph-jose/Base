@@ -1,0 +1,98 @@
+﻿body {
+}
+
+/** Navigation **/
+#navigationdetail {
+	background: url(../images/bg-menu-left-curve.gif) no-repeat left bottom;
+	height: 47px;
+	padding: 13px 0 0 4px;
+	position: absolute;
+	bottom: -20px;
+	left: 100px;
+}
+
+#navigationdetail ul {
+	background: url(../images/bg-menu.gif) repeat-x;
+	display: inline-block;
+	height: 40px;
+	width: 600px;
+	list-style: none;
+	margin: 0px;
+	padding: 4px 0 3px;
+}
+    #navigation form {
+        font-size : 15px;
+    }
+#navigationdetail li {
+	float: left;
+	/*font-size: 16px;*/
+    font-size: 10px;
+	line-height: 40px;
+	margin: 0 5px;
+	text-align: center;
+}
+#navigationdetail li.first {
+	margin-left: 0;
+	
+}
+#navigationdetail li.selected {
+	background-color: #b7c2c8;
+}
+#navigationdetail a {
+	color: #092f44;
+	font-weight: bold;
+	padding: 0 10px;
+	text-decoration: none;
+	text-shadow: 1px 1px 0 #eaeaea;
+}
+#navigationdetail a:hover {
+	color: #0a2d43;
+}
+/*------------------------------Admin.Projects.List.Head ------------------------------*/
+
+#detailcontents div.body div.details div.AdminProjectsListHead {
+    float: left ;
+    color: green ;
+    width:630px;
+    background-color : yellow ;
+	margin: 0 30px 5px;
+    border:dashed;
+}
+
+
+#detailcontents div.body div.details div.AdminProjectsListHead p {
+    float: left ;
+    width: 200px;
+    background-color : yellow ;
+	margin: 30px 130px 5px;
+}
+
+#detailcontents div.body div.details div.AdminProjectsListDet {
+    float: left ;
+    color: brown ;
+    width:630px;
+    background-color : yellow ;
+	margin: 0 30px 5px;
+    border:dashed;
+}
+
+/*------------------------------Admin.Projects.List.Nav ------------------------------*/
+#detailcontents div.nav p {
+    position :absolute;
+    text-align : right ;
+    /*color: green ;*/
+    width:200px;
+    /*background-color : yellow ;*/
+	margin: 10px 30px 5px;
+    /*border:dashed;*/
+}
+
+/*------------------------------Admin.Home ------------------------------*/
+#detailcontents div.body div.details div.AdminHome {
+	font-family: Verdana;
+	font-size: 12px;
+	background-repeat:no-repeat;
+}
+#detailcontents div.body div.details div.AdminHome h1 {
+	font-size: 25px;
+}
