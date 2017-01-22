@@ -1,0 +1,19 @@
+DECLARE @Table TABLE(
+        Val VARCHAR(50)
+)
+ 
+DECLARE @PageSize INT,
+        @Page INT
+ 
+SELECT  @PageSize = 10,
+        @Page = 2
+ 
+;WITH PageNumbers AS(
+        SELECT Val,
+                ROW_NUMBER() OVER(ORDER BY Val) ID
+        FROM    @Table
+)
+SELECT  *
+FROM    PageNumbers
+WHERE   ID  BETWEEN ((@Page - 1) * @PageSize + 1)
+        AND (@Page * @PageSize)
