@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Net;
 using System.Collections;
+using System.Net.Http;
 
 
 namespace _1
@@ -20,49 +21,24 @@ namespace _1
             InitializeComponent();
         }
 
-        static readonly DateTime UnixEpoch = new DateTime(1970, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc);
-        static readonly double MaxUnixSeconds = (DateTime.MaxValue - UnixEpoch).TotalSeconds;
 
-        public static DateTime UnixTimeStampToDateTime2(double unixTimeStamp)
-        {
-            return unixTimeStamp > MaxUnixSeconds
-               ? UnixEpoch.AddMilliseconds(unixTimeStamp)
-               : UnixEpoch.AddSeconds(unixTimeStamp);
-        }
-
-        public static DateTime UnixTimeStampToDateTime(double unixTimeStamp)
-        {
-            // Unix timestamp is seconds past epoch
-            System.DateTime dtDateTime = new DateTime(1970, 1, 1, 0, 0, 0, 0);
-            dtDateTime = dtDateTime.AddSeconds(unixTimeStamp).ToLocalTime();
-            return dtDateTime;
-        }
-
-        public static double DateTimeToUnixTimestamp(DateTime dateTime)
-        {
-            return (dateTime - new DateTime(1970, 1, 1).ToLocalTime()).TotalSeconds;
-        }
-
-
-        //jjose
-        public static double DateTimeToUnixTimestamp3(DateTime dateTime)
-        {
-            DateTime UnixEpoch = new DateTime(1970, 1, 1, 0, 0, 0);
-            UnixEpoch = UnixEpoch.ToLocalTime();
-
-            return (dateTime - UnixEpoch).TotalMilliseconds;
-        }
-
-        public static DateTime UnixTimeStampToDateTime3(double unixTimeStamp)
-        {
-            DateTime UnixEpoch = new DateTime(1970, 1, 1, 0, 0, 0);
-            UnixEpoch = UnixEpoch.ToLocalTime();
-            return UnixEpoch.AddMilliseconds(unixTimeStamp);
-        }
-        //jjose
 
         private void button1_Click(object sender, EventArgs e)
         {
+            dataGridView1.Columns[0].HeaderText = "ObjectID";
+            dataGridView1.Columns[1].HeaderText = "MethaneReading";
+            dataGridView1.Columns[2].HeaderText = "UniqueID";
+            dataGridView1.Columns[3].HeaderText = "Misc";
+            dataGridView1.Columns[4].HeaderText = "EditDate";
+            dataGridView1.Columns[5].HeaderText = "Editor";
+            dataGridView1.Columns[6].HeaderText = "CreationDate";
+            dataGridView1.Columns[7].HeaderText = "Description";
+            dataGridView1.Columns[8].HeaderText = "Observation";
+            dataGridView1.Columns[9].HeaderText = "Creator";
+            dataGridView1.Columns[10].HeaderText = "GlobalId";
+            dataGridView1.Columns[11].HeaderText = "X";
+            dataGridView1.Columns[12].HeaderText = "Y";
+
 
             WebClient vWClnt = new WebClient();
             vWClnt.Proxy = WebRequest.DefaultWebProxy;
@@ -72,14 +48,14 @@ namespace _1
 
             textBox2.Text = vRetStr;
             //Extract it to hash table
-            Hashtable vHshtable = (Hashtable) Procurios.Public.JSON.JsonDecode(vRetStr);
+            Hashtable vHshtable = (Hashtable)Procurios.Public.JSON.JsonDecode(vRetStr);
             //Get the features node
-            ArrayList vFeatItms = (ArrayList) vHshtable["features"];
+            ArrayList vFeatItms = (ArrayList)vHshtable["features"];
 
-            DateTime  vUnxDtTime;
+            DateTime vUnxDtTime;
             double vUnxDbl;
             //for each feature
-            for (int i = 0; i < vFeatItms.Count ; i++)
+            for (int i = 0; i < vFeatItms.Count; i++)
             {
                 Hashtable vFeature = (Hashtable)vFeatItms[i];
                 //get the attributes
@@ -90,12 +66,12 @@ namespace _1
                 string vUniqueID = (vAttrItms["UniqueID"] == null) ? "" : vAttrItms["UniqueID"].ToString();
                 string vMisc = (vAttrItms["Misc"] == null) ? "" : vAttrItms["Misc"].ToString();
                 //string vEditDate = (vAttrItms["EditDate"] == null) ? "" : vAttrItms["EditDate"].ToString();
-                string vEditDate="";
+                string vEditDate = "";
                 if (!(vAttrItms["EditDate"] == null))
                 {
                     double.TryParse(vAttrItms["EditDate"].ToString(), out vUnxDbl);
-                    vUnxDtTime = UnixTimeStampToDateTime2(vUnxDbl);
-                    vEditDate = vUnxDtTime.ToString("dd-mmm-yyyy"); 
+                    vUnxDtTime = Procurios.Public.JSON.UnixTimeStampToDateTime2(vUnxDbl);
+                    vEditDate = vUnxDtTime.ToString("dd-mmm-yyyy");
                 }
                 string vEditor = (vAttrItms["Editor"] == null) ? "" : vAttrItms["Editor"].ToString();
                 string vCreationDate = (vAttrItms["CreationDate"] == null) ? "" : vAttrItms["CreationDate"].ToString();
@@ -111,31 +87,6 @@ namespace _1
 
                 dataGridView1.Rows.Add(vObjId, vMethaneReading, vUniqueID, vMisc, vEditDate, vEditor, vCreationDate, vDescription, vObservation, vCreator, vGlobalId, vx, vy);
 
-                //double dtime = (double)LogRecord["time"];
-                //string source = (string)LogRecord["source"];
-                //string machine = (string)LogRecord["machine"];
-                //string user = (string)LogRecord["user"];
-                //double code = (double)LogRecord["code"];
-                //string elapsed = (string)LogRecord["elapsed"];
-                //string process = (string)LogRecord["process"];
-                //string thread = (string)LogRecord["thread"];
-                //string methodName = (string)LogRecord["methodName"];
-
-                //string scale = "NULL";
-
-                //string size_x = "NULL";
-                //string size_y = "NULL";
-
-                //string minx = "NULL";
-                //string miny = "NULL";
-                //string maxx = "NULL";
-                //string maxy = "NULL";
-
-                //string Shape = "NULL";
-
-                //DateTime dttime = UnixTimeStampToDateTime2(dtime);
-
-                //dttime = dttime.ToLocalTime();
 
                 //long lcode = (long)code;
 
@@ -172,7 +123,158 @@ namespace _1
 
             }
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            string vObjIds = "";
+            for (int i = 0; i < dataGridView1.RowCount; i++)
+            {
+                if (!(vObjIds == ""))
+                {
+                    vObjIds = vObjIds + ",";
+                }
+                vObjIds = vObjIds + dataGridView1.Rows[i].Cells[0].Value.ToString();
+            }
+
+            textBox3.Text = string.Format("http://services5.arcgis.com/PnnKqtqi3qfxnaPc/arcgis/rest/services/LabOfflineGdbT3/FeatureServer/0/queryAttachments?objectIds={0}&f=pjson&token=", vObjIds);
 
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Queue<object> vQAttchInfo = new Queue<object>();
+
+            WebClient vWbClnt2 = new WebClient();
+            vWbClnt2.Proxy = WebRequest.DefaultWebProxy;
+            vWbClnt2.Proxy.Credentials = CredentialCache.DefaultCredentials;
+            textBox4.Text = vWbClnt2.DownloadString(textBox3.Text);
+
+            Hashtable vHshtable = (Hashtable)Procurios.Public.JSON.JsonDecode(textBox4.Text);
+            //Get the features node
+            ArrayList vFeatItms = (ArrayList)vHshtable["attachmentGroups"];
+
+            //for each feature
+            for (int i = 0; i < vFeatItms.Count; i++)
+            {
+                Hashtable vFeature = (Hashtable)vFeatItms[i];
+                //get the attributes
+                string vParObjId = (vFeature["parentObjectId"] == null) ? "" : vFeature["parentObjectId"].ToString();
+
+                ArrayList vAttchArrInfo = (ArrayList)vFeature["attachmentInfos"];
+                Hashtable vAttchInfo = (Hashtable)vAttchArrInfo[0];
+
+                //extract each attribute
+                string vId = (vAttchInfo["id"] == null) ? "" : vAttchInfo["id"].ToString();
+                vQAttchInfo.Enqueue(new Tuple<string, string>(vParObjId, vId));
+            }
+            populategrid(vQAttchInfo);
+            vQAttchInfo.Clear();
+            vQAttchInfo = null;
+
+
+        }
+
+        private void populategrid(Queue<object> inQueue)
+        {
+            string vObjId = "";
+            string vPhtStr = "";
+            for (int i = 0; i < dataGridView1.Rows.Count; i++)
+            {
+                vObjId = dataGridView1.Rows[i].Cells[0].Value.ToString();
+                foreach (object v in inQueue)
+                {
+                    string p1 = ((Tuple<string, string>)v).Item1.ToString();
+                    string p2 = ((Tuple<string, string>)v).Item2.ToString();
+                    if (p1 == vObjId)
+                    {
+                        dataGridView1.Rows[i].Cells[dataGridView1.Columns.Count - 3].Value = p1;
+                        dataGridView1.Rows[i].Cells[dataGridView1.Columns.Count - 2].Value = p2;
+                        vPhtStr = string.Format("http://services5.arcgis.com/PnnKqtqi3qfxnaPc/ArcGIS/rest/services/LabOfflineGdbT3/FeatureServer/0/{0}/attachments/{1}", p1, p2);
+                        dataGridView1.Rows[i].Cells[dataGridView1.Columns.Count - 1].Value = vPhtStr;
+                    }
+                }
+            }
+        }
+
+        static async Task<HttpResponseMessage> CreateProductAsync(HttpClient inClnt, string urlStr, HttpContent inUrlContd)
+        {
+            HttpResponseMessage response = null;
+            try
+            {
+
+                response = await inClnt.PostAsync(urlStr, inUrlContd);
+                response.EnsureSuccessStatusCode();
+
+                // Return the URI of the created resource.
+                //return response.Headers.Location;
+
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message.ToString());
+            }
+            return response;
+        }
+
+        private string delObj(int inVal)
+        {
+            ////Method1 Post-Not working
+            //WebClient vWbClnt = new WebClient();
+            //vWbClnt.Proxy = WebRequest.DefaultWebProxy;
+            //vWbClnt.Proxy.Credentials = CredentialCache.DefaultCredentials;
+            ////string vRetStr = vWbClnt.UploadString("http://services5.arcgis.com/PnnKqtqi3qfxnaPc/ArcGIS/rest/services/LabOfflineGdbT3/FeatureServer/0/deleteFeatures", "POST", "objectIds=9221");
+            //string vRetStr = vWbClnt.UploadString("http://services5.arcgis.com/PnnKqtqi3qfxnaPc/ArcGIS/rest/services/WalkPathT3/FeatureServer/0/deleteFeatures?objectIds=9221&f=pjson", "POST");
+            //textBox4.Text = vRetStr;
+
+            string vUrlStr = string.Format( "http://services5.arcgis.com/PnnKqtqi3qfxnaPc/ArcGIS/rest/services/WalkPathT3/FeatureServer/0/deleteFeatures?objectIds={0}&f=pjson", inVal);
+            using (HttpClientHandler vClntHndlr = new HttpClientHandler())
+            {
+                vClntHndlr.Proxy = WebRequest.DefaultWebProxy;
+                vClntHndlr.Proxy.Credentials = CredentialCache.DefaultCredentials;
+                using (var client = new HttpClient(vClntHndlr))
+                {
+                    var urlParams = new Dictionary<string, string>
+                    {
+                        { "objectIds" , inVal.ToString() },
+                        { "f" , "pjson"}
+                    };
+                    var vUrlContd = new FormUrlEncodedContent(urlParams);
+
+                    //var vResponse = client.PostAsync("http://services5.arcgis.com/PnnKqtqi3qfxnaPc/ArcGIS/rest/services/WalkPathT3/FeatureServer/0/deleteFeatures?objectIds=9221&f=pjson", vUrlContd);
+                    //var vResponse = client.DeleteAsync("http://services5.arcgis.com/PnnKqtqi3qfxnaPc/ArcGIS/rest/services/WalkPathT3/FeatureServer/0/deleteFeatures?objectIds=9813&f=pjson");
+                    //var vResponse = CreateProductAsync(client, "http://services5.arcgis.com/PnnKqtqi3qfxnaPc/ArcGIS/rest/services/WalkPathT3/FeatureServer/0/deleteFeatures?objectIds=9221&f=pjson", vUrlContd);
+                    //System.Threading.Tasks.Task<HttpResponseMessage> vTskRespMsg = vResponse;
+                    System.Threading.Tasks.Task<HttpResponseMessage> vTskRespMsg = client.DeleteAsync(vUrlStr);
+
+
+                    HttpResponseMessage vHttpResp = vTskRespMsg.Result;
+
+                    //var vRetStr = vHttpResp.ToString();
+                    //textBox4.Text = vRetStr;
+                    return vHttpResp.ToString();
+                }
+            }
+        }
+
+        private void  button4_Click(object sender, EventArgs e)
+        {
+            //Queue<object> vQAttchInfo = new Queue<object>();
+
+            //vQAttchInfo.Enqueue(new Tuple<int, int>(2, 1));
+            //vQAttchInfo.Enqueue(new Tuple<int, int>(3, 1));
+            //vQAttchInfo.Enqueue(new Tuple<int, int>(4, 1));
+            //vQAttchInfo.Enqueue(new Tuple<int, int>(5, 1));
+
+            //foreach (object v in vQAttchInfo)
+            //{
+            //    string p1 = ((Tuple<int, int>)v).Item1.ToString();
+            //    string p2 = ((Tuple<int, int>)v).Item2.ToString();
+            //}
+
+            textBox4.Text = textBox4.Text +   delObj(9800);
+            textBox4.Text = textBox4.Text + delObj(9803);
+        }
     }
+    
 }

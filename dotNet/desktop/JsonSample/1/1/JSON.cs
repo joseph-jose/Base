@@ -29,12 +29,54 @@ namespace Procurios.Public
 
 		private const int BUILDER_CAPACITY = 2000;
 
-		/// <summary>
-		/// Parses the string json into a value
-		/// </summary>
-		/// <param name="json">A JSON string.</param>
-		/// <returns>An ArrayList, a Hashtable, a double, a string, null, true, or false</returns>
-		public static object JsonDecode(string json)
+        static readonly DateTime UnixEpoch = new DateTime(1970, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc);
+        static readonly double MaxUnixSeconds = (DateTime.MaxValue - UnixEpoch).TotalSeconds;
+
+        public static DateTime UnixTimeStampToDateTime2(double unixTimeStamp)
+        {
+            return unixTimeStamp > MaxUnixSeconds
+               ? UnixEpoch.AddMilliseconds(unixTimeStamp)
+               : UnixEpoch.AddSeconds(unixTimeStamp);
+        }
+
+        public static DateTime UnixTimeStampToDateTime(double unixTimeStamp)
+        {
+            // Unix timestamp is seconds past epoch
+            System.DateTime dtDateTime = new DateTime(1970, 1, 1, 0, 0, 0, 0);
+            dtDateTime = dtDateTime.AddSeconds(unixTimeStamp).ToLocalTime();
+            return dtDateTime;
+        }
+
+        public static double DateTimeToUnixTimestamp(DateTime dateTime)
+        {
+            return (dateTime - new DateTime(1970, 1, 1).ToLocalTime()).TotalSeconds;
+        }
+
+
+        //jjose
+        public static double DateTimeToUnixTimestamp3(DateTime dateTime)
+        {
+            DateTime UnixEpoch = new DateTime(1970, 1, 1, 0, 0, 0);
+            UnixEpoch = UnixEpoch.ToLocalTime();
+
+            return (dateTime - UnixEpoch).TotalMilliseconds;
+        }
+
+        public static DateTime UnixTimeStampToDateTime3(double unixTimeStamp)
+        {
+            DateTime UnixEpoch = new DateTime(1970, 1, 1, 0, 0, 0);
+            UnixEpoch = UnixEpoch.ToLocalTime();
+            return UnixEpoch.AddMilliseconds(unixTimeStamp);
+        }
+        //jjose
+
+
+        /// <summary>
+        /// Parses the string json into a value
+        /// </summary>
+        /// <param name="json">A JSON string.</param>
+        /// <returns>An ArrayList, a Hashtable, a double, a string, null, true, or false</returns>
+        public static object JsonDecode(string json)
 		{
 			bool success = true;
 			
