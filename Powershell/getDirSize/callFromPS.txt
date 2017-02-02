@@ -1,0 +1,1 @@
+.\Get-DirStats -Path C:\Temp | Sort-Object -Property Size
