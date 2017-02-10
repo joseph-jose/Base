@@ -1,0 +1,4 @@
+//delete all ssver2.scc files
+gci -Recurse | Where {$_.psIsContainer -eq $true} | foreach ($_) {$strA=$_.fullname+"\vssver2.scc"; del $strA -force}
+//List all srcsafe.ini files
+gci -Recurse | Where {$_.psIsContainer -eq $true} | foreach ($_) {$strA=$_.fullname+"\srcsafe.ini"; $strA}
