@@ -1,0 +1,85 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPageV2.master.cs" Inherits="MasterPageV2" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link rel="stylesheet" href="App_Themes/style.css" type="text/css" charset="utf-8" />	
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+	<!--[if lte IE 7]>
+		<link rel="stylesheet" href="App_Themes/ie.css" type="text/css" charset="utf-8" />	
+	<![endif]-->
+
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+<form id="form1" runat ="server">
+	<div id="header">
+		<div id="navigationdetail">
+			<ul>
+            <li class="first selected"><asp:LinkButton ID="SubLnk1" runat="server" Width="30px" Visible="False">Home</asp:LinkButton></li>
+				<li><asp:LinkButton ID="SubLnk2" runat="server" Width="30px" Visible="False">Search</asp:LinkButton></li>
+				<li><asp:LinkButton ID="SubLnk3" runat="server" Width="30px" Visible="False">Services</asp:LinkButton></li>
+				<li><asp:LinkButton ID="SubLnk4" runat="server" Width="30px" Visible="False">Solutions</asp:LinkButton></li>
+				<li><asp:LinkButton ID="SubLnk5" runat="server" Width="30px" Visible="False">Support</asp:LinkButton></li>
+				<li><asp:LinkButton ID="SubLnk6" runat="server" Width="30px" Visible="False">Blog</asp:LinkButton></li>
+				<li><asp:LinkButton ID="SubLnk7" runat="server" Width="30px" Visible="False">Contact</asp:LinkButton></li>
+
+			</ul> 
+
+		</div>
+<%--		<div id="search">
+
+<!--			<form action="" method="">
+				<input type="text" value="Search" class="txtfield" onblur="javascript:if(this.value==''){this.value=this.defaultValue;}" onfocus="javascript:if(this.value==this.defaultValue){this.value='';}" />
+				<input type="submit" value="" class="button" />
+			</form>-->
+		</div>--%>
+	</div> <!-- /#header -->
+	<div id="detailcontents">
+	    <div class="nav">
+            <p><asp:Label ID="lblPgHdr" runat="server" Text="GIS Administrator-" BackColor="#3184AC" ForeColor="White" Font-Bold="True" Font-Italic="True" Font-Names="Arial" Font-Size="Larger"></asp:Label><br />
+            <asp:Label ID="lblPgDtl" runat="server" Text="Job Management" ForeColor="White" Font-Bold="True" Font-Names="Arial" Font-Size="Small"></asp:Label></p>
+		    <img src="images/mnuHdr.jpg" alt="M1" />
+            <a href="Default.aspx"><img src="images/mnuHome.jpg" alt="M2" /></a>
+		    <a href="DCDataN.aspx"><img src="images/mnuDtCap.jpg" alt="M3" /></a>
+		    <a href="PRDataSearch.aspx"><img src="images/mnuProjects.jpg" alt="M4" /></a>
+		    <a href="MapsDataSearch.aspx"><img src="images/mnuMaps.jpg" alt="M5" /></a>
+		    <a href="GPSDataSearch.aspx"><img src="images/mnuGPS.jpg" alt="M6" /></a>
+		    <a href="DataLibrarySearch.aspx"><img src="images/mnuDtAcq.jpg" alt="M7" /></a>
+		    <a href="http://www.freewebsitetemplates.com"><img src="images/mnuFooter.jpg" alt="M7" /></a>
+	    </div>
+		<div class="body"> 
+			<div class="details"> 
+                <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+                        contend changes here
+                </asp:ContentPlaceHolder>
+
+			</div>
+<%--			<div id="main"> 
+<!--				<span><u>Viewers</u></span>
+				<ul>
+					<li>
+						<a href="http://wsldctvgpw/watercareviewer/" target="_blank"><img src="images/check.jpg" alt="Img" /><h3>Production</h3></a>
+						<p></p>
+					</li>
+
+				</ul>-->
+			</div>--%>
+		</div>
+	</div> <!-- /#contents -->
+	<div id="footer">
+		<ul class="contacts">
+			<h3>Contact Us</h3>
+			<li><span>Email</span><p>: gisservices@water.co.nz</p></li>
+		</ul>
+		<span class="footnote">&copy; Copyright &copy; 2013. Watercare services. All rights reserved v0.1
+		</span>
+	</div> <!-- /#footer -->
+</form>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"  style="width:100%; height:100%;">
+<head id="Head1" runat="server">
+    <title>GIS Manager</title>
+    <link href="App_Themes/Blue/GISManagerStyleSheet.css" type="text/css" rel="Stylesheet" />
+    <link href="App_Themes/wslstyle.css" type="text/css" rel="Stylesheet" />
+</head>
+<body style="width:100%; height:100%";>
+    <form id="form1" runat="server">
+            &nbsp; &nbsp; &nbsp; &nbsp;
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
+        <div class="Header" style="border-width: 0px; position: absolute; left: 35px; height: 100px; width: 1180px;">
+            <div class="HeaderIn" style="border-width: 0px; width:100%; left: 35px; height: 80px; background-color: #0069a6; width: 1180px;"></div>
+            <ul><li></li><li style="font-size: x-large; font-weight: bold; text-decoration: underline; color: #FFFFFF;"></li><li></li></ul>
+            </div>
+<div id="left">     
+            <asp:LinkButton ID="GPSDataSearch" PostBackUrl="~/GPSDataSearch.aspx" runat="server">GPS Data Search</asp:LinkButton>
+            </div>
+<div id="middle"></div>
+        
+
+        <div class="menuBckgrd" style="z-index: 100; position: absolute; left: 40px; top: 150px; height: 200px; width: 160px; ">
+            <p><img src= "Images/mnuHdr3.gif" style="width: 170px; height:180px " /> 
+                <asp:Label ID="Label1" runat="server" Text="GIS Administrator"  style="z-index: 100; position: absolute; left: 4px; top: 30px; width: 156px;" Font-Bold="True" Font-Italic="True" Font-Size="Medium" ForeColor="White"></asp:Label>
+
+            </p>
+        </div>
+        <div class="menu" style="z-index: 100; position: absolute; left: 50px; top: 250px; height: 313px; width: 141px;">
+            <asp:Button ID="Button1" PostBackUrl="Default.aspx" runat="server" 
+                Height="30px" Text="Home" 
+                Width="140px" BackColor="#6699FF" BorderColor="#3399FF" 
+                CssClass="primaryStaticMenu"  Font-Size="Medium" 
+                ForeColor="#CCFFFF" OnClick="Button1_Click"  />
+                <asp:Button ID="Button2" PostBackUrl="DCDataN.aspx" runat="server" Height="30px" Text="Data Capture" 
+                Width="140px" BackColor="#6699FF" BorderColor="#3399FF" 
+                CssClass="primaryDynamicHover"  Font-Size="Medium" 
+                ForeColor="#CCFFFF" OnClick="Button2_Click" />
+                <asp:Button ID="Button3" PostBackUrl="PRDataSearch.aspx" runat="server" Height="30px" Text="Projects" 
+                Width="140px" BackColor="#6699FF" BorderColor="#3399FF" 
+                CssClass="primaryDynamicHover"  Font-Size="Medium" 
+                ForeColor="#CCFFFF" OnClick="Button3_Click" />
+                <asp:Button ID="Button4" PostBackUrl="MapsDataSearch.aspx" runat="server" Height="30px" Text="Maps" 
+                Width="140px" BackColor="#6699FF" BorderColor="#3399FF" 
+                CssClass="primaryDynamicHover" Font-Size="Medium" 
+                ForeColor="#CCFFFF" OnClick="Button4_Click" />
+                <asp:Button ID="Button5" PostBackUrl="GPSDataSearch.aspx" runat="server" Height="30px" Text="GPS" 
+                Width="140px" BackColor="#6699FF" BorderColor="#3399FF" 
+                CssClass="primaryDynamicHover"  Font-Size="Medium" 
+                ForeColor="#CCFFFF" OnClick="Button5_Click" />
+                <asp:Button ID="Button6" PostBackUrl="DataLibrarySearch.aspx" 
+                runat="server" Height="30px" Text="Data Acquired" 
+                Width="140px" BackColor="#6699FF" BorderColor="#3399FF" 
+                CssClass="primaryDynamicHover"  Font-Size="Medium" 
+                ForeColor="#CCFFFF" OnClick="Button6_Click"    />
+                
+        </div>          
+
+    <div class="Content" style="top: 130px; width: 800px; left: 220px; height: 68%;">
+        &nbsp;<asp:contentplaceholder id="ContentPlaceHolder1" runat="server">
+        </asp:contentplaceholder>
+    </div>
+    <div id="right"></div>
+    <div class="Footer" style="border-width: 0px; position: absolute; left: 35px">
+        <p><% Response.Write(DateTime.Now.Year.ToString());  %> * Water Care Services-GIS</p>
+    </div>
+
+    </form>
+</body>
+</html>

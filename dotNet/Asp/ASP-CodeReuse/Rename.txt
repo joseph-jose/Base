@@ -1,0 +1,4 @@
+Dec2016
+	Uses two aspx files - Display , Edit, & Update
+	Code Reuse done in App_Code folder
+	Uses the vboo_pubs.mdb file in the DB folder

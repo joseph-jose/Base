@@ -1,0 +1,15 @@
+﻿.Header ul {
+    position: absolute;  
+    display:inline-block; 
+    height:40px; 
+    width:391px; 
+    background-color: aqua;  
+    background-image: url('../Images/bg-menu2.gif'); 
+    list-style:none; 
+    margin:0px; 
+    padding-left: 200px; 
+    top: 65px; 
+    left: 209px; 
+    right: 380px;"
+}
+

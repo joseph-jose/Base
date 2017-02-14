@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+  <siteMapNode url="" title="GIS Administrator"  description="">
+    <siteMapNode url="~" title="Home"  description="" />
+    <siteMapNode title="Data Capture"  description="">
+      <siteMapNode url="DCDataInput.aspx" title="New"  description="Insert new record" />
+      <!--<siteMapNode url="~/DCDataSearch.aspx" title="Update"  description="Search for a record"/>-->
+      <siteMapNode url="DCDataN.aspx" title="Search"  description="Update record" />
+    </siteMapNode>
+    <siteMapNode title="Job Request"  description="">
+      <siteMapNode url="ProjectInput.aspx" title="New"  description="Insert new record" />
+      <siteMapNode url="PRDataSearch.aspx" title="Update"  description="Search for a record"/>
+      <!--<siteMapNode url="~/ProjectData.aspx" title="Search"  description="Update record" />-->
+    </siteMapNode>
+    <siteMapNode title="Special Maps"  description="">
+      <siteMapNode url="MapsInput.aspx" title="New"  description="Insert new record" />
+      <siteMapNode url="MapsDataSearch.aspx" title="Update"  description="Search for a record"/>
+      <!--<siteMapNode url="~/MapsData.aspx" title="Search"  description="Search for a record"/>-->
+    </siteMapNode>
+    <siteMapNode title="GPS"  description="" >
+      <siteMapNode url="GPSInput.aspx" title="New"  description="Insert new record" />
+      <siteMapNode url="GPSDataSearch.aspx" title="Update"  description="Search for a record"/>
+      <!--<siteMapNode url="~/GPSData.aspx" title="Search"  description="Search for a record"/>-->
+    </siteMapNode>
+    <siteMapNode title="Data Library"  description="">
+      <siteMapNode url="DataLibInput.aspx" title="New"  description="Add new record" />
+      <siteMapNode url="DataLibrarySearch.aspx" title="Update"  description="Search for a record"/>
+      <!--<siteMapNode url="~/DataLibrary.aspx" title="Search"  description="Search for a record"/>-->
+    </siteMapNode>
+  </siteMapNode>
+</siteMap>
