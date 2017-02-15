@@ -1,0 +1,40 @@
+Function CountVbaLines()
+
+    On Error GoTo ErrorHandler
+    
+    '******************************************************************************
+    '_____________________________________________________________________________*
+    '                                                                             |
+    'THIS FUNCTION REQUIRES A REFERENCE TO THE "MICROSOFT VISUAL BASIC            |
+    'EXTENSIBILITY LIBRARY 5.3 (OR EARLIER VERSION)"                              |
+    '_____________________________________________________________________________|
+    '                                                                             *
+    '******************************************************************************
+    Dim vLocDet As String
+    vLocDet = ""
+    
+    Dim TotalLines As Double
+    Dim vbEditor As VBIDE.VBE
+    Dim VBProj As VBIDE.VBProject
+    Dim VBobj As VBIDE.VBComponent
+    
+    Set vbEditor = Application.VBE
+    Set VBProj = vbEditor.ActiveVBProject
+    
+       For Each VBobj In VBProj.VBComponents
+       
+          vLocDet = vLocDet & "[" & VBobj.Name & ":" & VBobj.CodeModule.CountOfLines & "]" & ","
+        
+       
+    
+          TotalLines = TotalLines + VBobj.CodeModule.CountOfLines
+       
+       Next VBobj
+       
+          CountVbaLines = TotalLines
+    
+ErrorHandler:
+       Set vbEditor = Nothing
+       Set VBProj = Nothing
+
+End Function '//LL
