@@ -1,0 +1,14 @@
+//Active directory login check
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            bool vValRes = false;
+            using (PrincipalContext vPC = new PrincipalContext(ContextType.Domain, "water"))
+            {
+                vValRes = vPC.ValidateCredentials(txtUsr.Text, txtPwd.Text);
+                if (vValRes)
+                    MessageBox.Show("Y");
+                else
+                    MessageBox.Show("N");
+            }
+        }
