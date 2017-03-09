@@ -12,3 +12,21 @@
                     MessageBox.Show("N");
             }
         }
+
+
+//Download a photo from intranet
+
+
+        private void downloadFile(string inUrl, string inFlLoc)
+        {
+            using (WebClient vWClnt = new WebClient())
+            {
+                vWClnt.Proxy = WebRequest.DefaultWebProxy;
+                vWClnt.Proxy.Credentials = CredentialCache.DefaultCredentials;
+                //Get request
+                vWClnt.DownloadFile(inUrl, inFlLoc);
+            }
+        }
+
+
+	downloadFile("http://services5.arcgis.com/PnnKqtqi3qfxnaPc/arcgis/rest/services/LabOfflineGdbT3/FeatureServer/0/1191/attachments/116", "c:\\temp\\Photo1.jpg");
