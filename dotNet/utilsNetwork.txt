@@ -30,3 +30,34 @@
 
 
 	downloadFile("http://services5.arcgis.com/PnnKqtqi3qfxnaPc/arcgis/rest/services/LabOfflineGdbT3/FeatureServer/0/1191/attachments/116", "c:\\temp\\Photo1.jpg");
+
+
+//------------get roles for current user----------
+	//------C#------------
+        string[] rolesArray = null;
+        try
+        {
+            rolesArray = Roles.GetRolesForUser();
+            foreach (string s in rolesArray)
+            {
+                Response.Write(s);
+            }
+        }
+        catch (HttpException ex)
+        {
+            Response.Write("Exception!-" + ex.Message.ToString());
+        }
+		
+	//-------VB-----------------
+
+    Dim rolesArray() As String
+
+
+    rolesArray = Roles.GetRolesForUser()
+    For Each s As String In rolesArray
+        Response.Write(s + "<br/>")
+    Next		
+		
+	//---------declare below in webConfig-----------
+		
+    <roleManager enabled="true" defaultProvider="AspNetWindowsTokenRoleProvider"/>		
