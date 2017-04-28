@@ -1,0 +1,12 @@
+            Queue<object> vQAttchInfo = new Queue<object>();
+
+            vQAttchInfo.Enqueue(new Tuple<int, int>(2, 1));
+            vQAttchInfo.Enqueue(new Tuple<int, int>(3, 1));
+            vQAttchInfo.Enqueue(new Tuple<int, int>(4, 1));
+            vQAttchInfo.Enqueue(new Tuple<int, int>(5, 1));
+
+            foreach (object v in vQAttchInfo)
+            {
+                string p1 = ((Tuple<int, int>)v).Item1.ToString();
+                string p2 = ((Tuple<int, int>)v).Item2.ToString();
+            }
