@@ -1,0 +1,10 @@
+Behaviour you have notices is implemented by a browser. This a new(ish) feature to increase security. First version of Chrome to support it was 4.02.211.  Chrome is replacing http to https for a number of sites and there is a way to change/clear the sites. 
+
+Here is what I have found on the internet about clearing them on Chrome.
+
+Clearing HSTS Settings on Chrome
+1.    Close all tabs in Chrome.
+2.    Type “chrome://net-internals/#hsts” into your address bar to access the Network Internals Page.
+3.    In the “Query Domain” field, type your domain name and click OK, this will check to see the HSTS settings for your domain.
+4.    If HSTS is enable, type your domain name in the “Delete Domain” field and click OK.
+5.    Query your domain again, the results should say “not found.”
