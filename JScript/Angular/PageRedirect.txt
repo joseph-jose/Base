@@ -1,0 +1,25 @@
+(function () {
+    'use strict';
+
+    angular
+        .module('app')
+        .controller('LoginCtrl', LoginCtrl);
+
+    LoginCtrl.$inject = ['$window', 'loginSrv', 'notify'];
+
+    function LoginCtrl($window, loginSrv, notify) {
+        /* jshint validthis:true */
+        var vm = this;
+        vm.validateUser = function () {
+             loginSrv.validateLogin(vm.username, vm.password).then(function (data) {          
+                if (data.isValidUser) {    
+                    $window.location.href = '/index.html';
+                }
+                else
+                    alert('Login incorrect');
+            });
+        }
+    }
+})();
+
+http://stackoverflow.com/questions/27941876/how-to-redirect-to-another-page-using-angular-js
