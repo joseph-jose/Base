@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Demo: dojoConfig</title>
+    <link rel="stylesheet" href="../../1.10/_common/demo.css" media="screen" type="text/css">
+    <link rel="stylesheet" href="../../1.10.4/dijit/themes/claro/claro.css" media="screen">
+    <style>
+        #dialog {
+            min-width: 200px;
+        }
+    </style>
+</head>
+<body class="claro">
+    <h1>Demo: dojo/Deferred</h1>
+
+    <ul id="userlist"></ul>
+
+    <script src="../../1.10.4/dojo/dojo.js" data-dojo-config="isDebug: 1, async: 1, parseOnLoad: 1"></script>
+    <script>
+        require([
+          "dojo/Deferred",
+          "dojo/request",
+          "dojo/_base/array",
+          "dojo/dom-construct",
+          "dojo/dom",
+          "dojo/domReady!"],
+    function (Deferred, request, arrayUtil, domConstruct, dom) {
+
+        // Create a deferred and get the user list
+        var deferred = new Deferred(),
+            userlist = dom.byId("userlist");
+
+        // Set up the callback and errback for the deferred
+        deferred.then(function (res) {
+            arrayUtil.forEach(res, function (user) {
+                domConstruct.create("li", {
+                    id: user.id,
+                    innerHTML: user.username + ": " + user.name
+                }, userlist);
+            });
+        }, function (err) {
+            domConstruct.create("li", {
+                innerHTML: "Error: " + err
+            }, userlist);
+        });
+
+        // Send an HTTP request
+        request.get("https://dojotoolkit.org/documentation/tutorials/1.10/deferreds/demo/users.json", {
+            handleAs: "json",
+            headers: {"X-Requested-With":null}
+        }).then(
+            function (response) {
+                // Resolve when content is received
+                deferred.resolve(response);
+            },
+            function (error) {
+                // Reject on error
+                deferred.reject(error);
+            }
+        );
+    }
+    );
+    </script>
+</body>
+</html>

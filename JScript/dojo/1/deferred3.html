@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+</head>
+<body>
+    <h1>Demo: Chaining Deferreds</h1>
+
+    <h2>Result from chaining from original deferred</h2>
+    <ul id="userlist1"></ul>
+
+
+    <!--<script src="//ajax.googleapis.com/ajax/libs/dojo/1.10.4/dojo/dojo.js"></script>-->
+    <script src="../../1.10.4/dojo/dojo.js"></script>
+    <script>
+    require([
+		"dojo/request",
+		"dojo/_base/array",
+		"dojo/json",
+		"dojo/dom-construct",
+		"dojo/dom",
+		"dojo/domReady!"
+		],
+		function(request, arrayUtil, JSON, domConstruct, dom) {
+
+      function getUserList(){
+        return request.get("users-mangled.json", {
+            handleAs:"json"
+            }).then(function(response){
+            return arrayUtil.map(response, function(user){
+                return {
+                    id : user[0],
+                    username: user[1],
+                    name: user[2]
+                  };
+                });
+        });
+      }
+
+      getUserList().then(function(users){
+          var userlist = dom.byId("userlist1");
+          arrayUtil.forEach(users, function (user) {
+              domConstruct.create("li", {
+                  id: user.id,
+                  innerHTML: user.username + ":" + user.name
+              }, userlist);
+          });
+
+      });
+
+
+
+
+
+
+
+
+    });
+    </script>
+</body>
+</html>
