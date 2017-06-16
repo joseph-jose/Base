@@ -1,0 +1,15 @@
+<?xml version="1.0" ?>
+<configuration label="Louisville Police Stations">
+    <marquee value="" />
+    <items>
+        <field dated="16-Jul-2015" description="Netview update-Added layers IGC(Paid), Address Key, Area of Service(W), Rural Urban Boundry. Graphical search for IGC(Paid), Address Key and Connections added."/>
+        <field dated="8-July-2015" description="Map Viewer showing wastewater route for Central Interceptor. Look under GIS Map Gallery"/>
+        <field dated="10-July-2015" description="Map Viewer showing wastewater route for Central Interceptor. Look under GIS Map Gallery"/>
+        <field dated="15-July-2015" description="Map Viewer showing wastewater route for Central Interceptor. Look under GIS Map Gallery"/>
+    </items>
+</configuration>
+
+<!--
+    See Query widget tag reference at
+    http://links.esri.com/querywidget
+-->

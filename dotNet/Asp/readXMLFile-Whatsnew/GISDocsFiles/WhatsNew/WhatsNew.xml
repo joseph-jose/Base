@@ -1,0 +1,15 @@
+<?xml version="1.0" ?>
+<configuration label="Netview What is new">
+    <marquee value="" />
+    <items>
+        <field dated="06-Oct-2015" description="GIS Servers upgraded to 10.3.1"/>
+        <field dated="10-Sep-2015" description="Netview Mobile web app launched. Based on a browser version with ease of setup and use. Look under 'Netview Mobile' for help."/>
+        <field dated="" description=""/>
+        <field dated="" description=""/>
+    </items>
+</configuration>
+
+<!--
+    See Query widget tag reference at
+    http://links.esri.com/querywidget
+-->
