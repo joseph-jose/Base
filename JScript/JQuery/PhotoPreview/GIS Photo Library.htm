@@ -1,0 +1,112 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0064)https://wsldctdgweb/gisapps/Photos/photoList.aspx -->
+<HTML><HEAD><META content="IE=5.0000" http-equiv="X-UA-Compatible">
+<TITLE>GIS Photo Library</TITLE>
+<META content="text/html; charset=utf-8" http-equiv=Content-Type>
+<SCRIPT src="GIS%20Photo%20Library_files/jquery-1.9.1.cache"></SCRIPT>
+
+<STYLE type=text/css>DIV.loader {
+	HEIGHT: 32px; WIDTH: 32px; BACKGROUND: url(img/loading.gif) no-repeat 0px 0px; POSITION: absolute; MARGIN-LEFT: -10px; LEFT: 15%; Z-INDEX: 9999; DISPLAY: none; TOP: 30%
+}
+</STYLE>
+
+<SCRIPT type=text/javascript>
+        function UrlExists(url) {
+            var http = new XMLHttpRequest();
+            http.open('HEAD', url, false);
+            http.send();
+            alert(http.status);
+            return http.status != 404;
+        }
+
+        jQuery(function($) {
+
+            $('a.livebox').click(function () {
+
+                $("div.loader").show();
+                vfile = $(this).attr("href");
+                vfile = vfile.substr(vfile.lastIndexOf('.') + 1);
+                vfile = vfile.toUpperCase();
+                //alert(vfile);
+
+
+                if (!('JPG,jpg,JPEG,jpeg,BMP,bmp,TIFF,tiff'.indexOf(vfile) > -1)) {
+                    //vfile = $(this).attr("href");
+                    //vfile = vfile.substr(0, vfile.lastIndexOf('/'));
+                    //vfile = vfile.substr(0, vfile.lastIndexOf('/'));
+                    //vfile = vfile + '/_iNotValid.jpg';
+                    vfile = 'img/_iNotValid.jpg';
+                    //alert(vfile);
+                    $("#phtVwr").attr("src", vfile);
+                }
+                else
+                    $("#phtVwr").attr("src", $(this).attr("href"));
+
+                $("div.loader").fadeOut('normal');
+                return false;
+            });
+
+            $('img.livebox').click(function () {
+                //alert("Image Clcik");
+                $('img.livebox').attr("src", 'img/spotlight.jpg');
+                $(this).attr("src", 'img/spotlight1.gif');
+            });
+
+        });
+    </SCRIPT>
+
+<META name=GENERATOR content="MSHTML 11.00.9600.18763"></HEAD>
+<BODY>
+<DIV class=loader></DIV>
+<TABLE width=600 bgColor=#f8f8ff>
+  <TBODY>
+  <TR>
+    <TD bgColor=#0000a2 height=50 colSpan=3 align=center><B><FONT color=white 
+      size=5 face=arial>Photo Library</FONT></B></TD></TR>
+  <TR>
+    <TD bgColor=#fafbf colSpan=3></TD></TR>
+  <TR>
+    <TD colSpan=3><IMG id=phtVwr style="HEIGHT: 500px; WIDTH: 600px" 
+      src="GIS%20Photo%20Library_files/P1130940.jpg"> </TD></TR>
+  <TR>
+    <TD bgColor=#f8f8ff height=10 colSpan=3></TD></TR>
+  <TR>
+    <TD bgColor=#0000a2 height=2 colSpan=3></TD></TR>
+  <TR>
+    <TD><FONT face=arial>&nbsp;<B>File Name</B>&nbsp;</FONT></TD>
+    <TD><FONT face=arial>&nbsp;<B>Date Taken</B>&nbsp;</FONT></TD>
+    <TD><FONT face=arial>&nbsp;<B>Comments</B>&nbsp;</FONT></TD></TR>
+  <TR>
+    <TD>&nbsp;<A class=livebox 
+      href="GIS%20Photo%20Library_files/P1130940.jpg"><IMG class=livebox 
+      src="GIS%20Photo%20Library_files/spotlight1.gif">&nbsp;</A><A 
+      href="GIS%20Photo%20Library_files/P1130940.jpg" target=blank><FONT 
+      color=blue size=2 face=arial><A 
+      href="GIS%20Photo%20Library_files/P1130940.jpg" 
+      target=_blank>P1130940.jpg</A></FONT></A></TD>
+    <TD><FONT size=2 face=arial>&nbsp; 2017-04-24 &nbsp;</FONT></TD>
+    <TD><FONT size=2 face=arial>&nbsp; 51HillsideRd &nbsp;</FONT></TD></TR>
+  <TR>
+    <TD>&nbsp;<A class=livebox 
+      href="https://wsldctdgweb/GISDocs/Photos/2017/P1130941.jpg"><IMG 
+      class=livebox src="GIS%20Photo%20Library_files/spotlight.jpg">&nbsp;</A><A 
+      href="https://wsldctdgweb/GISDocs/Photos/2017/P1130941.jpg" 
+      target=blank><FONT color=blue size=2 face=arial><A 
+      href="https://wsldctdgweb/GISDocs/Photos/2017/P1130941.jpg" 
+      target=_blank>P1130941.jpg</A></FONT></A></TD>
+    <TD><FONT size=2 face=arial>&nbsp; 2017-04-24 &nbsp;</FONT></TD>
+    <TD><FONT size=2 face=arial>&nbsp; &nbsp;</FONT></TD></TR>
+  <TR>
+    <TD>&nbsp;<A class=livebox 
+      href="https://wsldctdgweb/GISDocs/Photos/2017/P1130942.jpg"><IMG 
+      class=livebox src="GIS%20Photo%20Library_files/spotlight.jpg">&nbsp;</A><A 
+      href="https://wsldctdgweb/GISDocs/Photos/2017/P1130942.jpg" 
+      target=blank><FONT color=blue size=2 face=arial><A 
+      href="https://wsldctdgweb/GISDocs/Photos/2017/P1130942.jpg" 
+      target=_blank>P1130942.jpg</A></FONT></A></TD>
+    <TD><FONT size=2 face=arial>&nbsp; 2017-04-24 &nbsp;</FONT></TD>
+    <TD><FONT size=2 face=arial>&nbsp; &nbsp;</FONT></TD></TR>
+  <TR>
+    <TD bgColor=#f8f8ff height=10 colSpan=3></TD></TR>
+  <TR>
+    <TD bgColor=#0000a2 height=2 colSpan=3></TD></TR></TBODY></TABLE></BODY></HTML>
