@@ -1,0 +1,5 @@
+
+  declare @vDtTm datetime
+  set @vDtTm = DATEADD(dd, -2, DATEDIFF(dd, 0, GETDATE()))
+  
+  exec [GISAdmin].[GISWSL].[GetDailyLogs] @vDtTm
