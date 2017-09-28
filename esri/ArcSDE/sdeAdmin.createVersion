@@ -1,0 +1,11 @@
+EXEC dbo.create_version 'dbo.DEFAULT', 'WMMtoESRI', 2, 1, 'This version contains data pushed from WMM to ESRI';
+EXEC dbo.set_current_version 'WMMtoESRI';
+EXEC dbo.edit_version 'WMMtoESRI', 1;
+BEGIN TRANSACTION
+UPDATE ElectricNetwork.dbo.Regulators
+SET esPhasing = WMM_Export.dbo.REGULATOR.wmPhasing
+FROM WMM_Export.dbo.REGULATOR
+WHERE
+ ElectricNetwork.dbo.Regulators.GUID=WMM_Export.dbo.REGULATOR.wmextVoltageRegulator__GUID_ESR
+COMMIT;
+EXEC dbo.edit_version 'WMMtoESRI', 2;
