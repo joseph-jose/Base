@@ -1,0 +1,16 @@
+            string sagIdVal = "";
+            sagIdVal = txtGISId.Text.ToString();
+            //Match vRegMatch = Regex.Match(sagIdVal, "\\b(\\d\\,\\d\\,\\d)\\b", RegexOptions.Singleline);
+            Match vRegMatch = Regex.Match(sagIdVal, "^[(][0-9]+(?:,[0-9]+)*[)]$", RegexOptions.Singleline);
+            if (!(vRegMatch.Success))
+            {
+                MessageBox.Show ("Not a valid format- Should have the format (1,2,3)");
+                return ;
+            }
+			
+			
+			
+            string vSqlStr = "Update [GISAdmin].[GISWSL].[WAT_SAPGIS] set UpdatedDate=getDate(), UpdatedBy2 = '{0}', GisState = '{1}' where [SAG_ID] in {2}";
+			
+			
+			
