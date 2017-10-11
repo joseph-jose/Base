@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+</head>
+<body>
+  <h1>Demo: dojo/request/xhr</h1>
+  <p>Click the button below to see dojo/request/xhr in action.</p>
+  <div><button id="textButton">Click</button></div>
+  <br/><br/>
+  <div id="divStatus">
+    <!--<script src="//ajax.googleapis.com/ajax/libs/dojo/1.10.4/dojo/dojo.js"></script>-->
+    <script src="../../1.10.4/dojo/dojo.js"></script>
+    <script>
+    require([
+		"dojo/request",
+		"dojo/_base/array",
+		"dojo/json",
+		"dojo/dom-construct",
+		"dojo/dom",
+    "dojo/on",
+    "dojo/request/notify",
+    "dojo/query",
+		"dojo/domReady!"
+		],
+		function(request, arrayUtil, JSON, domConstruct, dom, on, notify) {
+
+        notify("start", function(){
+          domConstruct.place("<p>Start</p>", "divStatus");
+        }
+        );
+
+        notify("send", function(data, cancel){
+          domConstruct.place("<p>Sent request</p>", "divStatus");
+        }
+        );
+
+        notify("load", function(data){
+          domConstruct.place("<p>load (response reccieved)</p>", "divStatus");
+        }
+        );
+
+        notify("error", function(error){
+          domConstruct.place("<p class=\"error\">Error</p>", "divStatus");
+        });
+
+        notify("done", function(data){
+          domConstruct.place("<p>Done (response reccieved)</p>", "divStatus");
+          //if (data.instanceof Error)
+          //{
+          //  domConstruct.place("<p class=\"error\">Error</p>", "divStatus");
+          //}
+          //else {
+          //  domConstruct.place("<p class=\"success\">success</p>", "divStatus");
+          //}
+        });
+
+        notify("stop", function(){
+          domConstruct.place("<p>Stop</p>", "divStatus");
+          domConstruct.place("<p class=\"ready\">Ready</p>", "divStatus");
+        });
+
+
+        var resultDiv = dom.byId("resultDiv");
+
+        on( dom.byId('textButton'), "click", function(evt){
+            domConstruct.empty("divStatus");
+            request.get("resources/text/psalm_of_life.txt", {
+                query: {success: this.id === "successBtn"}, handleAs: "json"
+            });
+
+        });
+
+
+
+
+
+
+    });
+    </script>
+</body>
+</html>

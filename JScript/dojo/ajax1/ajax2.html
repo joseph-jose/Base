@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+</head>
+<body>
+  <h1>Demo: dojo/request/xhr</h1>
+
+
+  <br/><br/>
+  <div id="resultDiv">
+    <!--<script src="//ajax.googleapis.com/ajax/libs/dojo/1.10.4/dojo/dojo.js"></script>-->
+    <script src="../../1.10.4/dojo/dojo.js"></script>
+    <script>
+    require([
+		"dojo/request",
+		"dojo/_base/array",
+		"dojo/json",
+		"dojo/dom-construct",
+		"dojo/dom",
+    "dojo/on",
+		"dojo/domReady!"
+		],
+		function(request, arrayUtil, JSON, domConstruct, dom, on) {
+
+        var resultDiv = dom.byId("resultDiv");
+
+          request.get("resources/text/sample.json",{handleAs: "json"}).then(function(data){
+            var html = "<h2>JSON Data</h2>" +
+                "<p>JSON encoded data:</p>" +
+                "<p><code>" + JSON.stringify(data) + "</code></p>"+
+                "<h3>Accessing the JSON data</h3>" +
+                "<p><strong>title</strong> " + data.title + "</p>" +
+                "<p><strong>items</strong> An array of items." +
+                "Each item has a name and a value.  The type of " +
+                "the value is shown in parentheses.</p><dl>";
+
+            arrayUtil.forEach(data.items, function(item,i){
+              html += "<dt>" + item.name + "</dt><dd>" + item.value + "(" + (typeof item.value) + ")</dd>";
+            });
+            html += "</dl>";
+
+            resultDiv.innerHTML = html;
+
+          }, function(error){resultDiv.innerHTML = error;}
+
+          );
+
+
+    });
+    </script>
+</body>
+</html>

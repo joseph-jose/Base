@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+</head>
+<body>
+  <h1>Demo: dojo/request/xhr</h1>
+
+  <div><button id="textButton">Click</button></div>
+  <br/><br/>
+
+  <div id="resultDiv">
+    <!--<script src="//ajax.googleapis.com/ajax/libs/dojo/1.10.4/dojo/dojo.js"></script>-->
+    <script src="../../1.10.4/dojo/dojo.js"></script>
+    <script>
+    require([
+		"dojo/request",
+		"dojo/_base/array",
+		"dojo/json",
+		"dojo/dom-construct",
+		"dojo/dom",
+    "dojo/on",
+    "dojo/request/script",
+		"dojo/domReady!"
+		],
+		function(request, arrayUtil, JSON, domConstruct, dom, on, script) {
+
+        var resultDiv = dom.byId("resultDiv");
+        on(dom.byId("textButton"), "click", function(evt){
+          script.get("https://api.github.com/repos/dojo/dojo/pulls",{
+            jsonp: "callback"
+          }).then(function (response){
+            domConstruct.empty(resultDiv);
+
+            var fragment = document.createDocumentFragment();
+
+            arrayUtil.forEach(response.data, function(pull){
+              var li = domConstruct.create("li", {}, fragment);
+              var link = domConstruct.create("a", {href: pull.url, innerHTML:pull.title}, li);
+            });
+            domConstruct.place(fragment, resultDiv);
+          });
+        });
+
+
+
+
+    });
+    </script>
+</body>
+</html>
