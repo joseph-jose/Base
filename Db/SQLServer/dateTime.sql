@@ -1,0 +1,1 @@
+select top 1000 CONVERT(nvarchar(20),  APPDOCDT, 103), * from [IMSV7].XNETWEXT
