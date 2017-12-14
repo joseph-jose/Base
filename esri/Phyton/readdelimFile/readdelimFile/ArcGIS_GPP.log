@@ -1,0 +1,1392 @@
+11:29:34 (ARCGIS) Server started on WSLDCTVGPP for:	ACT		
+11:29:34 (ARCGIS) ARC/INFO	ArcStorm	ArcStormEnable	
+11:29:34 (ARCGIS) Editor		Grid		MrSID		
+11:29:34 (ARCGIS) Plotting	Publisher	TIFFLZW		
+11:29:34 (ARCGIS) TIN		VBA		Viewer		
+11:29:34 (ARCGIS) SLOG: Statistics Log Frequency is 240 minute(s).
+11:29:34 (ARCGIS) SLOG: TS update poll interval is 10 minute(s).
+11:29:34 (ARCGIS) SLOG: Activation borrow reclaim percentage is 0.
+11:29:34 (ARCGIS) (@ARCGIS-SLOG@) ===============================================
+11:29:34 (ARCGIS) (@ARCGIS-SLOG@) === Vendor Daemon ===
+11:29:34 (ARCGIS) (@ARCGIS-SLOG@) Vendor daemon: ARCGIS
+11:29:34 (ARCGIS) (@ARCGIS-SLOG@) Start-Date: Thu Oct 08 2015 11:29:34 New Zealand Daylight Time
+11:29:34 (ARCGIS) (@ARCGIS-SLOG@) PID: 1220
+11:29:34 (ARCGIS) (@ARCGIS-SLOG@) VD Version: v11.12.1.2 build 152538 i86_n3 ( build 152538 (ipv6))
+11:29:34 (ARCGIS) (@ARCGIS-SLOG@) 
+11:29:34 (ARCGIS) (@ARCGIS-SLOG@) === Startup/Restart Info ===
+11:29:34 (ARCGIS) (@ARCGIS-SLOG@) Options file used: C:\Program Files (x86)\ArcGIS\License10.3\bin\ARCGIS.opt
+11:29:34 (ARCGIS) (@ARCGIS-SLOG@) Is vendor daemon a CVD: No
+11:29:34 (ARCGIS) (@ARCGIS-SLOG@) Is TS accessed: Yes
+11:29:34 (ARCGIS) (@ARCGIS-SLOG@) TS accessed for feature load: Thu Oct 08 2015 11:29:34 New Zealand Daylight Time
+11:29:34 (ARCGIS) (@ARCGIS-SLOG@) Number of VD restarts since LS startup: 0
+11:29:34 (ARCGIS) (@ARCGIS-SLOG@) 
+11:29:34 (ARCGIS) (@ARCGIS-SLOG@) === Network Info ===
+11:29:34 (ARCGIS) (@ARCGIS-SLOG@) Socket interface: IPV6
+11:29:34 (ARCGIS) (@ARCGIS-SLOG@) Listening port: 6666
+11:29:34 (ARCGIS) (@ARCGIS-SLOG@) Daemon select timeout (in seconds): 1
+11:29:34 (ARCGIS) (@ARCGIS-SLOG@) 
+11:29:34 (ARCGIS) (@ARCGIS-SLOG@) === Host Info ===
+11:29:34 (ARCGIS) (@ARCGIS-SLOG@) Host used in license file: WSLDCTVGPP
+11:29:34 (ARCGIS) (@ARCGIS-SLOG@) Running on Hypervisor: VMWare
+11:29:34 (ARCGIS) (@ARCGIS-SLOG@) LMBIND needed: No
+11:29:34 (ARCGIS) (@ARCGIS-SLOG@) LMBIND port: -NA-
+11:29:34 (ARCGIS) (@ARCGIS-SLOG@) ===============================================
+11:29:36 (ARCGIS) TCP_NODELAY NOT enabled
+11:29:36 (ARCGIS) OUT: "Editor" jjose@SGH227R9PC  
+11:29:36 (ARCGIS) OUT: "VBA" jjose@SGH227R9PC  
+11:29:47 (ARCGIS) OUT: "Editor" jjose@SGH227R9PC  
+11:29:47 (ARCGIS) OUT: "VBA" jjose@SGH227R9PC  
+11:29:53 (ARCGIS) OUT: "Editor" smoodley@SGH227R9P2  
+11:29:53 (ARCGIS) OUT: "VBA" smoodley@SGH227R9P2  
+11:29:57 (ARCGIS) OUT: "Editor" snaidoo@SGH227R9PB  
+11:29:57 (ARCGIS) OUT: "VBA" snaidoo@SGH227R9PB  
+11:30:01 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) rvrooyen@SGH227R9PD  (License server system does not support this feature. (-18,327))
+11:30:08 (ARCGIS) OUT: "Editor" ralmeida@SGH402P41Y  
+11:30:08 (ARCGIS) OUT: "VBA" ralmeida@SGH402P41Y  
+11:30:13 (ARCGIS) OUT: "Editor" ralmeida@SGH402P41Y  
+11:30:13 (ARCGIS) OUT: "VBA" ralmeida@SGH402P41Y  
+11:30:27 (ARCGIS) OUT: "Editor" ralmeida@SGH402P41Y  
+11:30:27 (ARCGIS) OUT: "VBA" ralmeida@SGH402P41Y  
+11:30:33 (ARCGIS) OUT: "ARC/INFO" mcuevas@SGH227R9P8  
+11:30:33 (ARCGIS) OUT: "VBA" mcuevas@SGH227R9P8  
+11:30:46 (ARCGIS) OUT: "Editor" asawant@SGH227R9PF  
+11:30:46 (ARCGIS) OUT: "VBA" asawant@SGH227R9PF  
+11:30:47 (ARCGIS) OUT: "Editor" pshih@SGH227R9P9  
+11:30:47 (ARCGIS) OUT: "VBA" pshih@SGH227R9P9  
+11:30:55 (ARCGIS) SERVER-OUT: Failed to send the message(71) <END>
+11:30:55 (ARCGIS) OUT: "Editor" rzhang@SGH227R9P3  
+11:30:55 (ARCGIS) OUT: "VBA" rzhang@SGH227R9P3  
+11:30:56 (ARCGIS) DENIED: "ARC/INFO" mpatel1@SGH227R9P6  (Checkout exceeds MAX specified in options file. (-87,353:10054 ""))
+11:30:56 (ARCGIS) DENIED: "ARC/INFO" mpatel1@SGH227R9P6  (Checkout exceeds MAX specified in options file. (-87,353:10054 ""))
+11:30:56 (ARCGIS) OUT: "VBA" mpatel1@SGH227R9P6  
+11:31:06 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) rvrooyen@SGH227R9PD  (License server system does not support this feature. (-18,327))
+11:31:10 (ARCGIS) OUT: "Editor" jjose@SGH227R9PC  
+11:31:10 (ARCGIS) OUT: "VBA" jjose@SGH227R9PC  
+11:31:16 (ARCGIS) OUT: "Editor" pshih@SGH227R9P9  
+11:31:16 (ARCGIS) OUT: "VBA" pshih@SGH227R9P9  
+11:31:18 (ARCGIS) OUT: "Editor" rvrooyen@SGH227R9PD  
+11:31:18 (ARCGIS) OUT: "VBA" rvrooyen@SGH227R9PD  
+11:31:27 (ARCGIS) OUT: "Viewer" cbroadbe@SGH448T6H1  
+11:31:27 (ARCGIS) OUT: "VBA" cbroadbe@SGH448T6H1  
+11:31:29 (ARCGIS) OUT: "ARC/INFO" mcuevas@SGH227R9P8  
+11:31:29 (ARCGIS) OUT: "VBA" mcuevas@SGH227R9P8  
+11:31:46 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) rvrooyen@SGH227R9PD  (License server system does not support this feature. (-18,327))
+11:31:58 (ARCGIS) OUT: "Editor" rvrooyen@SGH227R9PD  
+11:31:58 (ARCGIS) OUT: "VBA" rvrooyen@SGH227R9PD  
+11:32:31 (ARCGIS) Server started on WSLDCTVGPP for:	ACT		
+11:32:31 (ARCGIS) ARC/INFO	ArcStorm	ArcStormEnable	
+11:32:31 (ARCGIS) Editor		Grid		MrSID		
+11:32:31 (ARCGIS) Plotting	Publisher	TIFFLZW		
+11:32:31 (ARCGIS) TIN		VBA		Viewer		
+11:32:31 (ARCGIS) SLOG: Statistics Log Frequency is 240 minute(s).
+11:32:31 (ARCGIS) SLOG: TS update poll interval is 10 minute(s).
+11:32:31 (ARCGIS) SLOG: Activation borrow reclaim percentage is 0.
+11:32:31 (ARCGIS) (@ARCGIS-SLOG@) ===============================================
+11:32:31 (ARCGIS) (@ARCGIS-SLOG@) === Vendor Daemon ===
+11:32:31 (ARCGIS) (@ARCGIS-SLOG@) Vendor daemon: ARCGIS
+11:32:31 (ARCGIS) (@ARCGIS-SLOG@) Start-Date: Thu Oct 08 2015 11:32:31 New Zealand Daylight Time
+11:32:31 (ARCGIS) (@ARCGIS-SLOG@) PID: 5164
+11:32:31 (ARCGIS) (@ARCGIS-SLOG@) VD Version: v11.12.1.2 build 152538 i86_n3 ( build 152538 (ipv6))
+11:32:31 (ARCGIS) (@ARCGIS-SLOG@) 
+11:32:31 (ARCGIS) (@ARCGIS-SLOG@) === Startup/Restart Info ===
+11:32:31 (ARCGIS) (@ARCGIS-SLOG@) Options file used: C:\Program Files (x86)\ArcGIS\License10.3\bin\ARCGIS.opt
+11:32:31 (ARCGIS) (@ARCGIS-SLOG@) Is vendor daemon a CVD: No
+11:32:31 (ARCGIS) (@ARCGIS-SLOG@) Is TS accessed: Yes
+11:32:31 (ARCGIS) (@ARCGIS-SLOG@) TS accessed for feature load: Thu Oct 08 2015 11:32:31 New Zealand Daylight Time
+11:32:31 (ARCGIS) (@ARCGIS-SLOG@) Number of VD restarts since LS startup: 0
+11:32:31 (ARCGIS) (@ARCGIS-SLOG@) 
+11:32:31 (ARCGIS) (@ARCGIS-SLOG@) === Network Info ===
+11:32:31 (ARCGIS) (@ARCGIS-SLOG@) Socket interface: IPV6
+11:32:31 (ARCGIS) (@ARCGIS-SLOG@) Listening port: 6666
+11:32:31 (ARCGIS) (@ARCGIS-SLOG@) Daemon select timeout (in seconds): 1
+11:32:31 (ARCGIS) (@ARCGIS-SLOG@) 
+11:32:31 (ARCGIS) (@ARCGIS-SLOG@) === Host Info ===
+11:32:31 (ARCGIS) (@ARCGIS-SLOG@) Host used in license file: WSLDCTVGPP
+11:32:31 (ARCGIS) (@ARCGIS-SLOG@) Running on Hypervisor: VMWare
+11:32:31 (ARCGIS) (@ARCGIS-SLOG@) LMBIND needed: No
+11:32:31 (ARCGIS) (@ARCGIS-SLOG@) LMBIND port: -NA-
+11:32:31 (ARCGIS) (@ARCGIS-SLOG@) ===============================================
+11:32:56 (ARCGIS) TCP_NODELAY NOT enabled
+11:32:56 (ARCGIS) OUT: "ARC/INFO" mpatel1@SGH227R9P6  
+11:33:06 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) rvrooyen@SGH227R9PD  (License server system does not support this feature. (-18,327))
+11:33:26 (ARCGIS) OUT: "Editor" rvrooyen@SGH227R9PD  
+11:33:27 (ARCGIS) OUT: "VBA" rvrooyen@SGH227R9PD  
+11:33:28 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) rvrooyen@SGH227R9PD  (License server system does not support this feature. (-18,327))
+11:33:36 (ARCGIS) OUT: "Editor" jjose@SGH227R9PC  
+11:33:36 (ARCGIS) OUT: "VBA" jjose@SGH227R9PC  
+11:33:47 (ARCGIS) OUT: "Editor" jjose@SGH227R9PC  
+11:33:47 (ARCGIS) OUT: "VBA" jjose@SGH227R9PC  
+11:33:53 (ARCGIS) OUT: "Editor" smoodley@SGH227R9P2  
+11:33:53 (ARCGIS) OUT: "VBA" smoodley@SGH227R9P2  
+11:33:57 (ARCGIS) OUT: "Editor" snaidoo@SGH227R9PB  
+11:33:57 (ARCGIS) OUT: "VBA" snaidoo@SGH227R9PB  
+11:34:08 (ARCGIS) OUT: "Editor" ralmeida@SGH402P41Y  
+11:34:08 (ARCGIS) OUT: "VBA" ralmeida@SGH402P41Y  
+11:34:14 (ARCGIS) OUT: "Editor" ralmeida@SGH402P41Y  
+11:34:14 (ARCGIS) OUT: "VBA" ralmeida@SGH402P41Y  
+11:34:27 (ARCGIS) OUT: "Editor" ralmeida@SGH402P41Y  
+11:34:27 (ARCGIS) OUT: "VBA" ralmeida@SGH402P41Y  
+11:34:33 (ARCGIS) OUT: "ARC/INFO" mcuevas@SGH227R9P8  
+11:34:33 (ARCGIS) OUT: "VBA" mcuevas@SGH227R9P8  
+11:34:46 (ARCGIS) OUT: "Editor" asawant@SGH227R9PF  
+11:34:46 (ARCGIS) OUT: "VBA" asawant@SGH227R9PF  
+11:34:47 (ARCGIS) OUT: "Editor" pshih@SGH227R9P9  
+11:34:47 (ARCGIS) OUT: "VBA" pshih@SGH227R9P9  
+11:34:50 (ARCGIS) IN: "VBA" rvrooyen@SGH227R9PD  
+11:34:50 (ARCGIS) IN: "Editor" rvrooyen@SGH227R9PD  
+11:34:55 (ARCGIS) OUT: "Editor" rzhang@SGH227R9P3  
+11:34:55 (ARCGIS) OUT: "VBA" rzhang@SGH227R9P3  
+11:35:10 (ARCGIS) OUT: "Editor" jjose@SGH227R9PC  
+11:35:10 (ARCGIS) OUT: "VBA" jjose@SGH227R9PC  
+11:35:10 (ARCGIS) OUT: "Editor" rvrooyen@SGH227R9PD  
+11:35:14 (ARCGIS) OUT: "VBA" rvrooyen@SGH227R9PD  
+11:35:16 (ARCGIS) OUT: "Editor" pshih@SGH227R9P9  
+11:35:16 (ARCGIS) OUT: "VBA" pshih@SGH227R9P9  
+11:35:18 (ARCGIS) OUT: "Editor" rvrooyen@SGH227R9PD  
+11:35:18 (ARCGIS) OUT: "VBA" rvrooyen@SGH227R9PD  
+11:35:23 (ARCGIS) OUT: "Editor" rvrooyen@SGH227R9PD  
+11:35:27 (ARCGIS) OUT: "Viewer" cbroadbe@SGH448T6H1  
+11:35:27 (ARCGIS) OUT: "VBA" cbroadbe@SGH448T6H1  
+11:35:29 (ARCGIS) OUT: "ARC/INFO" mcuevas@SGH227R9P8  
+11:35:29 (ARCGIS) OUT: "VBA" mcuevas@SGH227R9P8  
+11:35:48 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) rvrooyen@SGH227R9PD  (License server system does not support this feature. (-18,327))
+11:36:03 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) rvrooyen@SGH227R9PD  (License server system does not support this feature. (-18,327))
+11:36:21 (ARCGIS) OUT: "Editor" rvrooyen@SGH227R9PD  
+11:36:21 (ARCGIS) OUT: "VBA" rvrooyen@SGH227R9PD  
+11:36:22 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) rvrooyen@SGH227R9PD  (License server system does not support this feature. (-18,327))
+11:36:56 (ARCGIS) IN: "ARC/INFO" mpatel1@SGH227R9P6  
+11:36:56 (ARCGIS) OUT: "VBA" mpatel1@SGH227R9P6  
+11:37:04 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) rvrooyen@SGH227R9PD  (License server system does not support this feature. (-18,327))
+11:37:48 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) rvrooyen@SGH227R9PD  (License server system does not support this feature. (-18,327))
+11:37:51 (ARCGIS) OUT: "Viewer" nperrie@5CG44804CX  
+11:38:01 (ARCGIS) Server started on WSLDCTVGPP for:	ACT		
+11:38:01 (ARCGIS) ARC/INFO	ArcStorm	ArcStormEnable	
+11:38:01 (ARCGIS) Editor		Grid		MrSID		
+11:38:01 (ARCGIS) Plotting	Publisher	TIFFLZW		
+11:38:01 (ARCGIS) TIN		VBA		Viewer		
+11:38:01 (ARCGIS) SLOG: Statistics Log Frequency is 240 minute(s).
+11:38:01 (ARCGIS) SLOG: TS update poll interval is 10 minute(s).
+11:38:01 (ARCGIS) SLOG: Activation borrow reclaim percentage is 0.
+11:38:01 (ARCGIS) (@ARCGIS-SLOG@) ===============================================
+11:38:01 (ARCGIS) (@ARCGIS-SLOG@) === Vendor Daemon ===
+11:38:01 (ARCGIS) (@ARCGIS-SLOG@) Vendor daemon: ARCGIS
+11:38:01 (ARCGIS) (@ARCGIS-SLOG@) Start-Date: Thu Oct 08 2015 11:38:01 New Zealand Daylight Time
+11:38:01 (ARCGIS) (@ARCGIS-SLOG@) PID: 7408
+11:38:01 (ARCGIS) (@ARCGIS-SLOG@) VD Version: v11.12.1.2 build 152538 i86_n3 ( build 152538 (ipv6))
+11:38:01 (ARCGIS) (@ARCGIS-SLOG@) 
+11:38:01 (ARCGIS) (@ARCGIS-SLOG@) === Startup/Restart Info ===
+11:38:01 (ARCGIS) (@ARCGIS-SLOG@) Options file used: C:\Program Files (x86)\ArcGIS\License10.3\bin\ARCGIS.opt
+11:38:01 (ARCGIS) (@ARCGIS-SLOG@) Is vendor daemon a CVD: No
+11:38:01 (ARCGIS) (@ARCGIS-SLOG@) Is TS accessed: Yes
+11:38:01 (ARCGIS) (@ARCGIS-SLOG@) TS accessed for feature load: Thu Oct 08 2015 11:38:01 New Zealand Daylight Time
+11:38:01 (ARCGIS) (@ARCGIS-SLOG@) Number of VD restarts since LS startup: 0
+11:38:01 (ARCGIS) (@ARCGIS-SLOG@) 
+11:38:01 (ARCGIS) (@ARCGIS-SLOG@) === Network Info ===
+11:38:01 (ARCGIS) (@ARCGIS-SLOG@) Socket interface: IPV6
+11:38:01 (ARCGIS) (@ARCGIS-SLOG@) Listening port: 6666
+11:38:01 (ARCGIS) (@ARCGIS-SLOG@) Daemon select timeout (in seconds): 1
+11:38:01 (ARCGIS) (@ARCGIS-SLOG@) 
+11:38:01 (ARCGIS) (@ARCGIS-SLOG@) === Host Info ===
+11:38:01 (ARCGIS) (@ARCGIS-SLOG@) Host used in license file: WSLDCTVGPP
+11:38:01 (ARCGIS) (@ARCGIS-SLOG@) Running on Hypervisor: VMWare
+11:38:01 (ARCGIS) (@ARCGIS-SLOG@) LMBIND needed: No
+11:38:01 (ARCGIS) (@ARCGIS-SLOG@) LMBIND port: -NA-
+11:38:01 (ARCGIS) (@ARCGIS-SLOG@) ===============================================
+11:38:01 (ARCGIS) TCP_NODELAY NOT enabled
+11:38:01 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) rvrooyen@SGH227R9PD  (License server system does not support this feature. (-18,327))
+11:38:08 (ARCGIS) OUT: "Editor" ralmeida@SGH402P41Y  
+11:38:08 (ARCGIS) OUT: "VBA" ralmeida@SGH402P41Y  
+11:38:14 (ARCGIS) OUT: "Editor" ralmeida@SGH402P41Y  
+11:38:14 (ARCGIS) OUT: "VBA" ralmeida@SGH402P41Y  
+11:38:27 (ARCGIS) OUT: "Editor" ralmeida@SGH402P41Y  
+11:38:28 (ARCGIS) OUT: "VBA" ralmeida@SGH402P41Y  
+11:38:32 (ARCGIS) OUT: "Editor" asawant@SGH227R9PF  
+11:38:33 (ARCGIS) OUT: "ARC/INFO" mcuevas@SGH227R9P8  
+11:38:33 (ARCGIS) OUT: "VBA" mcuevas@SGH227R9P8  
+11:38:35 (ARCGIS) OUT: "VBA" asawant@SGH227R9PF  
+11:38:41 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) asawant@SGH227R9PF  (License server system does not support this feature. (-18,327:10054 ""))
+11:38:43 (ARCGIS) OUT: "Editor" asawant@SGH227R9PF  
+11:38:46 (ARCGIS) OUT: "Editor" asawant@SGH227R9PF  
+11:38:46 (ARCGIS) OUT: "VBA" asawant@SGH227R9PF  
+11:38:47 (ARCGIS) OUT: "Editor" pshih@SGH227R9P9  
+11:38:47 (ARCGIS) OUT: "VBA" pshih@SGH227R9P9  
+11:38:48 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) asawant@SGH227R9PF  (License server system does not support this feature. (-18,327))
+11:38:56 (ARCGIS) OUT: "Editor" rzhang@SGH227R9P3  
+11:38:56 (ARCGIS) OUT: "VBA" rzhang@SGH227R9P3  
+11:38:56 (ARCGIS) OUT: "ARC/INFO" mpatel1@SGH227R9P6  
+11:38:58 (ARCGIS) OUT: "Editor" rvrooyen@SGH227R9PD  
+11:39:03 (ARCGIS) OUT: "VBA" rvrooyen@SGH227R9PD  
+11:39:10 (ARCGIS) OUT: "Editor" jjose@SGH227R9PC  
+11:39:10 (ARCGIS) OUT: "VBA" jjose@SGH227R9PC  
+11:39:11 (ARCGIS) OUT: "Editor" rvrooyen@SGH227R9PD  
+11:39:16 (ARCGIS) OUT: "Editor" pshih@SGH227R9P9  
+11:39:16 (ARCGIS) OUT: "VBA" pshih@SGH227R9P9  
+11:39:18 (ARCGIS) OUT: "Editor" rvrooyen@SGH227R9PD  
+11:39:18 (ARCGIS) OUT: "VBA" rvrooyen@SGH227R9PD  
+11:39:27 (ARCGIS) OUT: "Viewer" cbroadbe@SGH448T6H1  
+11:39:27 (ARCGIS) OUT: "VBA" cbroadbe@SGH448T6H1  
+11:39:29 (ARCGIS) OUT: "ARC/INFO" mcuevas@SGH227R9P8  
+11:39:29 (ARCGIS) OUT: "VBA" mcuevas@SGH227R9P8  
+11:39:29 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) rvrooyen@SGH227R9PD  (License server system does not support this feature. (-18,327))
+11:39:36 (ARCGIS) OUT: "Editor" jjose@SGH227R9PC  
+11:39:36 (ARCGIS) OUT: "VBA" jjose@SGH227R9PC  
+11:39:47 (ARCGIS) OUT: "Editor" jjose@SGH227R9PC  
+11:39:47 (ARCGIS) OUT: "VBA" jjose@SGH227R9PC  
+11:39:52 (ARCGIS) OUT: "Viewer" nperrie@5CG44804CX  
+11:39:53 (ARCGIS) OUT: "Editor" smoodley@SGH227R9P2  
+11:39:53 (ARCGIS) OUT: "VBA" smoodley@SGH227R9P2  
+11:39:57 (ARCGIS) OUT: "Editor" snaidoo@SGH227R9PB  
+11:39:57 (ARCGIS) OUT: "VBA" snaidoo@SGH227R9PB  
+11:40:56 (ARCGIS) IN: "ARC/INFO" mpatel1@SGH227R9P6  
+11:40:56 (ARCGIS) OUT: "VBA" mpatel1@SGH227R9P6  
+11:41:10 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) rzhang@SGH227R9P3  (License server system does not support this feature. (-18,327))
+11:42:01 (ARCGIS) Server started on WSLDCTVGPP for:	ACT		
+11:42:01 (ARCGIS) ARC/INFO	ArcStorm	ArcStormEnable	
+11:42:01 (ARCGIS) Editor		Grid		MrSID		
+11:42:01 (ARCGIS) Plotting	Publisher	TIFFLZW		
+11:42:01 (ARCGIS) TIN		VBA		Viewer		
+11:42:01 (ARCGIS) SLOG: Statistics Log Frequency is 240 minute(s).
+11:42:01 (ARCGIS) SLOG: TS update poll interval is 10 minute(s).
+11:42:01 (ARCGIS) SLOG: Activation borrow reclaim percentage is 0.
+11:42:01 (ARCGIS) (@ARCGIS-SLOG@) ===============================================
+11:42:01 (ARCGIS) (@ARCGIS-SLOG@) === Vendor Daemon ===
+11:42:01 (ARCGIS) (@ARCGIS-SLOG@) Vendor daemon: ARCGIS
+11:42:01 (ARCGIS) (@ARCGIS-SLOG@) Start-Date: Thu Oct 08 2015 11:42:01 New Zealand Daylight Time
+11:42:01 (ARCGIS) (@ARCGIS-SLOG@) PID: 5724
+11:42:01 (ARCGIS) (@ARCGIS-SLOG@) VD Version: v11.12.1.2 build 152538 i86_n3 ( build 152538 (ipv6))
+11:42:01 (ARCGIS) (@ARCGIS-SLOG@) 
+11:42:01 (ARCGIS) (@ARCGIS-SLOG@) === Startup/Restart Info ===
+11:42:01 (ARCGIS) (@ARCGIS-SLOG@) Options file used: C:\Program Files (x86)\ArcGIS\License10.3\bin\ARCGIS.opt
+11:42:01 (ARCGIS) (@ARCGIS-SLOG@) Is vendor daemon a CVD: No
+11:42:01 (ARCGIS) (@ARCGIS-SLOG@) Is TS accessed: Yes
+11:42:01 (ARCGIS) (@ARCGIS-SLOG@) TS accessed for feature load: Thu Oct 08 2015 11:42:01 New Zealand Daylight Time
+11:42:01 (ARCGIS) (@ARCGIS-SLOG@) Number of VD restarts since LS startup: 0
+11:42:01 (ARCGIS) (@ARCGIS-SLOG@) 
+11:42:01 (ARCGIS) (@ARCGIS-SLOG@) === Network Info ===
+11:42:01 (ARCGIS) (@ARCGIS-SLOG@) Socket interface: IPV6
+11:42:01 (ARCGIS) (@ARCGIS-SLOG@) Listening port: 6666
+11:42:01 (ARCGIS) (@ARCGIS-SLOG@) Daemon select timeout (in seconds): 1
+11:42:01 (ARCGIS) (@ARCGIS-SLOG@) 
+11:42:01 (ARCGIS) (@ARCGIS-SLOG@) === Host Info ===
+11:42:01 (ARCGIS) (@ARCGIS-SLOG@) Host used in license file: WSLDCTVGPP
+11:42:01 (ARCGIS) (@ARCGIS-SLOG@) Running on Hypervisor: VMWare
+11:42:01 (ARCGIS) (@ARCGIS-SLOG@) LMBIND needed: No
+11:42:01 (ARCGIS) (@ARCGIS-SLOG@) LMBIND port: -NA-
+11:42:01 (ARCGIS) (@ARCGIS-SLOG@) ===============================================
+11:42:08 (ARCGIS) TCP_NODELAY NOT enabled
+11:42:08 (ARCGIS) OUT: "Editor" ralmeida@SGH402P41Y  
+11:42:08 (ARCGIS) OUT: "VBA" ralmeida@SGH402P41Y  
+11:42:14 (ARCGIS) OUT: "Editor" ralmeida@SGH402P41Y  
+11:42:14 (ARCGIS) OUT: "VBA" ralmeida@SGH402P41Y  
+11:42:28 (ARCGIS) OUT: "Editor" ralmeida@SGH402P41Y  
+11:42:28 (ARCGIS) OUT: "VBA" ralmeida@SGH402P41Y  
+11:42:32 (ARCGIS) OUT: "Editor" asawant@SGH227R9PF  
+11:42:32 (ARCGIS) OUT: "VBA" asawant@SGH227R9PF  
+11:42:33 (ARCGIS) OUT: "ARC/INFO" mcuevas@SGH227R9P8  
+11:42:33 (ARCGIS) OUT: "VBA" mcuevas@SGH227R9P8  
+11:42:46 (ARCGIS) OUT: "Editor" asawant@SGH227R9PF  
+11:42:46 (ARCGIS) OUT: "VBA" asawant@SGH227R9PF  
+11:42:47 (ARCGIS) OUT: "Editor" pshih@SGH227R9P9  
+11:42:47 (ARCGIS) OUT: "VBA" pshih@SGH227R9P9  
+11:42:56 (ARCGIS) OUT: "ARC/INFO" mpatel1@SGH227R9P6  
+11:42:58 (ARCGIS) OUT: "Editor" rvrooyen@SGH227R9PD  
+11:42:58 (ARCGIS) OUT: "VBA" rvrooyen@SGH227R9PD  
+11:43:10 (ARCGIS) OUT: "Editor" jjose@SGH227R9PC  
+11:43:10 (ARCGIS) OUT: "VBA" jjose@SGH227R9PC  
+11:43:16 (ARCGIS) OUT: "Editor" pshih@SGH227R9P9  
+11:43:16 (ARCGIS) OUT: "VBA" pshih@SGH227R9P9  
+11:43:18 (ARCGIS) OUT: "Editor" rvrooyen@SGH227R9PD  
+11:43:18 (ARCGIS) OUT: "VBA" rvrooyen@SGH227R9PD  
+11:43:27 (ARCGIS) OUT: "Viewer" cbroadbe@SGH448T6H1  
+11:43:27 (ARCGIS) OUT: "VBA" cbroadbe@SGH448T6H1  
+11:43:29 (ARCGIS) OUT: "ARC/INFO" mcuevas@SGH227R9P8  
+11:43:29 (ARCGIS) OUT: "VBA" mcuevas@SGH227R9P8  
+11:43:36 (ARCGIS) OUT: "Editor" jjose@SGH227R9PC  
+11:43:36 (ARCGIS) OUT: "VBA" jjose@SGH227R9PC  
+11:43:47 (ARCGIS) OUT: "Editor" jjose@SGH227R9PC  
+11:43:47 (ARCGIS) OUT: "VBA" jjose@SGH227R9PC  
+11:43:51 (ARCGIS) SERVER-OUT: Failed to send the message(71) <END>
+11:43:51 (ARCGIS) OUT: "Viewer" nperrie@5CG44804CX  
+11:43:54 (ARCGIS) OUT: "Editor" smoodley@SGH227R9P2  
+11:43:54 (ARCGIS) OUT: "VBA" smoodley@SGH227R9P2  
+11:43:57 (ARCGIS) OUT: "Editor" snaidoo@SGH227R9PB  
+11:43:57 (ARCGIS) OUT: "VBA" snaidoo@SGH227R9PB  
+11:44:42 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) rvrooyen@SGH227R9PD  (License server system does not support this feature. (-18,327))
+11:44:53 (ARCGIS) OUT: "ARC/INFO" mcuevas@SGH227R9P8  
+11:44:56 (ARCGIS) OUT: "Editor" rzhang@SGH227R9P3  
+11:44:56 (ARCGIS) OUT: "VBA" rzhang@SGH227R9P3  
+11:44:56 (ARCGIS) OUT: "VBA" mcuevas@SGH227R9P8  
+11:44:56 (ARCGIS) IN: "ARC/INFO" mpatel1@SGH227R9P6  
+11:44:56 (ARCGIS) OUT: "VBA" mpatel1@SGH227R9P6  
+11:45:02 (ARCGIS) OUT: "ARC/INFO" mcuevas@SGH227R9P8  
+11:45:07 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) mcuevas@SGH227R9P8  (License server system does not support this feature. (-18,327))
+11:45:49 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) rvrooyen@SGH227R9PD  (License server system does not support this feature. (-18,327))
+11:45:54 (ARCGIS) IN: "VBA" asawant@SGH227R9PF  
+11:45:54 (ARCGIS) IN: "Editor" asawant@SGH227R9PF  
+11:46:36 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) rvrooyen@SGH227R9PD  (License server system does not support this feature. (-18,327))
+11:46:56 (ARCGIS) IN: "VBA" mpatel1@SGH227R9P6  
+11:46:56 (ARCGIS) OUT: "ARC/INFO" mpatel1@SGH227R9P6  
+11:47:45 (ARCGIS) OUT: "Editor" rvrooyen@SGH227R9PD  
+11:47:46 (ARCGIS) OUT: "VBA" rvrooyen@SGH227R9PD  
+11:47:47 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) rvrooyen@SGH227R9PD  (License server system does not support this feature. (-18,327))
+11:48:10 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) smoodley@SGH227R9P2  (License server system does not support this feature. (-18,327))
+11:48:48 (ARCGIS) IN: "VBA" rvrooyen@SGH227R9PD  
+11:48:48 (ARCGIS) IN: "Editor" rvrooyen@SGH227R9PD  
+11:48:56 (ARCGIS) IN: "ARC/INFO" mpatel1@SGH227R9P6  
+11:48:56 (ARCGIS) OUT: "VBA" mpatel1@SGH227R9P6  
+11:49:25 (ARCGIS) OUT: "Editor" rvrooyen@SGH227R9PD  
+11:49:25 (ARCGIS) OUT: "VBA" rvrooyen@SGH227R9PD  
+11:49:27 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) rvrooyen@SGH227R9PD  (License server system does not support this feature. (-18,327))
+11:50:27 (ARCGIS) IN: "VBA" rvrooyen@SGH227R9PD  
+11:50:27 (ARCGIS) IN: "Editor" rvrooyen@SGH227R9PD  
+11:50:56 (ARCGIS) IN: "VBA" mpatel1@SGH227R9P6  
+11:50:56 (ARCGIS) OUT: "ARC/INFO" mpatel1@SGH227R9P6  
+11:52:23 (ARCGIS) OUT: "Editor" rvrooyen@SGH227R9PD  
+11:52:24 (ARCGIS) OUT: "VBA" rvrooyen@SGH227R9PD  
+11:52:25 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) rvrooyen@SGH227R9PD  (License server system does not support this feature. (-18,327))
+11:52:56 (ARCGIS) IN: "ARC/INFO" mpatel1@SGH227R9P6  
+11:52:56 (ARCGIS) OUT: "VBA" mpatel1@SGH227R9P6  
+11:54:24 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) rvrooyen@SGH227R9PD  (License server system does not support this feature. (-18,327))
+11:54:24 (ARCGIS) IN: "VBA" mpatel1@SGH227R9P6  
+11:54:58 (ARCGIS) IN: "VBA" rvrooyen@SGH227R9PD  
+11:54:58 (ARCGIS) IN: "Editor" rvrooyen@SGH227R9PD  
+11:55:25 (ARCGIS) IN: "VBA" rvrooyen@SGH227R9PD  
+11:55:25 (ARCGIS) IN: "Editor" rvrooyen@SGH227R9PD  
+11:55:46 (ARCGIS) OUT: "Editor" rvrooyen@SGH227R9PD  
+11:55:46 (ARCGIS) IN: "Editor" rvrooyen@SGH227R9PD  
+11:55:47 (ARCGIS) OUT: "Editor" rvrooyen@SGH227R9PD  
+11:58:54 (ARCGIS) OUT: "ARC/INFO" mcuevas@SGH227R9P8  
+11:58:55 (ARCGIS) IN: "ARC/INFO" mcuevas@SGH227R9P8  
+11:58:55 (ARCGIS) IN: "VBA" mcuevas@SGH227R9P8  
+12:03:45 (ARCGIS) IN: "Editor" rvrooyen@SGH227R9PD  
+12:03:48 (ARCGIS) OUT: "ARC/INFO" rvrooyen@SGH227R9PD  
+12:04:23 (ARCGIS) IN: "ARC/INFO" rvrooyen@SGH227R9PD  
+13:03:36 (ARCGIS) OUT: "ARC/INFO" mcuevas@SGH227R9P8  
+13:03:39 (ARCGIS) OUT: "VBA" mcuevas@SGH227R9P8  
+13:03:46 (ARCGIS) OUT: "ARC/INFO" mcuevas@SGH227R9P8  
+13:04:06 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) mcuevas@SGH227R9P8  (License server system does not support this feature. (-18,327))
+13:18:54 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) mcuevas@SGH227R9P8  (License server system does not support this feature. (-18,327))
+13:19:57 (ARCGIS) OUT: "Editor" rvrooyen@SGH227R9PD  
+13:20:01 (ARCGIS) OUT: "VBA" rvrooyen@SGH227R9PD  
+13:20:09 (ARCGIS) OUT: "Editor" rvrooyen@SGH227R9PD  
+13:20:27 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) rvrooyen@SGH227R9PD  (License server system does not support this feature. (-18,327))
+13:20:45 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) rvrooyen@SGH227R9PD  (License server system does not support this feature. (-18,327))
+13:21:25 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) rvrooyen@SGH227R9PD  (License server system does not support this feature. (-18,327))
+13:22:17 (ARCGIS) OUT: "Editor" rvrooyen@SGH227R9PD  
+13:22:18 (ARCGIS) OUT: "VBA" rvrooyen@SGH227R9PD  
+13:22:19 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) rvrooyen@SGH227R9PD  (License server system does not support this feature. (-18,327))
+13:22:54 (ARCGIS) IN: "Editor" rvrooyen@SGH227R9PD  
+13:22:58 (ARCGIS) IN: "VBA" rvrooyen@SGH227R9PD  
+13:22:58 (ARCGIS) IN: "Editor" rvrooyen@SGH227R9PD  
+13:24:02 (ARCGIS) IN: "VBA" rvrooyen@SGH227R9PD  
+13:24:02 (ARCGIS) IN: "Editor" rvrooyen@SGH227R9PD  
+13:24:46 (ARCGIS) OUT: "Editor" rvrooyen@SGH227R9PD  
+13:24:46 (ARCGIS) IN: "Editor" rvrooyen@SGH227R9PD  
+13:24:46 (ARCGIS) OUT: "Editor" rvrooyen@SGH227R9PD  
+13:27:46 (ARCGIS) OUT: "ARC/INFO" mcuevas@SGH227R9P8  
+13:27:49 (ARCGIS) OUT: "VBA" mcuevas@SGH227R9P8  
+13:27:55 (ARCGIS) OUT: "ARC/INFO" mcuevas@SGH227R9P8  
+13:28:15 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) mcuevas@SGH227R9P8  (License server system does not support this feature. (-18,327))
+13:29:53 (ARCGIS) OUT: "Editor" asawant@SGH227R9PF  
+13:29:56 (ARCGIS) OUT: "VBA" asawant@SGH227R9PF  
+13:30:19 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) asawant@SGH227R9PF  (License server system does not support this feature. (-18,327))
+13:30:28 (ARCGIS) OUT: "Editor" asawant@SGH227R9PF  
+13:32:37 (ARCGIS) IN: "Editor" rvrooyen@SGH227R9PD  
+13:32:39 (ARCGIS) OUT: "ARC/INFO" rvrooyen@SGH227R9PD  
+13:33:14 (ARCGIS) IN: "ARC/INFO" rvrooyen@SGH227R9PD  
+13:33:25 (ARCGIS) OUT: "ARC/INFO" mcuevas@SGH227R9P8  
+13:33:28 (ARCGIS) OUT: "VBA" mcuevas@SGH227R9P8  
+13:33:34 (ARCGIS) OUT: "ARC/INFO" mcuevas@SGH227R9P8  
+13:33:53 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) mcuevas@SGH227R9P8  (License server system does not support this feature. (-18,327))
+13:39:18 (ARCGIS) OUT: "ARC/INFO" mpatel1@SGH227R9P6  
+13:39:19 (ARCGIS) OUT: "VBA" mpatel1@SGH227R9P6  
+13:39:20 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) mpatel1@SGH227R9P6  (License server system does not support this feature. (-18,327))
+13:45:15 (ARCGIS) IN: "ARC/INFO" mcuevas@SGH227R9P8  
+13:49:23 (ARCGIS) IN: "ARC/INFO" mpatel1@SGH227R9P6  
+13:49:23 (ARCGIS) IN: "VBA" mpatel1@SGH227R9P6  
+13:49:28 (ARCGIS) OUT: "ARC/INFO" mpatel1@SGH227R9P6  
+13:49:28 (ARCGIS) OUT: "VBA" mpatel1@SGH227R9P6  
+13:49:29 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) mpatel1@SGH227R9P6  (License server system does not support this feature. (-18,327))
+13:59:07 (ARCGIS) IN: "ARC/INFO" mcuevas@SGH227R9P8  
+14:00:28 (ARCGIS) OUT: "Editor" rzhang@SGH227R9P3  
+14:00:29 (ARCGIS) OUT: "VBA" rzhang@SGH227R9P3  
+14:00:29 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) rzhang@SGH227R9P3  (License server system does not support this feature. (-18,327))
+14:01:12 (ARCGIS) OUT: "Editor" rvrooyen@SGH227R9PD  
+14:01:17 (ARCGIS) OUT: "VBA" rvrooyen@SGH227R9PD  
+14:01:25 (ARCGIS) OUT: "Editor" rvrooyen@SGH227R9PD  
+14:01:29 (ARCGIS) OUT: "Editor" rvrooyen@SGH227R9PD  
+14:01:29 (ARCGIS) OUT: "VBA" rvrooyen@SGH227R9PD  
+14:01:30 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) rvrooyen@SGH227R9PD  (License server system does not support this feature. (-18,327))
+14:01:30 (ARCGIS) OUT: "Editor" rvrooyen@SGH227R9PD  
+14:01:30 (ARCGIS) OUT: "VBA" rvrooyen@SGH227R9PD  
+14:01:31 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) rvrooyen@SGH227R9PD  (License server system does not support this feature. (-18,327))
+14:01:39 (ARCGIS) IN: "VBA" rvrooyen@SGH227R9PD  
+14:01:39 (ARCGIS) IN: "Editor" rvrooyen@SGH227R9PD  
+14:01:41 (ARCGIS) IN: "VBA" rvrooyen@SGH227R9PD  
+14:01:41 (ARCGIS) IN: "Editor" rvrooyen@SGH227R9PD  
+14:01:57 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) rvrooyen@SGH227R9PD  (License server system does not support this feature. (-18,327))
+14:02:16 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) rvrooyen@SGH227R9PD  (License server system does not support this feature. (-18,327))
+14:05:27 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) rvrooyen@SGH227R9PD  (License server system does not support this feature. (-18,327))
+14:08:15 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) rvrooyen@SGH227R9PD  (License server system does not support this feature. (-18,327))
+14:09:39 (ARCGIS) IN: "VBA" mpatel1@SGH227R9P6  
+14:09:39 (ARCGIS) IN: "ARC/INFO" mpatel1@SGH227R9P6  
+14:09:44 (ARCGIS) OUT: "ARC/INFO" mpatel1@SGH227R9P6  
+14:09:48 (ARCGIS) IN: "Viewer" nperrie@5CG44804CX  
+14:10:39 (ARCGIS) OUT: "VBA" mpatel1@SGH227R9P6  
+14:10:42 (ARCGIS) OUT: "Publisher" mpatel1@SGH227R9P6  
+14:10:48 (ARCGIS) OUT: "ARC/INFO" mpatel1@SGH227R9P6  
+14:11:16 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) mpatel1@SGH227R9P6  (License server system does not support this feature. (-18,327))
+14:12:44 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) rvrooyen@SGH227R9PD  (License server system does not support this feature. (-18,327))
+14:13:29 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) rvrooyen@SGH227R9PD  (License server system does not support this feature. (-18,327))
+14:14:50 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) rvrooyen@SGH227R9PD  (License server system does not support this feature. (-18,327))
+14:15:54 (ARCGIS) OUT: "Editor" asawant@SGH227R9PF  
+14:15:57 (ARCGIS) OUT: "VBA" asawant@SGH227R9PF  
+14:16:05 (ARCGIS) OUT: "Editor" asawant@SGH227R9PF  
+14:17:26 (ARCGIS) IN: "ARC/INFO" mpatel1@SGH227R9P6  
+14:17:28 (ARCGIS) IN: "VBA" mpatel1@SGH227R9P6  
+14:17:28 (ARCGIS) IN: "ARC/INFO" mpatel1@SGH227R9P6  
+14:17:28 (ARCGIS) IN: "Publisher" mpatel1@SGH227R9P6  
+14:23:48 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) smoodley@SGH227R9P2  (License server system does not support this feature. (-18,327))
+14:23:50 (ARCGIS) OUT: "ARC/INFO" mpatel1@SGH227R9P6  
+14:24:44 (ARCGIS) OUT: "VBA" mpatel1@SGH227R9P6  
+14:24:46 (ARCGIS) OUT: "Publisher" mpatel1@SGH227R9P6  
+14:24:51 (ARCGIS) OUT: "ARC/INFO" mpatel1@SGH227R9P6  
+14:24:52 (ARCGIS) OUT: "VBA" mpatel1@SGH227R9P6  
+14:24:52 (ARCGIS) OUT: "ARC/INFO" mpatel1@SGH227R9P6  
+14:24:53 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) mpatel1@SGH227R9P6  (License server system does not support this feature. (-18,327))
+14:25:16 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) mpatel1@SGH227R9P6  (License server system does not support this feature. (-18,327))
+14:26:12 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) rvrooyen@SGH227R9PD  (License server system does not support this feature. (-18,327))
+14:28:14 (ARCGIS) IN: "ARC/INFO" mpatel1@SGH227R9P6  
+14:28:14 (ARCGIS) IN: "VBA" mpatel1@SGH227R9P6  
+14:28:14 (ARCGIS) IN: "ARC/INFO" mpatel1@SGH227R9P6  
+14:28:14 (ARCGIS) IN: "Publisher" mpatel1@SGH227R9P6  
+14:28:29 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) smoodley@SGH227R9P2  (License server system does not support this feature. (-18,327))
+14:29:03 (ARCGIS) OUT: "ARC/INFO" mpatel1@SGH227R9P6  
+14:34:55 (ARCGIS) IN: "Editor" asawant@SGH227R9PF  
+14:34:56 (ARCGIS) IN: "VBA" asawant@SGH227R9PF  
+14:34:56 (ARCGIS) IN: "Editor" asawant@SGH227R9PF  
+14:35:26 (ARCGIS) IN: "ARC/INFO" mpatel1@SGH227R9P6  
+14:35:27 (ARCGIS) IN: "VBA" mpatel1@SGH227R9P6  
+14:35:27 (ARCGIS) IN: "ARC/INFO" mpatel1@SGH227R9P6  
+14:40:58 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) rvrooyen@SGH227R9PD  (License server system does not support this feature. (-18,327))
+14:41:23 (ARCGIS) OUT: "ARC/INFO" mpatel1@SGH227R9P6  
+14:42:16 (ARCGIS) OUT: "VBA" mpatel1@SGH227R9P6  
+14:42:18 (ARCGIS) OUT: "Publisher" mpatel1@SGH227R9P6  
+14:42:24 (ARCGIS) OUT: "ARC/INFO" mpatel1@SGH227R9P6  
+14:42:38 (ARCGIS) IN: "VBA" mcuevas@SGH227R9P8  
+14:42:38 (ARCGIS) IN: "ARC/INFO" mcuevas@SGH227R9P8  
+14:43:40 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) mpatel1@SGH227R9P6  (License server system does not support this feature. (-18,327))
+14:45:24 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) rvrooyen@SGH227R9PD  (License server system does not support this feature. (-18,327))
+14:46:58 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) rvrooyen@SGH227R9PD  (License server system does not support this feature. (-18,327))
+14:47:42 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) smoodley@SGH227R9P2  (License server system does not support this feature. (-18,327))
+14:48:43 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) rvrooyen@SGH227R9PD  (License server system does not support this feature. (-18,327))
+14:49:44 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) rvrooyen@SGH227R9PD  (License server system does not support this feature. (-18,327))
+14:49:53 (ARCGIS) IN: "ARC/INFO" mpatel1@SGH227R9P6  
+14:49:54 (ARCGIS) IN: "VBA" mpatel1@SGH227R9P6  
+14:49:54 (ARCGIS) IN: "ARC/INFO" mpatel1@SGH227R9P6  
+14:49:54 (ARCGIS) IN: "Publisher" mpatel1@SGH227R9P6  
+14:49:58 (ARCGIS) OUT: "ARC/INFO" mpatel1@SGH227R9P6  
+14:50:52 (ARCGIS) OUT: "VBA" mpatel1@SGH227R9P6  
+14:50:54 (ARCGIS) OUT: "Publisher" mpatel1@SGH227R9P6  
+14:51:00 (ARCGIS) OUT: "ARC/INFO" mpatel1@SGH227R9P6  
+14:51:29 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) mpatel1@SGH227R9P6  (License server system does not support this feature. (-18,327))
+14:51:48 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) mpatel1@SGH227R9P6  (License server system does not support this feature. (-18,327))
+14:52:24 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) mpatel1@SGH227R9P6  (License server system does not support this feature. (-18,327))
+14:52:58 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) mpatel1@SGH227R9P6  (License server system does not support this feature. (-18,327))
+14:54:10 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) smoodley@SGH227R9P2  (License server system does not support this feature. (-18,327))
+14:57:27 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) mpatel1@SGH227R9P6  (License server system does not support this feature. (-18,327))
+14:57:54 (ARCGIS) IN: "VBA" cbroadbe@SGH448T6H1  
+14:57:54 (ARCGIS) IN: "Viewer" cbroadbe@SGH448T6H1  
+15:00:36 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) mpatel1@SGH227R9P6  (License server system does not support this feature. (-18,327))
+15:00:51 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) mpatel1@SGH227R9P6  (License server system does not support this feature. (-18,327))
+15:03:16 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) mpatel1@SGH227R9P6  (License server system does not support this feature. (-18,327))
+15:03:56 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) rvrooyen@SGH227R9PD  (License server system does not support this feature. (-18,327))
+15:03:59 (ARCGIS) IN: "ARC/INFO" mcuevas@SGH227R9P8  
+15:04:13 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) rvrooyen@SGH227R9PD  (License server system does not support this feature. (-18,327))
+15:04:26 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) rvrooyen@SGH227R9PD  (License server system does not support this feature. (-18,327))
+15:05:09 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) rvrooyen@SGH227R9PD  (License server system does not support this feature. (-18,327))
+15:05:16 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) rvrooyen@SGH227R9PD  (License server system does not support this feature. (-18,327))
+15:07:15 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) mpatel1@SGH227R9P6  (License server system does not support this feature. (-18,327))
+15:07:54 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) mpatel1@SGH227R9P6  (License server system does not support this feature. (-18,327))
+15:09:08 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) mpatel1@SGH227R9P6  (License server system does not support this feature. (-18,327))
+15:09:32 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) rvrooyen@SGH227R9PD  (License server system does not support this feature. (-18,327))
+15:10:12 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) rvrooyen@SGH227R9PD  (License server system does not support this feature. (-18,327))
+15:10:47 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) mpatel1@SGH227R9P6  (License server system does not support this feature. (-18,327))
+15:11:13 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) mpatel1@SGH227R9P6  (License server system does not support this feature. (-18,327))
+15:11:28 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) rvrooyen@SGH227R9PD  (License server system does not support this feature. (-18,327))
+15:11:39 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) rvrooyen@SGH227R9PD  (License server system does not support this feature. (-18,327))
+15:11:42 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) mpatel1@SGH227R9P6  (License server system does not support this feature. (-18,327))
+15:11:46 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) rvrooyen@SGH227R9PD  (License server system does not support this feature. (-18,327))
+15:12:07 (ARCGIS) IN: "VBA" rvrooyen@SGH227R9PD  
+15:12:07 (ARCGIS) IN: "Editor" rvrooyen@SGH227R9PD  
+15:12:14 (ARCGIS) IN: "VBA" rvrooyen@SGH227R9PD  
+15:12:14 (ARCGIS) IN: "Editor" rvrooyen@SGH227R9PD  
+15:12:27 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) smoodley@SGH227R9P2  (License server system does not support this feature. (-18,327))
+15:12:45 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) mpatel1@SGH227R9P6  (License server system does not support this feature. (-18,327))
+15:12:56 (ARCGIS) OUT: "Editor" rvrooyen@SGH227R9PD  
+15:13:00 (ARCGIS) OUT: "VBA" rvrooyen@SGH227R9PD  
+15:13:08 (ARCGIS) OUT: "Editor" rvrooyen@SGH227R9PD  
+15:13:35 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) smoodley@SGH227R9P2  (License server system does not support this feature. (-18,327))
+15:14:43 (ARCGIS) OUT: "Editor" rvrooyen@SGH227R9PD  
+15:14:43 (ARCGIS) OUT: "VBA" rvrooyen@SGH227R9PD  
+15:14:45 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) rvrooyen@SGH227R9PD  (License server system does not support this feature. (-18,327))
+15:15:34 (ARCGIS) IN: "VBA" rvrooyen@SGH227R9PD  
+15:15:34 (ARCGIS) IN: "Editor" rvrooyen@SGH227R9PD  
+15:15:42 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) smoodley@SGH227R9P2  (License server system does not support this feature. (-18,327))
+15:15:56 (ARCGIS) OUT: "Viewer" nperrie@5CG44804CX  
+15:17:13 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) rvrooyen@SGH227R9PD  (License server system does not support this feature. (-18,327))
+15:17:40 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) rvrooyen@SGH227R9PD  (License server system does not support this feature. (-18,327))
+15:18:04 (ARCGIS) IN: "Editor" rvrooyen@SGH227R9PD  
+15:18:05 (ARCGIS) IN: "VBA" rvrooyen@SGH227R9PD  
+15:18:05 (ARCGIS) IN: "Editor" rvrooyen@SGH227R9PD  
+15:18:12 (ARCGIS) OUT: "Editor" rvrooyen@SGH227R9PD  
+15:18:13 (ARCGIS) OUT: "VBA" rvrooyen@SGH227R9PD  
+15:18:14 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) rvrooyen@SGH227R9PD  (License server system does not support this feature. (-18,327))
+15:20:55 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) smoodley@SGH227R9P2  (License server system does not support this feature. (-18,327))
+15:22:36 (ARCGIS) IN: "VBA" rvrooyen@SGH227R9PD  
+15:22:36 (ARCGIS) IN: "Editor" rvrooyen@SGH227R9PD  
+15:22:42 (ARCGIS) OUT: "Editor" rvrooyen@SGH227R9PD  
+15:22:42 (ARCGIS) IN: "Editor" rvrooyen@SGH227R9PD  
+15:22:43 (ARCGIS) OUT: "Editor" rvrooyen@SGH227R9PD  
+15:22:45 (ARCGIS) IN: "Editor" rvrooyen@SGH227R9PD  
+15:23:03 (ARCGIS) OUT: "Editor" rvrooyen@SGH227R9PD  
+15:23:08 (ARCGIS) OUT: "VBA" rvrooyen@SGH227R9PD  
+15:23:16 (ARCGIS) OUT: "Editor" rvrooyen@SGH227R9PD  
+15:23:43 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) mpatel1@SGH227R9P6  (License server system does not support this feature. (-18,327))
+15:24:04 (ARCGIS) IN: "Editor" rvrooyen@SGH227R9PD  
+15:24:05 (ARCGIS) IN: "VBA" rvrooyen@SGH227R9PD  
+15:24:05 (ARCGIS) IN: "Editor" rvrooyen@SGH227R9PD  
+15:28:08 (ARCGIS) IN: "ARC/INFO" mcuevas@SGH227R9P8  
+15:28:47 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) smoodley@SGH227R9P2  (License server system does not support this feature. (-18,327))
+15:29:33 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) smoodley@SGH227R9P2  (License server system does not support this feature. (-18,327))
+15:30:41 (ARCGIS) IN: "Editor" asawant@SGH227R9PF  
+15:31:42 (ARCGIS) DENIED: "ARC/INFO" rvrooyen@SGH227R9PD  (Licensed number of users already reached. (-4,342))
+15:31:42 (ARCGIS) DENIED: "ARC/INFO" rvrooyen@SGH227R9PD  (Licensed number of users already reached. (-4,342:10054 ""))
+15:31:42 (ARCGIS) OUT: "Editor" rvrooyen@SGH227R9PD  
+15:32:07 (ARCGIS) OUT: "Editor" rvrooyen@SGH227R9PD  
+15:32:07 (ARCGIS) OUT: "VBA" rvrooyen@SGH227R9PD  
+15:32:09 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) rvrooyen@SGH227R9PD  (License server system does not support this feature. (-18,327))
+15:33:16 (ARCGIS) IN: "Editor" rvrooyen@SGH227R9PD  
+15:33:18 (ARCGIS) DENIED: "ARC/INFO" rvrooyen@SGH227R9PD  (Licensed number of users already reached. (-4,342))
+15:33:18 (ARCGIS) DENIED: "ARC/INFO" rvrooyen@SGH227R9PD  (Licensed number of users already reached. (-4,342:10054 ""))
+15:33:18 (ARCGIS) OUT: "Editor" rvrooyen@SGH227R9PD  
+15:33:47 (ARCGIS) IN: "ARC/INFO" mcuevas@SGH227R9P8  
+15:37:55 (ARCGIS) IN: "VBA" rvrooyen@SGH227R9PD  
+15:37:55 (ARCGIS) IN: "Editor" rvrooyen@SGH227R9PD  
+15:38:02 (ARCGIS) OUT: "Editor" rvrooyen@SGH227R9PD  
+15:38:02 (ARCGIS) OUT: "VBA" rvrooyen@SGH227R9PD  
+15:38:03 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) rvrooyen@SGH227R9PD  (License server system does not support this feature. (-18,327))
+15:38:17 (ARCGIS) IN: "VBA" asawant@SGH227R9PF  
+15:38:17 (ARCGIS) IN: "Editor" asawant@SGH227R9PF  
+15:38:17 (ARCGIS) IN: "VBA" rvrooyen@SGH227R9PD  
+15:38:17 (ARCGIS) IN: "Editor" rvrooyen@SGH227R9PD  
+15:38:33 (ARCGIS) IN: "Editor" rvrooyen@SGH227R9PD  
+15:38:35 (ARCGIS) IN: "VBA" mcuevas@SGH227R9P8  
+15:38:35 (ARCGIS) IN: "ARC/INFO" mcuevas@SGH227R9P8  
+15:38:39 (ARCGIS) OUT: "Editor" rvrooyen@SGH227R9PD  
+15:38:39 (ARCGIS) OUT: "VBA" rvrooyen@SGH227R9PD  
+15:38:40 (ARCGIS) IN: "VBA" mcuevas@SGH227R9P8  
+15:38:40 (ARCGIS) IN: "ARC/INFO" mcuevas@SGH227R9P8  
+15:38:40 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) rvrooyen@SGH227R9PD  (License server system does not support this feature. (-18,327))
+15:38:43 (ARCGIS) IN: "VBA" mcuevas@SGH227R9P8  
+15:38:43 (ARCGIS) IN: "ARC/INFO" mcuevas@SGH227R9P8  
+15:38:47 (ARCGIS) IN: "VBA" mcuevas@SGH227R9P8  
+15:38:47 (ARCGIS) IN: "ARC/INFO" mcuevas@SGH227R9P8  
+15:42:04 (ARCGIS) (@ARCGIS-SLOG@) ===============================================
+15:42:04 (ARCGIS) (@ARCGIS-SLOG@) === Last 10 Client Requests Processing Time (in ms) ===
+15:42:04 (ARCGIS) (@ARCGIS-SLOG@) Time: Thu Oct 08 2015 15:42:04 New Zealand Daylight Time
+15:42:04 (ARCGIS) (@ARCGIS-SLOG@) Request processing time, when, #concurrent clients, (private bytes (in KB)), client info (user, node, FD)
+15:42:04 (ARCGIS) (@ARCGIS-SLOG@) 00000000 ms at 15:41:59(10/8/2015),#20,(5116K),(snaidoo,SGH227R9PB,788)
+15:42:04 (ARCGIS) (@ARCGIS-SLOG@) 00000000 ms at 15:41:58(10/8/2015),#20,(5116K),(mpatel1,SGH227R9P6,860)
+15:42:04 (ARCGIS) (@ARCGIS-SLOG@) 00000000 ms at 15:41:57(10/8/2015),#20,(5116K),(nperrie,5CG44804CX,716)
+15:42:04 (ARCGIS) (@ARCGIS-SLOG@) 00000000 ms at 15:41:55(10/8/2015),#20,(5116K),(smoodley,SGH227R9P2,780)
+15:42:04 (ARCGIS) (@ARCGIS-SLOG@) 00000000 ms at 15:41:55(10/8/2015),#20,(5116K),(asawant,SGH227R9PF,700)
+15:42:04 (ARCGIS) (@ARCGIS-SLOG@) 00000000 ms at 15:41:49(10/8/2015),#20,(5116K),(jjose,SGH227R9PC,728)
+15:42:04 (ARCGIS) (@ARCGIS-SLOG@) 00000000 ms at 15:41:37(10/8/2015),#20,(5116K),(jjose,SGH227R9PC,692)
+15:42:04 (ARCGIS) (@ARCGIS-SLOG@) 00000000 ms at 15:41:18(10/8/2015),#20,(5116K),(pshih,SGH227R9P9,704)
+15:42:04 (ARCGIS) (@ARCGIS-SLOG@) 00000000 ms at 15:41:12(10/8/2015),#20,(5116K),(jjose,SGH227R9PC,708)
+15:42:04 (ARCGIS) (@ARCGIS-SLOG@) 00000000 ms at 15:40:57(10/8/2015),#20,(5116K),(rzhang,SGH227R9P3,800)
+15:42:04 (ARCGIS) (@ARCGIS-SLOG@) 
+15:42:04 (ARCGIS) (@ARCGIS-SLOG@) === Top 10 Peak Client Requests Processing Time (in ms) ===
+15:42:04 (ARCGIS) (@ARCGIS-SLOG@) Time: Thu Oct 08 2015 15:42:04 New Zealand Daylight Time
+15:42:04 (ARCGIS) (@ARCGIS-SLOG@) Request processing time, when, #concurrent clients, (private bytes (in KB)), client info (user, node, FD)
+15:42:04 (ARCGIS) (@ARCGIS-SLOG@) 00000016 ms at 11:44:47(10/8/2015),#21,(4784K),(pshih,SGH227R9P9,720)
+15:42:04 (ARCGIS) (@ARCGIS-SLOG@) 00000016 ms at 12:07:27(10/8/2015),#21,(4924K),(cbroadbe,SGH448T6H1,752)
+15:42:04 (ARCGIS) (@ARCGIS-SLOG@) 00000016 ms at 11:44:53(10/8/2015),#22,(4816K),(mcuevas,SGH227R9P8,760)
+15:42:04 (ARCGIS) (@ARCGIS-SLOG@) 00000016 ms at 12:50:56(10/8/2015),#21,(4924K),(rzhang,SGH227R9P3,800)
+15:42:04 (ARCGIS) (@ARCGIS-SLOG@) 00000016 ms at 13:17:19(10/8/2015),#23,(4936K),(rvrooyen,SGH227R9PD,768)
+15:42:04 (ARCGIS) (@ARCGIS-SLOG@) 00000016 ms at 13:19:57(10/8/2015),#24,(4936K),(rvrooyen,SGH227R9PD,680)
+15:42:04 (ARCGIS) (@ARCGIS-SLOG@) 00000016 ms at 13:20:47(10/8/2015),#25,(4936K),(asawant,SGH227R9PF,748)
+15:42:04 (ARCGIS) (@ARCGIS-SLOG@) 00000016 ms at 13:51:28(10/8/2015),#29,(4948K),(mpatel1,SGH227R9P6,772)
+15:42:04 (ARCGIS) (@ARCGIS-SLOG@) 00000016 ms at 14:02:15(10/8/2015),#31,(5080K),(ralmeida,SGH402P41Y,712)
+15:42:04 (ARCGIS) (@ARCGIS-SLOG@) 00000016 ms at 14:25:28(10/8/2015),#34,(5092K),(cbroadbe,SGH448T6H1,752)
+15:42:04 (ARCGIS) (@ARCGIS-SLOG@) 
+15:42:04 (ARCGIS) (@ARCGIS-SLOG@) === Top 10 Peak In-house Operations time (in ms) ===
+15:42:04 (ARCGIS) (@ARCGIS-SLOG@) NOTE: Peak times greater than 4 seconds get recorded.
+15:42:04 (ARCGIS) (@ARCGIS-SLOG@) Time: Thu Oct 08 2015 15:42:04 New Zealand Daylight Time
+15:42:04 (ARCGIS) (@ARCGIS-SLOG@) In-house operation time, when, #concurrent clients
+15:42:04 (ARCGIS) (@ARCGIS-SLOG@) 
+15:42:04 (ARCGIS) (@ARCGIS-SLOG@) === Active Connections Info ===
+15:42:04 (ARCGIS) (@ARCGIS-SLOG@) Peak active connections #34 attempted at Thu Oct 08 2015 14:24:52 New Zealand Daylight Time
+15:42:04 (ARCGIS) (@ARCGIS-SLOG@) 
+15:42:04 (ARCGIS) (@ARCGIS-SLOG@) === Memory Usage Info ===
+15:42:04 (ARCGIS) (@ARCGIS-SLOG@) Peak private bytes 6260K attempted at Thu Oct 08 2015 15:25:47 New Zealand Daylight Time
+15:42:04 (ARCGIS) (@ARCGIS-SLOG@) ===============================================
+15:42:28 (ARCGIS) OUT: "ARC/INFO" rvrooyen@SGH227R9PD  
+15:44:47 (ARCGIS) IN: "VBA" rvrooyen@SGH227R9PD  
+15:44:47 (ARCGIS) IN: "Editor" rvrooyen@SGH227R9PD  
+15:44:51 (ARCGIS) OUT: "Editor" rvrooyen@SGH227R9PD  
+15:44:51 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) mpatel1@SGH227R9P6  (License server system does not support this feature. (-18,327))
+15:44:52 (ARCGIS) OUT: "VBA" rvrooyen@SGH227R9PD  
+15:44:53 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) rvrooyen@SGH227R9PD  (License server system does not support this feature. (-18,327))
+15:44:57 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) mpatel1@SGH227R9P6  (License server system does not support this feature. (-18,327))
+15:45:04 (ARCGIS) IN: "VBA" rvrooyen@SGH227R9PD  
+15:45:04 (ARCGIS) IN: "Editor" rvrooyen@SGH227R9PD  
+15:45:05 (ARCGIS) OUT: "Viewer" rzhang@SGH227R9P3  
+15:45:05 (ARCGIS) IN: "Viewer" rzhang@SGH227R9P3  
+15:45:21 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) asawant@SGH227R9PF  (License server system does not support this feature. (-18,327))
+15:51:04 (ARCGIS) DENIED: "ARC/INFO" mcuevas@SGH227R9P8  (Licensed number of users already reached. (-4,342))
+15:51:04 (ARCGIS) DENIED: "ARC/INFO" mcuevas@SGH227R9P8  (Licensed number of users already reached. (-4,342:10054 ""))
+15:51:52 (ARCGIS) OUT: "Editor" rvrooyen@SGH227R9PD  
+15:51:53 (ARCGIS) OUT: "VBA" rvrooyen@SGH227R9PD  
+15:51:54 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) rvrooyen@SGH227R9PD  (License server system does not support this feature. (-18,327))
+15:51:56 (ARCGIS) OUT: "Editor" mcuevas@SGH227R9P8  
+15:51:56 (ARCGIS) OUT: "VBA" mcuevas@SGH227R9P8  
+15:51:59 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) mcuevas@SGH227R9P8  (License server system does not support this feature. (-18,327))
+15:51:59 (ARCGIS) OUT: "Editor" mcuevas@SGH227R9P8  
+15:52:36 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) smoodley@SGH227R9P2  (License server system does not support this feature. (-18,327))
+15:52:39 (ARCGIS) IN: "VBA" snaidoo@SGH227R9PB  
+15:52:39 (ARCGIS) IN: "Editor" snaidoo@SGH227R9PB  
+15:52:40 (ARCGIS) IN: "ARC/INFO" rvrooyen@SGH227R9PD  
+15:52:46 (ARCGIS) IN: "VBA" rvrooyen@SGH227R9PD  
+15:52:46 (ARCGIS) IN: "Editor" rvrooyen@SGH227R9PD  
+15:52:47 (ARCGIS) OUT: "ARC/INFO" rvrooyen@SGH227R9PD  
+15:57:11 (ARCGIS) OUT: "Editor" rvrooyen@SGH227R9PD  
+15:57:11 (ARCGIS) OUT: "VBA" rvrooyen@SGH227R9PD  
+15:57:12 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) rvrooyen@SGH227R9PD  (License server system does not support this feature. (-18,327))
+15:57:28 (ARCGIS) IN: "VBA" rvrooyen@SGH227R9PD  
+15:57:28 (ARCGIS) IN: "Editor" rvrooyen@SGH227R9PD  
+16:00:14 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) smoodley@SGH227R9P2  (License server system does not support this feature. (-18,327))
+16:01:38 (ARCGIS) IN: "Editor" rvrooyen@SGH227R9PD  
+16:06:51 (ARCGIS) OUT: "Editor" rvrooyen@SGH227R9PD  
+16:06:51 (ARCGIS) OUT: "VBA" rvrooyen@SGH227R9PD  
+16:06:52 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) rvrooyen@SGH227R9PD  (License server system does not support this feature. (-18,327))
+16:06:59 (ARCGIS) IN: "VBA" rvrooyen@SGH227R9PD  
+16:06:59 (ARCGIS) IN: "Editor" rvrooyen@SGH227R9PD  
+16:07:16 (ARCGIS) OUT: "Editor" mcuevas@SGH227R9P8  
+16:07:19 (ARCGIS) OUT: "VBA" mcuevas@SGH227R9P8  
+16:07:24 (ARCGIS) OUT: "Editor" mcuevas@SGH227R9P8  
+16:07:39 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) mpatel1@SGH227R9P6  (License server system does not support this feature. (-18,327))
+16:08:10 (ARCGIS) OUT: "Editor" rvrooyen@SGH227R9PD  
+16:08:10 (ARCGIS) OUT: "VBA" rvrooyen@SGH227R9PD  
+16:08:11 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) rvrooyen@SGH227R9PD  (License server system does not support this feature. (-18,327))
+16:08:31 (ARCGIS) IN: "VBA" rvrooyen@SGH227R9PD  
+16:08:31 (ARCGIS) IN: "Editor" rvrooyen@SGH227R9PD  
+16:08:49 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) mcuevas@SGH227R9P8  (License server system does not support this feature. (-18,327))
+16:10:13 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) mpatel1@SGH227R9P6  (License server system does not support this feature. (-18,327))
+16:10:25 (ARCGIS) IN: "ARC/INFO" rvrooyen@SGH227R9PD  
+16:10:55 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) mcuevas@SGH227R9P8  (License server system does not support this feature. (-18,327))
+16:11:04 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) smoodley@SGH227R9P2  (License server system does not support this feature. (-18,327))
+16:11:23 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) smoodley@SGH227R9P2  (License server system does not support this feature. (-18,327))
+16:12:23 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) smoodley@SGH227R9P2  (License server system does not support this feature. (-18,327))
+16:12:31 (ARCGIS) IN: "Editor" mcuevas@SGH227R9P8  
+16:12:32 (ARCGIS) IN: "VBA" mcuevas@SGH227R9P8  
+16:12:32 (ARCGIS) IN: "Editor" mcuevas@SGH227R9P8  
+16:12:50 (ARCGIS) IN: "Editor" mcuevas@SGH227R9P8  
+16:12:50 (ARCGIS) IN: "Editor" mcuevas@SGH227R9P8  
+16:12:50 (ARCGIS) IN: "VBA" mcuevas@SGH227R9P8  
+16:13:59 (ARCGIS) OUT: "ARC/INFO" rvrooyen@SGH227R9PD  
+16:14:04 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) mpatel1@SGH227R9P6  (License server system does not support this feature. (-18,327))
+16:14:25 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) mpatel1@SGH227R9P6  (License server system does not support this feature. (-18,327))
+16:14:53 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) mpatel1@SGH227R9P6  (License server system does not support this feature. (-18,327))
+16:20:13 (ARCGIS) OUT: "Editor" rvrooyen@SGH227R9PD  
+16:20:13 (ARCGIS) OUT: "VBA" rvrooyen@SGH227R9PD  
+16:20:14 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) rvrooyen@SGH227R9PD  (License server system does not support this feature. (-18,327))
+16:21:30 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) mpatel1@SGH227R9P6  (License server system does not support this feature. (-18,327))
+16:22:21 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) mpatel1@SGH227R9P6  (License server system does not support this feature. (-18,327))
+16:22:46 (ARCGIS) IN: "ARC/INFO" rvrooyen@SGH227R9PD  
+16:22:58 (ARCGIS) IN: "VBA" smoodley@SGH227R9P2  
+16:22:58 (ARCGIS) IN: "Editor" smoodley@SGH227R9P2  
+16:23:05 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) mpatel1@SGH227R9P6  (License server system does not support this feature. (-18,327))
+16:23:17 (ARCGIS) OUT: "Editor" rvrooyen@SGH227R9PD  
+16:23:17 (ARCGIS) IN: "Editor" rvrooyen@SGH227R9PD  
+16:23:17 (ARCGIS) OUT: "Editor" rvrooyen@SGH227R9PD  
+16:23:20 (ARCGIS) IN: "Editor" rvrooyen@SGH227R9PD  
+16:29:21 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) mpatel1@SGH227R9P6  (License server system does not support this feature. (-18,327))
+16:30:37 (ARCGIS) IN: "VBA" rvrooyen@SGH227R9PD  
+16:30:37 (ARCGIS) IN: "Editor" rvrooyen@SGH227R9PD  
+16:40:41 (ARCGIS) IN: "ARC/INFO" mpatel1@SGH227R9P6  
+16:40:42 (ARCGIS) IN: "VBA" mpatel1@SGH227R9P6  
+16:40:42 (ARCGIS) IN: "ARC/INFO" mpatel1@SGH227R9P6  
+16:40:42 (ARCGIS) IN: "Publisher" mpatel1@SGH227R9P6  
+16:40:47 (ARCGIS) OUT: "ARC/INFO" mpatel1@SGH227R9P6  
+16:40:47 (ARCGIS) OUT: "VBA" mpatel1@SGH227R9P6  
+16:40:49 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) mpatel1@SGH227R9P6  (License server system does not support this feature. (-18,327))
+16:41:12 (ARCGIS) IN: "VBA" mpatel1@SGH227R9P6  
+16:41:12 (ARCGIS) IN: "ARC/INFO" mpatel1@SGH227R9P6  
+16:45:26 (ARCGIS) IN: "VBA" ralmeida@SGH402P41Y  
+16:45:26 (ARCGIS) IN: "Editor" ralmeida@SGH402P41Y  
+16:46:47 (ARCGIS) IN: "VBA" asawant@SGH227R9PF  
+16:46:47 (ARCGIS) IN: "Editor" asawant@SGH227R9PF  
+16:51:00 (ARCGIS) IN: "VBA" ralmeida@SGH402P41Y  
+16:51:00 (ARCGIS) IN: "Editor" ralmeida@SGH402P41Y  
+16:51:13 (ARCGIS) IN: "Editor" pshih@SGH227R9P9  
+16:51:13 (ARCGIS) IN: "VBA" pshih@SGH227R9P9  
+16:51:32 (ARCGIS) IN: "VBA" pshih@SGH227R9P9  
+16:51:32 (ARCGIS) IN: "Editor" pshih@SGH227R9P9  
+16:53:02 (ARCGIS) IN: "VBA" ralmeida@SGH402P41Y  
+16:53:02 (ARCGIS) IN: "Editor" ralmeida@SGH402P41Y  
+16:53:59 (ARCGIS) IN: "VBA" rzhang@SGH227R9P3  
+16:53:59 (ARCGIS) IN: "Editor" rzhang@SGH227R9P3  
+16:54:06 (ARCGIS) IN: "VBA" rzhang@SGH227R9P3  
+16:54:06 (ARCGIS) IN: "Editor" rzhang@SGH227R9P3  
+16:54:18 (ARCGIS) IN: "Viewer" nperrie@5CG44804CX  
+17:12:15 (ARCGIS) IN: "VBA" jjose@SGH227R9PC  
+17:12:15 (ARCGIS) IN: "Editor" jjose@SGH227R9PC  
+17:12:18 (ARCGIS) IN: "VBA" jjose@SGH227R9PC  
+17:12:18 (ARCGIS) IN: "Editor" jjose@SGH227R9PC  
+17:12:20 (ARCGIS) IN: "VBA" jjose@SGH227R9PC  
+17:12:20 (ARCGIS) IN: "Editor" jjose@SGH227R9PC  
+17:47:05 (ARCGIS) TIMESTAMP 10/8/2015
+19:42:05 (ARCGIS) (@ARCGIS-SLOG@) ===============================================
+19:42:05 (ARCGIS) (@ARCGIS-SLOG@) === Last 10 Client Requests Processing Time (in ms) ===
+19:42:05 (ARCGIS) (@ARCGIS-SLOG@) Time: Thu Oct 08 2015 19:42:05 New Zealand Daylight Time
+19:42:05 (ARCGIS) (@ARCGIS-SLOG@) Request processing time, when, #concurrent clients, (private bytes (in KB)), client info (user, node, FD)
+19:42:05 (ARCGIS) (@ARCGIS-SLOG@) 00000000 ms at 17:12:20(10/8/2015),#3,(5156K),(jjose,SGH227R9PC,728)
+19:42:05 (ARCGIS) (@ARCGIS-SLOG@) 00000000 ms at 17:12:18(10/8/2015),#4,(5156K),(jjose,SGH227R9PC,692)
+19:42:05 (ARCGIS) (@ARCGIS-SLOG@) 00000000 ms at 17:12:15(10/8/2015),#5,(5156K),(jjose,SGH227R9PC,708)
+19:42:05 (ARCGIS) (@ARCGIS-SLOG@) 00000000 ms at 17:11:49(10/8/2015),#5,(5156K),(jjose,SGH227R9PC,728)
+19:42:05 (ARCGIS) (@ARCGIS-SLOG@) 00000000 ms at 17:11:38(10/8/2015),#5,(5156K),(jjose,SGH227R9PC,692)
+19:42:05 (ARCGIS) (@ARCGIS-SLOG@) 00000000 ms at 17:11:12(10/8/2015),#5,(5156K),(jjose,SGH227R9PC,708)
+19:42:05 (ARCGIS) (@ARCGIS-SLOG@) 00000000 ms at 17:09:49(10/8/2015),#5,(5156K),(jjose,SGH227R9PC,728)
+19:42:05 (ARCGIS) (@ARCGIS-SLOG@) 00000000 ms at 17:09:38(10/8/2015),#5,(5156K),(jjose,SGH227R9PC,692)
+19:42:05 (ARCGIS) (@ARCGIS-SLOG@) 00000000 ms at 17:09:12(10/8/2015),#5,(5156K),(jjose,SGH227R9PC,708)
+19:42:05 (ARCGIS) (@ARCGIS-SLOG@) 00000000 ms at 17:07:49(10/8/2015),#5,(5156K),(jjose,SGH227R9PC,728)
+19:42:05 (ARCGIS) (@ARCGIS-SLOG@) 
+19:42:05 (ARCGIS) (@ARCGIS-SLOG@) === Top 10 Peak Client Requests Processing Time (in ms) ===
+19:42:05 (ARCGIS) (@ARCGIS-SLOG@) Time: Thu Oct 08 2015 19:42:05 New Zealand Daylight Time
+19:42:05 (ARCGIS) (@ARCGIS-SLOG@) Request processing time, when, #concurrent clients, (private bytes (in KB)), client info (user, node, FD)
+19:42:05 (ARCGIS) (@ARCGIS-SLOG@) 00000016 ms at 11:44:47(10/8/2015),#21,(4784K),(pshih,SGH227R9P9,720)
+19:42:05 (ARCGIS) (@ARCGIS-SLOG@) 00000016 ms at 12:07:27(10/8/2015),#21,(4924K),(cbroadbe,SGH448T6H1,752)
+19:42:05 (ARCGIS) (@ARCGIS-SLOG@) 00000016 ms at 11:44:53(10/8/2015),#22,(4816K),(mcuevas,SGH227R9P8,760)
+19:42:05 (ARCGIS) (@ARCGIS-SLOG@) 00000016 ms at 12:50:56(10/8/2015),#21,(4924K),(rzhang,SGH227R9P3,800)
+19:42:05 (ARCGIS) (@ARCGIS-SLOG@) 00000016 ms at 13:17:19(10/8/2015),#23,(4936K),(rvrooyen,SGH227R9PD,768)
+19:42:05 (ARCGIS) (@ARCGIS-SLOG@) 00000016 ms at 13:19:57(10/8/2015),#24,(4936K),(rvrooyen,SGH227R9PD,680)
+19:42:05 (ARCGIS) (@ARCGIS-SLOG@) 00000016 ms at 13:20:47(10/8/2015),#25,(4936K),(asawant,SGH227R9PF,748)
+19:42:05 (ARCGIS) (@ARCGIS-SLOG@) 00000016 ms at 13:51:28(10/8/2015),#29,(4948K),(mpatel1,SGH227R9P6,772)
+19:42:05 (ARCGIS) (@ARCGIS-SLOG@) 00000016 ms at 14:02:15(10/8/2015),#31,(5080K),(ralmeida,SGH402P41Y,712)
+19:42:05 (ARCGIS) (@ARCGIS-SLOG@) 00000016 ms at 14:25:28(10/8/2015),#34,(5092K),(cbroadbe,SGH448T6H1,752)
+19:42:05 (ARCGIS) (@ARCGIS-SLOG@) 
+19:42:05 (ARCGIS) (@ARCGIS-SLOG@) === Top 10 Peak In-house Operations time (in ms) ===
+19:42:05 (ARCGIS) (@ARCGIS-SLOG@) NOTE: Peak times greater than 4 seconds get recorded.
+19:42:05 (ARCGIS) (@ARCGIS-SLOG@) Time: Thu Oct 08 2015 19:42:05 New Zealand Daylight Time
+19:42:05 (ARCGIS) (@ARCGIS-SLOG@) In-house operation time, when, #concurrent clients
+19:42:05 (ARCGIS) (@ARCGIS-SLOG@) 
+19:42:05 (ARCGIS) (@ARCGIS-SLOG@) === Active Connections Info ===
+19:42:05 (ARCGIS) (@ARCGIS-SLOG@) Peak active connections #34 attempted at Thu Oct 08 2015 14:24:52 New Zealand Daylight Time
+19:42:05 (ARCGIS) (@ARCGIS-SLOG@) 
+19:42:05 (ARCGIS) (@ARCGIS-SLOG@) === Memory Usage Info ===
+19:42:05 (ARCGIS) (@ARCGIS-SLOG@) Peak private bytes 6300K attempted at Thu Oct 08 2015 16:38:49 New Zealand Daylight Time
+19:42:05 (ARCGIS) (@ARCGIS-SLOG@) ===============================================
+23:42:05 (ARCGIS) (@ARCGIS-SLOG@) ===============================================
+23:42:05 (ARCGIS) (@ARCGIS-SLOG@) === Last 10 Client Requests Processing Time (in ms) ===
+23:42:05 (ARCGIS) (@ARCGIS-SLOG@) Time: Thu Oct 08 2015 23:42:05 New Zealand Daylight Time
+23:42:05 (ARCGIS) (@ARCGIS-SLOG@) Request processing time, when, #concurrent clients, (private bytes (in KB)), client info (user, node, FD)
+23:42:05 (ARCGIS) (@ARCGIS-SLOG@) 00000000 ms at 17:12:20(10/8/2015),#3,(5156K),(jjose,SGH227R9PC,728)
+23:42:05 (ARCGIS) (@ARCGIS-SLOG@) 00000000 ms at 17:12:18(10/8/2015),#4,(5156K),(jjose,SGH227R9PC,692)
+23:42:05 (ARCGIS) (@ARCGIS-SLOG@) 00000000 ms at 17:12:15(10/8/2015),#5,(5156K),(jjose,SGH227R9PC,708)
+23:42:05 (ARCGIS) (@ARCGIS-SLOG@) 00000000 ms at 17:11:49(10/8/2015),#5,(5156K),(jjose,SGH227R9PC,728)
+23:42:05 (ARCGIS) (@ARCGIS-SLOG@) 00000000 ms at 17:11:38(10/8/2015),#5,(5156K),(jjose,SGH227R9PC,692)
+23:42:05 (ARCGIS) (@ARCGIS-SLOG@) 00000000 ms at 17:11:12(10/8/2015),#5,(5156K),(jjose,SGH227R9PC,708)
+23:42:05 (ARCGIS) (@ARCGIS-SLOG@) 00000000 ms at 17:09:49(10/8/2015),#5,(5156K),(jjose,SGH227R9PC,728)
+23:42:05 (ARCGIS) (@ARCGIS-SLOG@) 00000000 ms at 17:09:38(10/8/2015),#5,(5156K),(jjose,SGH227R9PC,692)
+23:42:05 (ARCGIS) (@ARCGIS-SLOG@) 00000000 ms at 17:09:12(10/8/2015),#5,(5156K),(jjose,SGH227R9PC,708)
+23:42:05 (ARCGIS) (@ARCGIS-SLOG@) 00000000 ms at 17:07:49(10/8/2015),#5,(5156K),(jjose,SGH227R9PC,728)
+23:42:05 (ARCGIS) (@ARCGIS-SLOG@) 
+23:42:05 (ARCGIS) (@ARCGIS-SLOG@) === Top 10 Peak Client Requests Processing Time (in ms) ===
+23:42:05 (ARCGIS) (@ARCGIS-SLOG@) Time: Thu Oct 08 2015 23:42:05 New Zealand Daylight Time
+23:42:05 (ARCGIS) (@ARCGIS-SLOG@) Request processing time, when, #concurrent clients, (private bytes (in KB)), client info (user, node, FD)
+23:42:05 (ARCGIS) (@ARCGIS-SLOG@) 00000016 ms at 11:44:47(10/8/2015),#21,(4784K),(pshih,SGH227R9P9,720)
+23:42:05 (ARCGIS) (@ARCGIS-SLOG@) 00000016 ms at 12:07:27(10/8/2015),#21,(4924K),(cbroadbe,SGH448T6H1,752)
+23:42:05 (ARCGIS) (@ARCGIS-SLOG@) 00000016 ms at 11:44:53(10/8/2015),#22,(4816K),(mcuevas,SGH227R9P8,760)
+23:42:05 (ARCGIS) (@ARCGIS-SLOG@) 00000016 ms at 12:50:56(10/8/2015),#21,(4924K),(rzhang,SGH227R9P3,800)
+23:42:05 (ARCGIS) (@ARCGIS-SLOG@) 00000016 ms at 13:17:19(10/8/2015),#23,(4936K),(rvrooyen,SGH227R9PD,768)
+23:42:05 (ARCGIS) (@ARCGIS-SLOG@) 00000016 ms at 13:19:57(10/8/2015),#24,(4936K),(rvrooyen,SGH227R9PD,680)
+23:42:05 (ARCGIS) (@ARCGIS-SLOG@) 00000016 ms at 13:20:47(10/8/2015),#25,(4936K),(asawant,SGH227R9PF,748)
+23:42:05 (ARCGIS) (@ARCGIS-SLOG@) 00000016 ms at 13:51:28(10/8/2015),#29,(4948K),(mpatel1,SGH227R9P6,772)
+23:42:05 (ARCGIS) (@ARCGIS-SLOG@) 00000016 ms at 14:02:15(10/8/2015),#31,(5080K),(ralmeida,SGH402P41Y,712)
+23:42:05 (ARCGIS) (@ARCGIS-SLOG@) 00000016 ms at 14:25:28(10/8/2015),#34,(5092K),(cbroadbe,SGH448T6H1,752)
+23:42:05 (ARCGIS) (@ARCGIS-SLOG@) 
+23:42:05 (ARCGIS) (@ARCGIS-SLOG@) === Top 10 Peak In-house Operations time (in ms) ===
+23:42:05 (ARCGIS) (@ARCGIS-SLOG@) NOTE: Peak times greater than 4 seconds get recorded.
+23:42:05 (ARCGIS) (@ARCGIS-SLOG@) Time: Thu Oct 08 2015 23:42:05 New Zealand Daylight Time
+23:42:05 (ARCGIS) (@ARCGIS-SLOG@) In-house operation time, when, #concurrent clients
+23:42:05 (ARCGIS) (@ARCGIS-SLOG@) 
+23:42:05 (ARCGIS) (@ARCGIS-SLOG@) === Active Connections Info ===
+23:42:05 (ARCGIS) (@ARCGIS-SLOG@) Peak active connections #34 attempted at Thu Oct 08 2015 14:24:52 New Zealand Daylight Time
+23:42:05 (ARCGIS) (@ARCGIS-SLOG@) 
+23:42:05 (ARCGIS) (@ARCGIS-SLOG@) === Memory Usage Info ===
+23:42:05 (ARCGIS) (@ARCGIS-SLOG@) Peak private bytes 6300K attempted at Thu Oct 08 2015 16:38:49 New Zealand Daylight Time
+23:42:05 (ARCGIS) (@ARCGIS-SLOG@) ===============================================
+23:52:05 (ARCGIS) TIMESTAMP 10/8/2015
+ 3:42:05 (ARCGIS) (@ARCGIS-SLOG@) ===============================================
+ 3:42:05 (ARCGIS) (@ARCGIS-SLOG@) === Last 10 Client Requests Processing Time (in ms) ===
+ 3:42:05 (ARCGIS) (@ARCGIS-SLOG@) Time: Fri Oct 09 2015 03:42:05 New Zealand Daylight Time
+ 3:42:05 (ARCGIS) (@ARCGIS-SLOG@) Request processing time, when, #concurrent clients, (private bytes (in KB)), client info (user, node, FD)
+ 3:42:05 (ARCGIS) (@ARCGIS-SLOG@) 00000000 ms at 17:12:20(10/9/2015),#3,(5156K),(jjose,SGH227R9PC,728)
+ 3:42:05 (ARCGIS) (@ARCGIS-SLOG@) 00000000 ms at 17:12:18(10/9/2015),#4,(5156K),(jjose,SGH227R9PC,692)
+ 3:42:05 (ARCGIS) (@ARCGIS-SLOG@) 00000000 ms at 17:12:15(10/9/2015),#5,(5156K),(jjose,SGH227R9PC,708)
+ 3:42:05 (ARCGIS) (@ARCGIS-SLOG@) 00000000 ms at 17:11:49(10/9/2015),#5,(5156K),(jjose,SGH227R9PC,728)
+ 3:42:05 (ARCGIS) (@ARCGIS-SLOG@) 00000000 ms at 17:11:38(10/9/2015),#5,(5156K),(jjose,SGH227R9PC,692)
+ 3:42:05 (ARCGIS) (@ARCGIS-SLOG@) 00000000 ms at 17:11:12(10/9/2015),#5,(5156K),(jjose,SGH227R9PC,708)
+ 3:42:05 (ARCGIS) (@ARCGIS-SLOG@) 00000000 ms at 17:09:49(10/9/2015),#5,(5156K),(jjose,SGH227R9PC,728)
+ 3:42:05 (ARCGIS) (@ARCGIS-SLOG@) 00000000 ms at 17:09:38(10/9/2015),#5,(5156K),(jjose,SGH227R9PC,692)
+ 3:42:05 (ARCGIS) (@ARCGIS-SLOG@) 00000000 ms at 17:09:12(10/9/2015),#5,(5156K),(jjose,SGH227R9PC,708)
+ 3:42:05 (ARCGIS) (@ARCGIS-SLOG@) 00000000 ms at 17:07:49(10/9/2015),#5,(5156K),(jjose,SGH227R9PC,728)
+ 3:42:05 (ARCGIS) (@ARCGIS-SLOG@) 
+ 3:42:05 (ARCGIS) (@ARCGIS-SLOG@) === Top 10 Peak Client Requests Processing Time (in ms) ===
+ 3:42:05 (ARCGIS) (@ARCGIS-SLOG@) Time: Fri Oct 09 2015 03:42:05 New Zealand Daylight Time
+ 3:42:05 (ARCGIS) (@ARCGIS-SLOG@) Request processing time, when, #concurrent clients, (private bytes (in KB)), client info (user, node, FD)
+ 3:42:05 (ARCGIS) (@ARCGIS-SLOG@) 00000016 ms at 11:44:47(10/9/2015),#21,(4784K),(pshih,SGH227R9P9,720)
+ 3:42:05 (ARCGIS) (@ARCGIS-SLOG@) 00000016 ms at 12:07:27(10/9/2015),#21,(4924K),(cbroadbe,SGH448T6H1,752)
+ 3:42:05 (ARCGIS) (@ARCGIS-SLOG@) 00000016 ms at 11:44:53(10/9/2015),#22,(4816K),(mcuevas,SGH227R9P8,760)
+ 3:42:05 (ARCGIS) (@ARCGIS-SLOG@) 00000016 ms at 12:50:56(10/9/2015),#21,(4924K),(rzhang,SGH227R9P3,800)
+ 3:42:05 (ARCGIS) (@ARCGIS-SLOG@) 00000016 ms at 13:17:19(10/9/2015),#23,(4936K),(rvrooyen,SGH227R9PD,768)
+ 3:42:05 (ARCGIS) (@ARCGIS-SLOG@) 00000016 ms at 13:19:57(10/9/2015),#24,(4936K),(rvrooyen,SGH227R9PD,680)
+ 3:42:05 (ARCGIS) (@ARCGIS-SLOG@) 00000016 ms at 13:20:47(10/9/2015),#25,(4936K),(asawant,SGH227R9PF,748)
+ 3:42:05 (ARCGIS) (@ARCGIS-SLOG@) 00000016 ms at 13:51:28(10/9/2015),#29,(4948K),(mpatel1,SGH227R9P6,772)
+ 3:42:05 (ARCGIS) (@ARCGIS-SLOG@) 00000016 ms at 14:02:15(10/9/2015),#31,(5080K),(ralmeida,SGH402P41Y,712)
+ 3:42:05 (ARCGIS) (@ARCGIS-SLOG@) 00000016 ms at 14:25:28(10/9/2015),#34,(5092K),(cbroadbe,SGH448T6H1,752)
+ 3:42:05 (ARCGIS) (@ARCGIS-SLOG@) 
+ 3:42:05 (ARCGIS) (@ARCGIS-SLOG@) === Top 10 Peak In-house Operations time (in ms) ===
+ 3:42:05 (ARCGIS) (@ARCGIS-SLOG@) NOTE: Peak times greater than 4 seconds get recorded.
+ 3:42:05 (ARCGIS) (@ARCGIS-SLOG@) Time: Fri Oct 09 2015 03:42:05 New Zealand Daylight Time
+ 3:42:05 (ARCGIS) (@ARCGIS-SLOG@) In-house operation time, when, #concurrent clients
+ 3:42:05 (ARCGIS) (@ARCGIS-SLOG@) 
+ 3:42:05 (ARCGIS) (@ARCGIS-SLOG@) === Active Connections Info ===
+ 3:42:05 (ARCGIS) (@ARCGIS-SLOG@) Peak active connections #34 attempted at Thu Oct 08 2015 14:24:52 New Zealand Daylight Time
+ 3:42:05 (ARCGIS) (@ARCGIS-SLOG@) 
+ 3:42:05 (ARCGIS) (@ARCGIS-SLOG@) === Memory Usage Info ===
+ 3:42:05 (ARCGIS) (@ARCGIS-SLOG@) Peak private bytes 6300K attempted at Thu Oct 08 2015 16:38:49 New Zealand Daylight Time
+ 3:42:05 (ARCGIS) (@ARCGIS-SLOG@) ===============================================
+ 5:57:09 (ARCGIS) TIMESTAMP 10/9/2015
+ 7:42:05 (ARCGIS) (@ARCGIS-SLOG@) ===============================================
+ 7:42:05 (ARCGIS) (@ARCGIS-SLOG@) === Last 10 Client Requests Processing Time (in ms) ===
+ 7:42:05 (ARCGIS) (@ARCGIS-SLOG@) Time: Fri Oct 09 2015 07:42:05 New Zealand Daylight Time
+ 7:42:05 (ARCGIS) (@ARCGIS-SLOG@) Request processing time, when, #concurrent clients, (private bytes (in KB)), client info (user, node, FD)
+ 7:42:05 (ARCGIS) (@ARCGIS-SLOG@) 00000000 ms at 17:12:20(10/9/2015),#3,(5156K),(jjose,SGH227R9PC,728)
+ 7:42:05 (ARCGIS) (@ARCGIS-SLOG@) 00000000 ms at 17:12:18(10/9/2015),#4,(5156K),(jjose,SGH227R9PC,692)
+ 7:42:05 (ARCGIS) (@ARCGIS-SLOG@) 00000000 ms at 17:12:15(10/9/2015),#5,(5156K),(jjose,SGH227R9PC,708)
+ 7:42:05 (ARCGIS) (@ARCGIS-SLOG@) 00000000 ms at 17:11:49(10/9/2015),#5,(5156K),(jjose,SGH227R9PC,728)
+ 7:42:05 (ARCGIS) (@ARCGIS-SLOG@) 00000000 ms at 17:11:38(10/9/2015),#5,(5156K),(jjose,SGH227R9PC,692)
+ 7:42:05 (ARCGIS) (@ARCGIS-SLOG@) 00000000 ms at 17:11:12(10/9/2015),#5,(5156K),(jjose,SGH227R9PC,708)
+ 7:42:05 (ARCGIS) (@ARCGIS-SLOG@) 00000000 ms at 17:09:49(10/9/2015),#5,(5156K),(jjose,SGH227R9PC,728)
+ 7:42:05 (ARCGIS) (@ARCGIS-SLOG@) 00000000 ms at 17:09:38(10/9/2015),#5,(5156K),(jjose,SGH227R9PC,692)
+ 7:42:05 (ARCGIS) (@ARCGIS-SLOG@) 00000000 ms at 17:09:12(10/9/2015),#5,(5156K),(jjose,SGH227R9PC,708)
+ 7:42:05 (ARCGIS) (@ARCGIS-SLOG@) 00000000 ms at 17:07:49(10/9/2015),#5,(5156K),(jjose,SGH227R9PC,728)
+ 7:42:05 (ARCGIS) (@ARCGIS-SLOG@) 
+ 7:42:05 (ARCGIS) (@ARCGIS-SLOG@) === Top 10 Peak Client Requests Processing Time (in ms) ===
+ 7:42:05 (ARCGIS) (@ARCGIS-SLOG@) Time: Fri Oct 09 2015 07:42:05 New Zealand Daylight Time
+ 7:42:05 (ARCGIS) (@ARCGIS-SLOG@) Request processing time, when, #concurrent clients, (private bytes (in KB)), client info (user, node, FD)
+ 7:42:05 (ARCGIS) (@ARCGIS-SLOG@) 00000016 ms at 11:44:47(10/9/2015),#21,(4784K),(pshih,SGH227R9P9,720)
+ 7:42:05 (ARCGIS) (@ARCGIS-SLOG@) 00000016 ms at 12:07:27(10/9/2015),#21,(4924K),(cbroadbe,SGH448T6H1,752)
+ 7:42:05 (ARCGIS) (@ARCGIS-SLOG@) 00000016 ms at 11:44:53(10/9/2015),#22,(4816K),(mcuevas,SGH227R9P8,760)
+ 7:42:05 (ARCGIS) (@ARCGIS-SLOG@) 00000016 ms at 12:50:56(10/9/2015),#21,(4924K),(rzhang,SGH227R9P3,800)
+ 7:42:05 (ARCGIS) (@ARCGIS-SLOG@) 00000016 ms at 13:17:19(10/9/2015),#23,(4936K),(rvrooyen,SGH227R9PD,768)
+ 7:42:05 (ARCGIS) (@ARCGIS-SLOG@) 00000016 ms at 13:19:57(10/9/2015),#24,(4936K),(rvrooyen,SGH227R9PD,680)
+ 7:42:05 (ARCGIS) (@ARCGIS-SLOG@) 00000016 ms at 13:20:47(10/9/2015),#25,(4936K),(asawant,SGH227R9PF,748)
+ 7:42:05 (ARCGIS) (@ARCGIS-SLOG@) 00000016 ms at 13:51:28(10/9/2015),#29,(4948K),(mpatel1,SGH227R9P6,772)
+ 7:42:05 (ARCGIS) (@ARCGIS-SLOG@) 00000016 ms at 14:02:15(10/9/2015),#31,(5080K),(ralmeida,SGH402P41Y,712)
+ 7:42:05 (ARCGIS) (@ARCGIS-SLOG@) 00000016 ms at 14:25:28(10/9/2015),#34,(5092K),(cbroadbe,SGH448T6H1,752)
+ 7:42:05 (ARCGIS) (@ARCGIS-SLOG@) 
+ 7:42:05 (ARCGIS) (@ARCGIS-SLOG@) === Top 10 Peak In-house Operations time (in ms) ===
+ 7:42:05 (ARCGIS) (@ARCGIS-SLOG@) NOTE: Peak times greater than 4 seconds get recorded.
+ 7:42:05 (ARCGIS) (@ARCGIS-SLOG@) Time: Fri Oct 09 2015 07:42:05 New Zealand Daylight Time
+ 7:42:05 (ARCGIS) (@ARCGIS-SLOG@) In-house operation time, when, #concurrent clients
+ 7:42:05 (ARCGIS) (@ARCGIS-SLOG@) 
+ 7:42:05 (ARCGIS) (@ARCGIS-SLOG@) === Active Connections Info ===
+ 7:42:05 (ARCGIS) (@ARCGIS-SLOG@) Peak active connections #34 attempted at Thu Oct 08 2015 14:24:52 New Zealand Daylight Time
+ 7:42:05 (ARCGIS) (@ARCGIS-SLOG@) 
+ 7:42:05 (ARCGIS) (@ARCGIS-SLOG@) === Memory Usage Info ===
+ 7:42:05 (ARCGIS) (@ARCGIS-SLOG@) Peak private bytes 6300K attempted at Thu Oct 08 2015 16:38:49 New Zealand Daylight Time
+ 7:42:05 (ARCGIS) (@ARCGIS-SLOG@) ===============================================
+ 7:58:00 (ARCGIS) OUT: "Editor" RZhang@SGH227R9P3  
+ 7:58:07 (ARCGIS) OUT: "VBA" RZhang@SGH227R9P3  
+ 7:58:26 (ARCGIS) OUT: "Editor" RZhang@SGH227R9P3  
+ 7:58:32 (ARCGIS) OUT: "Editor" pshih@SGH227R9P9  
+ 7:58:33 (ARCGIS) OUT: "VBA" pshih@SGH227R9P9  
+ 7:58:35 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) pshih@SGH227R9P9  (License server system does not support this feature. (-18,327))
+ 7:58:44 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) RZhang@SGH227R9P3  (License server system does not support this feature. (-18,327))
+ 7:59:14 (ARCGIS) OUT: "Editor" smoodley@SGH227R9P2  
+ 7:59:17 (ARCGIS) OUT: "Editor" pshih@SGH227R9P9  
+ 7:59:21 (ARCGIS) OUT: "VBA" smoodley@SGH227R9P2  
+ 7:59:22 (ARCGIS) OUT: "VBA" pshih@SGH227R9P9  
+ 7:59:35 (ARCGIS) OUT: "Editor" smoodley@SGH227R9P2  
+ 7:59:38 (ARCGIS) OUT: "Editor" pshih@SGH227R9P9  
+ 8:00:17 (ARCGIS) UNSUPPORTED: "StandardEngine" (PORT_AT_HOST_PLUS   ) pshih@SGH227R9P9  (License server system does not support this feature. (-18,327))
+ 8:00:17 (ARCGIS) UNSUPPORTED: "GDBEdit" (PORT_AT_HOST_PLUS   ) pshih@SGH227R9P9  (License server system does not support this feature. (-18,327))
+ 8:00:17 (ARCGIS) OUT: "Viewer" pshih@SGH227R9P9  
+ 8:00:17 (ARCGIS) IN: "Viewer" pshih@SGH227R9P9  
+ 8:00:23 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) smoodley@SGH227R9P2  (License server system does not support this feature. (-18,327))
+ 8:00:28 (ARCGIS) OUT: "Viewer" pshih@SGH227R9P9  
+ 8:01:10 (ARCGIS) OUT: "Editor" rvrooyen@SGH227R9PD  
+ 8:01:26 (ARCGIS) OUT: "VBA" rvrooyen@SGH227R9PD  
+ 8:01:44 (ARCGIS) OUT: "Editor" rvrooyen@SGH227R9PD  
+ 8:03:02 (ARCGIS) OUT: "Editor" ralmeida@SGH402P41Y  
+ 8:03:11 (ARCGIS) OUT: "VBA" ralmeida@SGH402P41Y  
+ 8:04:30 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) ralmeida@SGH402P41Y  (License server system does not support this feature. (-18,327))
+ 8:07:51 (ARCGIS) IN: "Viewer" pshih@SGH227R9P9  
+ 8:08:46 (ARCGIS) IN: "Editor" pshih@SGH227R9P9  
+ 8:08:46 (ARCGIS) IN: "Editor" pshih@SGH227R9P9  
+ 8:08:46 (ARCGIS) IN: "VBA" pshih@SGH227R9P9  
+ 8:08:52 (ARCGIS) OUT: "Editor" pshih@SGH227R9P9  
+ 8:08:56 (ARCGIS) OUT: "VBA" pshih@SGH227R9P9  
+ 8:09:04 (ARCGIS) OUT: "Editor" pshih@SGH227R9P9  
+ 8:09:19 (ARCGIS) IN: "Editor" pshih@SGH227R9P9  
+ 8:09:19 (ARCGIS) IN: "Editor" pshih@SGH227R9P9  
+ 8:09:19 (ARCGIS) IN: "VBA" pshih@SGH227R9P9  
+ 8:10:07 (ARCGIS) UNSUPPORTED: "StandardEngine" (PORT_AT_HOST_PLUS   ) pshih@SGH227R9P9  (License server system does not support this feature. (-18,327))
+ 8:10:07 (ARCGIS) UNSUPPORTED: "GDBEdit" (PORT_AT_HOST_PLUS   ) pshih@SGH227R9P9  (License server system does not support this feature. (-18,327))
+ 8:10:07 (ARCGIS) OUT: "Viewer" pshih@SGH227R9P9  
+ 8:10:07 (ARCGIS) IN: "Viewer" pshih@SGH227R9P9  
+ 8:10:18 (ARCGIS) OUT: "Viewer" pshih@SGH227R9P9  
+ 8:11:29 (ARCGIS) IN: "Viewer" pshih@SGH227R9P9  
+ 8:11:48 (ARCGIS) OUT: "Editor" pshih@SGH227R9P9  
+ 8:11:51 (ARCGIS) OUT: "VBA" pshih@SGH227R9P9  
+ 8:11:59 (ARCGIS) OUT: "Editor" pshih@SGH227R9P9  
+ 8:12:10 (ARCGIS) IN: "Editor" pshih@SGH227R9P9  
+ 8:12:10 (ARCGIS) IN: "Editor" pshih@SGH227R9P9  
+ 8:12:10 (ARCGIS) IN: "VBA" pshih@SGH227R9P9  
+ 8:12:45 (ARCGIS) UNSUPPORTED: "StandardEngine" (PORT_AT_HOST_PLUS   ) pshih@SGH227R9P9  (License server system does not support this feature. (-18,327))
+ 8:12:45 (ARCGIS) UNSUPPORTED: "GDBEdit" (PORT_AT_HOST_PLUS   ) pshih@SGH227R9P9  (License server system does not support this feature. (-18,327))
+ 8:12:45 (ARCGIS) OUT: "Viewer" pshih@SGH227R9P9  
+ 8:12:45 (ARCGIS) IN: "Viewer" pshih@SGH227R9P9  
+ 8:12:56 (ARCGIS) OUT: "Viewer" pshih@SGH227R9P9  
+ 8:13:11 (ARCGIS) IN: "Viewer" pshih@SGH227R9P9  
+ 8:13:27 (ARCGIS) OUT: "Editor" pshih@SGH227R9P9  
+ 8:13:30 (ARCGIS) OUT: "VBA" pshih@SGH227R9P9  
+ 8:13:38 (ARCGIS) OUT: "Editor" pshih@SGH227R9P9  
+ 8:13:50 (ARCGIS) IN: "Editor" pshih@SGH227R9P9  
+ 8:13:50 (ARCGIS) IN: "Editor" pshih@SGH227R9P9  
+ 8:13:50 (ARCGIS) IN: "VBA" pshih@SGH227R9P9  
+ 8:13:59 (ARCGIS) OUT: "Editor" pshih@SGH227R9P9  
+ 8:14:02 (ARCGIS) OUT: "VBA" pshih@SGH227R9P9  
+ 8:14:09 (ARCGIS) OUT: "Editor" pshih@SGH227R9P9  
+ 8:14:21 (ARCGIS) IN: "Editor" pshih@SGH227R9P9  
+ 8:14:21 (ARCGIS) OUT: "Editor" rvrooyen@SGH227R9PD  
+ 8:14:21 (ARCGIS) IN: "Editor" pshih@SGH227R9P9  
+ 8:14:21 (ARCGIS) IN: "VBA" pshih@SGH227R9P9  
+ 8:14:21 (ARCGIS) OUT: "VBA" rvrooyen@SGH227R9PD  
+ 8:14:23 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) rvrooyen@SGH227R9PD  (License server system does not support this feature. (-18,327))
+ 8:14:45 (ARCGIS) OUT: "Editor" rvrooyen@SGH227R9PD  
+ 8:14:49 (ARCGIS) OUT: "VBA" rvrooyen@SGH227R9PD  
+ 8:14:57 (ARCGIS) OUT: "Editor" rvrooyen@SGH227R9PD  
+ 8:15:15 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) rvrooyen@SGH227R9PD  (License server system does not support this feature. (-18,327))
+ 8:15:42 (ARCGIS) UNSUPPORTED: "StandardEngine" (PORT_AT_HOST_PLUS   ) pshih@SGH227R9P9  (License server system does not support this feature. (-18,327))
+ 8:15:42 (ARCGIS) UNSUPPORTED: "GDBEdit" (PORT_AT_HOST_PLUS   ) pshih@SGH227R9P9  (License server system does not support this feature. (-18,327))
+ 8:15:42 (ARCGIS) OUT: "Viewer" pshih@SGH227R9P9  
+ 8:15:42 (ARCGIS) IN: "Viewer" pshih@SGH227R9P9  
+ 8:15:53 (ARCGIS) OUT: "Viewer" pshih@SGH227R9P9  
+ 8:16:59 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) rvrooyen@SGH227R9PD  (License server system does not support this feature. (-18,327))
+ 8:17:08 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) rvrooyen@SGH227R9PD  (License server system does not support this feature. (-18,327))
+ 8:17:18 (ARCGIS) OUT: "Editor" pshih@SGH227R9P9  
+ 8:17:21 (ARCGIS) OUT: "VBA" pshih@SGH227R9P9  
+ 8:17:29 (ARCGIS) OUT: "Editor" pshih@SGH227R9P9  
+ 8:17:41 (ARCGIS) IN: "Editor" pshih@SGH227R9P9  
+ 8:17:41 (ARCGIS) IN: "Editor" pshih@SGH227R9P9  
+ 8:17:41 (ARCGIS) IN: "VBA" pshih@SGH227R9P9  
+ 8:19:21 (ARCGIS) IN: "Viewer" pshih@SGH227R9P9  
+ 8:20:43 (ARCGIS) OUT: "Editor" ctapp@AUD23904Y1  
+ 8:20:49 (ARCGIS) IN: "Editor" rvrooyen@SGH227R9PD  
+ 8:20:52 (ARCGIS) IN: "VBA" rvrooyen@SGH227R9PD  
+ 8:20:52 (ARCGIS) IN: "Editor" rvrooyen@SGH227R9PD  
+ 8:20:53 (ARCGIS) OUT: "VBA" ctapp@AUD23904Y1  
+ 8:20:54 (ARCGIS) IN: "VBA" rvrooyen@SGH227R9PD  
+ 8:20:54 (ARCGIS) IN: "Editor" rvrooyen@SGH227R9PD  
+ 8:20:58 (ARCGIS) IN: "Editor" rvrooyen@SGH227R9PD  
+ 8:20:59 (ARCGIS) IN: "VBA" rvrooyen@SGH227R9PD  
+ 8:20:59 (ARCGIS) IN: "Editor" rvrooyen@SGH227R9PD  
+ 8:21:27 (ARCGIS) OUT: "Editor" ctapp@AUD23904Y1  
+ 8:21:29 (ARCGIS) OUT: "Editor" rvrooyen@SGH227R9PD  
+ 8:21:29 (ARCGIS) OUT: "VBA" rvrooyen@SGH227R9PD  
+ 8:21:30 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) rvrooyen@SGH227R9PD  (License server system does not support this feature. (-18,327))
+ 8:23:57 (ARCGIS) OUT: "Editor" pshih@SGH227R9P9  
+ 8:24:00 (ARCGIS) OUT: "VBA" pshih@SGH227R9P9  
+ 8:24:03 (ARCGIS) IN: "Editor" ctapp@AUD23904Y1  
+ 8:24:05 (ARCGIS) IN: "VBA" ctapp@AUD23904Y1  
+ 8:24:05 (ARCGIS) IN: "Editor" ctapp@AUD23904Y1  
+ 8:24:08 (ARCGIS) OUT: "Editor" pshih@SGH227R9P9  
+ 8:24:10 (ARCGIS) OUT: "Editor" ctapp@AUD23904Y1  
+ 8:24:13 (ARCGIS) OUT: "VBA" ctapp@AUD23904Y1  
+ 8:24:21 (ARCGIS) OUT: "Editor" ctapp@AUD23904Y1  
+ 8:24:43 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) pshih@SGH227R9P9  (License server system does not support this feature. (-18,327))
+ 8:26:51 (ARCGIS) IN: "Editor" pshih@SGH227R9P9  
+ 8:26:52 (ARCGIS) IN: "Editor" pshih@SGH227R9P9  
+ 8:26:52 (ARCGIS) IN: "VBA" pshih@SGH227R9P9  
+ 8:28:07 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) smoodley@SGH227R9P2  (License server system does not support this feature. (-18,327))
+ 8:30:37 (ARCGIS) OUT: "ARC/INFO" mpatel1@SGH227R9P6  
+ 8:30:53 (ARCGIS) OUT: "VBA" mpatel1@SGH227R9P6  
+ 8:30:58 (ARCGIS) OUT: "Publisher" mpatel1@SGH227R9P6  
+ 8:31:09 (ARCGIS) OUT: "ARC/INFO" mpatel1@SGH227R9P6  
+ 8:33:11 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) mpatel1@SGH227R9P6  (License server system does not support this feature. (-18,327))
+ 8:38:22 (ARCGIS) OUT: "Editor" pshih@SGH227R9P9  
+ 8:38:26 (ARCGIS) OUT: "VBA" pshih@SGH227R9P9  
+ 8:38:34 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) pshih@SGH227R9P9  (License server system does not support this feature. (-18,327))
+ 8:38:53 (ARCGIS) IN: "Editor" pshih@SGH227R9P9  
+ 8:38:53 (ARCGIS) IN: "VBA" pshih@SGH227R9P9  
+ 8:40:36 (ARCGIS) OUT: "Editor" pshih@SGH227R9P9  
+ 8:40:40 (ARCGIS) OUT: "VBA" pshih@SGH227R9P9  
+ 8:40:47 (ARCGIS) OUT: "Editor" pshih@SGH227R9P9  
+ 8:42:06 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) pshih@SGH227R9P9  (License server system does not support this feature. (-18,327))
+ 8:42:53 (ARCGIS) IN: "Editor" pshih@SGH227R9P9  
+ 8:42:53 (ARCGIS) IN: "Editor" pshih@SGH227R9P9  
+ 8:42:53 (ARCGIS) IN: "VBA" pshih@SGH227R9P9  
+ 8:43:04 (ARCGIS) OUT: "Editor" pshih@SGH227R9P9  
+ 8:43:07 (ARCGIS) OUT: "VBA" pshih@SGH227R9P9  
+ 8:43:16 (ARCGIS) OUT: "Editor" pshih@SGH227R9P9  
+ 8:43:17 (ARCGIS) IN: "Editor" pshih@SGH227R9P9  
+ 8:43:17 (ARCGIS) IN: "Editor" pshih@SGH227R9P9  
+ 8:43:17 (ARCGIS) IN: "VBA" pshih@SGH227R9P9  
+ 8:43:21 (ARCGIS) OUT: "Editor" pshih@SGH227R9P9  
+ 8:43:24 (ARCGIS) OUT: "VBA" pshih@SGH227R9P9  
+ 8:43:32 (ARCGIS) OUT: "Editor" pshih@SGH227R9P9  
+ 8:43:33 (ARCGIS) IN: "Editor" pshih@SGH227R9P9  
+ 8:43:33 (ARCGIS) IN: "Editor" pshih@SGH227R9P9  
+ 8:43:33 (ARCGIS) IN: "VBA" pshih@SGH227R9P9  
+ 8:47:34 (ARCGIS) OUT: "Editor" pshih@SGH227R9P9  
+ 8:47:37 (ARCGIS) OUT: "VBA" pshih@SGH227R9P9  
+ 8:47:45 (ARCGIS) OUT: "Editor" pshih@SGH227R9P9  
+ 8:50:45 (ARCGIS) IN: "Editor" pshih@SGH227R9P9  
+ 8:50:45 (ARCGIS) IN: "Editor" pshih@SGH227R9P9  
+ 8:50:45 (ARCGIS) IN: "VBA" pshih@SGH227R9P9  
+ 8:50:51 (ARCGIS) OUT: "Editor" pshih@SGH227R9P9  
+ 8:50:55 (ARCGIS) OUT: "VBA" pshih@SGH227R9P9  
+ 8:50:57 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) RZhang@SGH227R9P3  (License server system does not support this feature. (-18,327))
+ 8:51:01 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) mpatel1@SGH227R9P6  (License server system does not support this feature. (-18,327))
+ 8:51:02 (ARCGIS) OUT: "Editor" pshih@SGH227R9P9  
+ 8:51:20 (ARCGIS) IN: "Editor" pshih@SGH227R9P9  
+ 8:51:20 (ARCGIS) IN: "Editor" pshih@SGH227R9P9  
+ 8:51:20 (ARCGIS) IN: "VBA" pshih@SGH227R9P9  
+ 8:52:53 (ARCGIS) OUT: "Editor" pshih@SGH227R9P9  
+ 8:52:57 (ARCGIS) OUT: "VBA" pshih@SGH227R9P9  
+ 8:53:04 (ARCGIS) OUT: "Editor" pshih@SGH227R9P9  
+ 8:53:11 (ARCGIS) IN: "Editor" pshih@SGH227R9P9  
+ 8:53:12 (ARCGIS) IN: "VBA" pshih@SGH227R9P9  
+ 8:53:12 (ARCGIS) IN: "Editor" pshih@SGH227R9P9  
+ 8:53:24 (ARCGIS) OUT: "Editor" pshih@SGH227R9P9  
+ 8:53:25 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) mpatel1@SGH227R9P6  (License server system does not support this feature. (-18,327))
+ 8:53:27 (ARCGIS) OUT: "VBA" pshih@SGH227R9P9  
+ 8:53:35 (ARCGIS) OUT: "Editor" pshih@SGH227R9P9  
+ 8:56:01 (ARCGIS) OUT: "Editor" pshih@SGH227R9P9  
+ 8:56:04 (ARCGIS) OUT: "VBA" pshih@SGH227R9P9  
+ 8:56:12 (ARCGIS) OUT: "Editor" pshih@SGH227R9P9  
+ 8:56:41 (ARCGIS) IN: "Editor" pshih@SGH227R9P9  
+ 8:56:41 (ARCGIS) IN: "Editor" pshih@SGH227R9P9  
+ 8:56:41 (ARCGIS) IN: "VBA" pshih@SGH227R9P9  
+ 8:57:14 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) pshih@SGH227R9P9  (License server system does not support this feature. (-18,327))
+ 8:57:45 (ARCGIS) IN: "Editor" pshih@SGH227R9P9  
+ 8:57:45 (ARCGIS) IN: "Editor" pshih@SGH227R9P9  
+ 8:57:45 (ARCGIS) IN: "VBA" pshih@SGH227R9P9  
+ 9:02:15 (ARCGIS) UNSUPPORTED: "StandardEngine" (PORT_AT_HOST_PLUS   ) pshih@SGH227R9P9  (License server system does not support this feature. (-18,327))
+ 9:02:15 (ARCGIS) UNSUPPORTED: "GDBEdit" (PORT_AT_HOST_PLUS   ) pshih@SGH227R9P9  (License server system does not support this feature. (-18,327))
+ 9:02:15 (ARCGIS) OUT: "Viewer" pshih@SGH227R9P9  
+ 9:02:15 (ARCGIS) IN: "Viewer" pshih@SGH227R9P9  
+ 9:02:29 (ARCGIS) OUT: "Viewer" pshih@SGH227R9P9  
+ 9:04:33 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) mpatel1@SGH227R9P6  (License server system does not support this feature. (-18,327))
+ 9:16:29 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) mpatel1@SGH227R9P6  (License server system does not support this feature. (-18,327))
+ 9:16:51 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) mpatel1@SGH227R9P6  (License server system does not support this feature. (-18,327))
+ 9:19:49 (ARCGIS) OUT: "Editor" pshih@SGH227R9P9  
+ 9:19:53 (ARCGIS) OUT: "VBA" pshih@SGH227R9P9  
+ 9:20:01 (ARCGIS) OUT: "Editor" pshih@SGH227R9P9  
+ 9:20:19 (ARCGIS) IN: "Editor" pshih@SGH227R9P9  
+ 9:20:19 (ARCGIS) IN: "Editor" pshih@SGH227R9P9  
+ 9:20:19 (ARCGIS) IN: "VBA" pshih@SGH227R9P9  
+ 9:21:29 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) smoodley@SGH227R9P2  (License server system does not support this feature. (-18,327))
+ 9:25:24 (ARCGIS) IN: "Viewer" pshih@SGH227R9P9  
+ 9:25:40 (ARCGIS) OUT: "Editor" pshih@SGH227R9P9  
+ 9:25:44 (ARCGIS) OUT: "VBA" pshih@SGH227R9P9  
+ 9:25:48 (ARCGIS) IN: "Editor" pshih@SGH227R9P9  
+ 9:25:48 (ARCGIS) IN: "VBA" pshih@SGH227R9P9  
+ 9:25:53 (ARCGIS) OUT: "Editor" pshih@SGH227R9P9  
+ 9:25:56 (ARCGIS) OUT: "VBA" pshih@SGH227R9P9  
+ 9:26:04 (ARCGIS) OUT: "Editor" pshih@SGH227R9P9  
+ 9:26:25 (ARCGIS) IN: "Editor" pshih@SGH227R9P9  
+ 9:26:25 (ARCGIS) IN: "Editor" pshih@SGH227R9P9  
+ 9:26:25 (ARCGIS) IN: "VBA" pshih@SGH227R9P9  
+ 9:30:25 (ARCGIS) OUT: "Viewer" smoodley@SGH227R9P2  
+ 9:30:25 (ARCGIS) IN: "Viewer" smoodley@SGH227R9P2  
+ 9:30:33 (ARCGIS) OUT: "Editor" pshih@SGH227R9P9  
+ 9:30:37 (ARCGIS) OUT: "VBA" pshih@SGH227R9P9  
+ 9:30:45 (ARCGIS) OUT: "Editor" pshih@SGH227R9P9  
+ 9:31:14 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) pshih@SGH227R9P9  (License server system does not support this feature. (-18,327))
+ 9:31:53 (ARCGIS) IN: "Editor" pshih@SGH227R9P9  
+ 9:31:53 (ARCGIS) IN: "Editor" pshih@SGH227R9P9  
+ 9:31:53 (ARCGIS) IN: "VBA" pshih@SGH227R9P9  
+ 9:32:08 (ARCGIS) OUT: "Editor" pshih@SGH227R9P9  
+ 9:32:11 (ARCGIS) OUT: "VBA" pshih@SGH227R9P9  
+ 9:32:15 (ARCGIS) IN: "Editor" pshih@SGH227R9P9  
+ 9:32:15 (ARCGIS) IN: "VBA" pshih@SGH227R9P9  
+ 9:37:35 (ARCGIS) OUT: "Editor" pshih@SGH227R9P9  
+ 9:37:39 (ARCGIS) OUT: "VBA" pshih@SGH227R9P9  
+ 9:37:48 (ARCGIS) OUT: "Editor" pshih@SGH227R9P9  
+ 9:39:36 (ARCGIS) IN: "Editor" pshih@SGH227R9P9  
+ 9:39:36 (ARCGIS) IN: "Editor" pshih@SGH227R9P9  
+ 9:39:36 (ARCGIS) IN: "VBA" pshih@SGH227R9P9  
+ 9:41:08 (ARCGIS) OUT: "Editor" pshih@SGH227R9P9  
+ 9:41:11 (ARCGIS) OUT: "VBA" pshih@SGH227R9P9  
+ 9:41:15 (ARCGIS) IN: "Editor" pshih@SGH227R9P9  
+ 9:41:15 (ARCGIS) IN: "VBA" pshih@SGH227R9P9  
+ 9:49:12 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) mpatel1@SGH227R9P6  (License server system does not support this feature. (-18,327))
+ 9:51:09 (ARCGIS) OUT: "Editor" pshih@SGH227R9P9  
+ 9:51:12 (ARCGIS) OUT: "VBA" pshih@SGH227R9P9  
+ 9:51:20 (ARCGIS) OUT: "Editor" pshih@SGH227R9P9  
+ 9:52:22 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) pshih@SGH227R9P9  (License server system does not support this feature. (-18,327))
+ 9:52:45 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) mpatel1@SGH227R9P6  (License server system does not support this feature. (-18,327))
+ 9:56:07 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) mpatel1@SGH227R9P6  (License server system does not support this feature. (-18,327))
+ 9:58:35 (ARCGIS) IN: "Editor" RZhang@SGH227R9P3  
+ 9:58:44 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) mpatel1@SGH227R9P6  (License server system does not support this feature. (-18,327))
+ 9:59:49 (ARCGIS) IN: "Editor" smoodley@SGH227R9P2  
+10:02:06 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) mpatel1@SGH227R9P6  (License server system does not support this feature. (-18,327))
+10:02:57 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) mpatel1@SGH227R9P6  (License server system does not support this feature. (-18,327))
+10:24:49 (ARCGIS) IN: "Editor" ctapp@AUD23904Y1  
+10:26:48 (ARCGIS) IN: "Editor" pshih@SGH227R9P9  
+10:26:48 (ARCGIS) IN: "Editor" pshih@SGH227R9P9  
+10:26:48 (ARCGIS) IN: "VBA" pshih@SGH227R9P9  
+10:28:32 (ARCGIS) OUT: "Publisher" mpatel1@SGH227R9P6  
+10:28:46 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) mpatel1@SGH227R9P6  (License server system does not support this feature. (-18,327))
+10:29:09 (ARCGIS) OUT: "Editor" ctapp@AUD23904Y1  
+10:29:09 (ARCGIS) OUT: "VBA" ctapp@AUD23904Y1  
+10:29:17 (ARCGIS) OUT: "Editor" ctapp@AUD23904Y1  
+10:29:17 (ARCGIS) OUT: "VBA" ctapp@AUD23904Y1  
+10:31:27 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) mpatel1@SGH227R9P6  (License server system does not support this feature. (-18,327))
+10:32:14 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) mpatel1@SGH227R9P6  (License server system does not support this feature. (-18,327))
+10:34:08 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) mpatel1@SGH227R9P6  (License server system does not support this feature. (-18,327))
+10:34:16 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) smoodley@SGH227R9P2  (License server system does not support this feature. (-18,327))
+10:34:21 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) mpatel1@SGH227R9P6  (License server system does not support this feature. (-18,327))
+10:34:39 (ARCGIS) IN: "VBA" ralmeida@SGH402P41Y  
+10:34:39 (ARCGIS) IN: "Editor" ralmeida@SGH402P41Y  
+10:36:05 (ARCGIS) OUT: "Editor" pshih@SGH227R9P9  
+10:36:08 (ARCGIS) OUT: "VBA" pshih@SGH227R9P9  
+10:36:16 (ARCGIS) OUT: "Editor" pshih@SGH227R9P9  
+10:36:47 (ARCGIS) UNSUPPORTED: "StandardEngine" (PORT_AT_HOST_PLUS   ) pshih@SGH227R9P9  (License server system does not support this feature. (-18,327))
+10:36:47 (ARCGIS) UNSUPPORTED: "GDBEdit" (PORT_AT_HOST_PLUS   ) pshih@SGH227R9P9  (License server system does not support this feature. (-18,327))
+10:36:47 (ARCGIS) OUT: "Viewer" pshih@SGH227R9P9  
+10:36:47 (ARCGIS) IN: "Viewer" pshih@SGH227R9P9  
+10:36:57 (ARCGIS) OUT: "Viewer" pshih@SGH227R9P9  
+10:37:42 (ARCGIS) OUT: "Editor" pshih@SGH227R9P9  
+10:37:45 (ARCGIS) OUT: "VBA" pshih@SGH227R9P9  
+10:38:17 (ARCGIS) OUT: "Editor" pshih@SGH227R9P9  
+10:41:12 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) mpatel1@SGH227R9P6  (License server system does not support this feature. (-18,327))
+10:47:25 (ARCGIS) OUT: "Editor" ralmeida@SGH402P41Y  
+10:47:28 (ARCGIS) OUT: "VBA" ralmeida@SGH402P41Y  
+10:49:12 (ARCGIS) UNSUPPORTED: "StandardEngine" (PORT_AT_HOST_PLUS   ) pshih@SGH227R9P9  (License server system does not support this feature. (-18,327))
+10:49:12 (ARCGIS) UNSUPPORTED: "GDBEdit" (PORT_AT_HOST_PLUS   ) pshih@SGH227R9P9  (License server system does not support this feature. (-18,327))
+10:49:12 (ARCGIS) OUT: "Viewer" pshih@SGH227R9P9  
+10:49:12 (ARCGIS) IN: "Viewer" pshih@SGH227R9P9  
+10:49:23 (ARCGIS) OUT: "Viewer" pshih@SGH227R9P9  
+10:51:08 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) mpatel1@SGH227R9P6  (License server system does not support this feature. (-18,327))
+10:52:16 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) mpatel1@SGH227R9P6  (License server system does not support this feature. (-18,327))
+10:52:25 (ARCGIS) UNSUPPORTED: "StandardEngine" (PORT_AT_HOST_PLUS   ) pshih@SGH227R9P9  (License server system does not support this feature. (-18,327))
+10:52:25 (ARCGIS) UNSUPPORTED: "GDBEdit" (PORT_AT_HOST_PLUS   ) pshih@SGH227R9P9  (License server system does not support this feature. (-18,327))
+10:52:25 (ARCGIS) OUT: "Viewer" pshih@SGH227R9P9  
+10:52:25 (ARCGIS) IN: "Viewer" pshih@SGH227R9P9  
+10:52:37 (ARCGIS) OUT: "Viewer" pshih@SGH227R9P9  
+10:53:07 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) RZhang@SGH227R9P3  (License server system does not support this feature. (-18,327))
+10:54:41 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) ralmeida@SGH402P41Y  (License server system does not support this feature. (-18,327))
+10:55:49 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) ralmeida@SGH402P41Y  (License server system does not support this feature. (-18,327))
+10:56:45 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) ralmeida@SGH402P41Y  (License server system does not support this feature. (-18,327))
+10:57:25 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) ralmeida@SGH402P41Y  (License server system does not support this feature. (-18,327))
+10:57:32 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) ralmeida@SGH402P41Y  (License server system does not support this feature. (-18,327))
+10:57:56 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) ralmeida@SGH402P41Y  (License server system does not support this feature. (-18,327))
+10:58:21 (ARCGIS) IN: "VBA" ctapp@AUD23904Y1  
+10:58:21 (ARCGIS) IN: "Editor" ctapp@AUD23904Y1  
+10:58:22 (ARCGIS) IN: "VBA" ctapp@AUD23904Y1  
+10:58:22 (ARCGIS) IN: "Editor" ctapp@AUD23904Y1  
+11:01:53 (ARCGIS) IN: "Viewer" pshih@SGH227R9P9  
+11:01:55 (ARCGIS) IN: "Viewer" pshih@SGH227R9P9  
+11:01:56 (ARCGIS) IN: "Viewer" pshih@SGH227R9P9  
+11:04:17 (ARCGIS) IN: "Editor" pshih@SGH227R9P9  
+11:04:18 (ARCGIS) IN: "VBA" pshih@SGH227R9P9  
+11:04:18 (ARCGIS) IN: "Editor" pshih@SGH227R9P9  
+11:05:26 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) pshih@SGH227R9P9  (License server system does not support this feature. (-18,327))
+11:07:29 (ARCGIS) IN: "VBA" rvrooyen@SGH227R9PD  
+11:07:29 (ARCGIS) IN: "Editor" rvrooyen@SGH227R9PD  
+11:08:00 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) ralmeida@SGH402P41Y  (License server system does not support this feature. (-18,327))
+11:08:12 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) pshih@SGH227R9P9  (License server system does not support this feature. (-18,327))
+11:08:14 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) ralmeida@SGH402P41Y  (License server system does not support this feature. (-18,327))
+11:10:08 (ARCGIS) UNSUPPORTED: "StandardEngine" (PORT_AT_HOST_PLUS   ) pshih@SGH227R9P9  (License server system does not support this feature. (-18,327))
+11:10:08 (ARCGIS) UNSUPPORTED: "GDBEdit" (PORT_AT_HOST_PLUS   ) pshih@SGH227R9P9  (License server system does not support this feature. (-18,327))
+11:10:08 (ARCGIS) OUT: "Viewer" pshih@SGH227R9P9  
+11:10:08 (ARCGIS) IN: "Viewer" pshih@SGH227R9P9  
+11:10:19 (ARCGIS) OUT: "Viewer" pshih@SGH227R9P9  
+11:10:46 (ARCGIS) IN: "Viewer" pshih@SGH227R9P9  
+11:11:13 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) pshih@SGH227R9P9  (License server system does not support this feature. (-18,327))
+11:13:59 (ARCGIS) OUT: "Editor" ctapp@AUD23904Y1  
+11:14:01 (ARCGIS) OUT: "VBA" ctapp@AUD23904Y1  
+11:14:11 (ARCGIS) OUT: "Editor" rvrooyen@SGH227R9PD  
+11:14:11 (ARCGIS) OUT: "VBA" rvrooyen@SGH227R9PD  
+11:14:12 (ARCGIS) OUT: "Editor" ctapp@AUD23904Y1  
+11:14:13 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) rvrooyen@SGH227R9PD  (License server system does not support this feature. (-18,327))
+11:17:20 (ARCGIS) OUT: "Editor" ralmeida@SGH402P41Y  
+11:17:23 (ARCGIS) OUT: "VBA" ralmeida@SGH402P41Y  
+11:17:34 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) pshih@SGH227R9P9  (License server system does not support this feature. (-18,327))
+11:18:21 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) ralmeida@SGH402P41Y  (License server system does not support this feature. (-18,327))
+11:22:16 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) ralmeida@SGH402P41Y  (License server system does not support this feature. (-18,327))
+11:27:46 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) ralmeida@SGH402P41Y  (License server system does not support this feature. (-18,327))
+11:42:07 (ARCGIS) (@ARCGIS-SLOG@) ===============================================
+11:42:07 (ARCGIS) (@ARCGIS-SLOG@) === Last 10 Client Requests Processing Time (in ms) ===
+11:42:07 (ARCGIS) (@ARCGIS-SLOG@) Time: Fri Oct 09 2015 11:42:07 New Zealand Daylight Time
+11:42:07 (ARCGIS) (@ARCGIS-SLOG@) Request processing time, when, #concurrent clients, (private bytes (in KB)), client info (user, node, FD)
+11:42:07 (ARCGIS) (@ARCGIS-SLOG@) 00000000 ms at 11:42:02(10/9/2015),#15,(6024K),(RZhang,SGH227R9P3,696)
+11:42:07 (ARCGIS) (@ARCGIS-SLOG@) 00000000 ms at 11:41:59(10/9/2015),#15,(6024K),(ctapp,AUD23904Y1,780)
+11:42:07 (ARCGIS) (@ARCGIS-SLOG@) 00000000 ms at 11:41:43(10/9/2015),#15,(6024K),(pshih,SGH227R9P9,716)
+11:42:07 (ARCGIS) (@ARCGIS-SLOG@) 00000000 ms at 11:41:25(10/9/2015),#15,(6024K),(ralmeida,SGH402P41Y,860)
+11:42:07 (ARCGIS) (@ARCGIS-SLOG@) 00000000 ms at 11:41:20(10/9/2015),#15,(6024K),(ralmeida,SGH402P41Y,816)
+11:42:07 (ARCGIS) (@ARCGIS-SLOG@) 00000000 ms at 11:41:20(10/9/2015),#15,(6024K),(ctapp,AUD23904Y1,708)
+11:42:07 (ARCGIS) (@ARCGIS-SLOG@) 00000000 ms at 11:41:16(10/9/2015),#15,(6024K),(smoodley,SGH227R9P2,548)
+11:42:07 (ARCGIS) (@ARCGIS-SLOG@) 00000000 ms at 11:40:39(10/9/2015),#15,(6024K),(mpatel1,SGH227R9P6,776)
+11:42:07 (ARCGIS) (@ARCGIS-SLOG@) 00000000 ms at 11:40:36(10/9/2015),#15,(6024K),(pshih,SGH227R9P9,800)
+11:42:07 (ARCGIS) (@ARCGIS-SLOG@) 00000000 ms at 11:40:12(10/9/2015),#15,(6024K),(rvrooyen,SGH227R9PD,828)
+11:42:07 (ARCGIS) (@ARCGIS-SLOG@) 
+11:42:07 (ARCGIS) (@ARCGIS-SLOG@) === Top 10 Peak Client Requests Processing Time (in ms) ===
+11:42:07 (ARCGIS) (@ARCGIS-SLOG@) Time: Fri Oct 09 2015 11:42:07 New Zealand Daylight Time
+11:42:07 (ARCGIS) (@ARCGIS-SLOG@) Request processing time, when, #concurrent clients, (private bytes (in KB)), client info (user, node, FD)
+11:42:07 (ARCGIS) (@ARCGIS-SLOG@) 00000016 ms at 11:44:47(10/9/2015),#21,(4784K),(pshih,SGH227R9P9,720)
+11:42:07 (ARCGIS) (@ARCGIS-SLOG@) 00000016 ms at 12:07:27(10/9/2015),#21,(4924K),(cbroadbe,SGH448T6H1,752)
+11:42:07 (ARCGIS) (@ARCGIS-SLOG@) 00000016 ms at 11:44:53(10/9/2015),#22,(4816K),(mcuevas,SGH227R9P8,760)
+11:42:07 (ARCGIS) (@ARCGIS-SLOG@) 00000016 ms at 12:50:56(10/9/2015),#21,(4924K),(rzhang,SGH227R9P3,800)
+11:42:07 (ARCGIS) (@ARCGIS-SLOG@) 00000016 ms at 13:17:19(10/9/2015),#23,(4936K),(rvrooyen,SGH227R9PD,768)
+11:42:07 (ARCGIS) (@ARCGIS-SLOG@) 00000016 ms at 13:19:57(10/9/2015),#24,(4936K),(rvrooyen,SGH227R9PD,680)
+11:42:07 (ARCGIS) (@ARCGIS-SLOG@) 00000016 ms at 13:20:47(10/9/2015),#25,(4936K),(asawant,SGH227R9PF,748)
+11:42:07 (ARCGIS) (@ARCGIS-SLOG@) 00000016 ms at 13:51:28(10/9/2015),#29,(4948K),(mpatel1,SGH227R9P6,772)
+11:42:07 (ARCGIS) (@ARCGIS-SLOG@) 00000016 ms at 14:02:15(10/9/2015),#31,(5080K),(ralmeida,SGH402P41Y,712)
+11:42:07 (ARCGIS) (@ARCGIS-SLOG@) 00000016 ms at 14:25:28(10/9/2015),#34,(5092K),(cbroadbe,SGH448T6H1,752)
+11:42:07 (ARCGIS) (@ARCGIS-SLOG@) 
+11:42:07 (ARCGIS) (@ARCGIS-SLOG@) === Top 10 Peak In-house Operations time (in ms) ===
+11:42:07 (ARCGIS) (@ARCGIS-SLOG@) NOTE: Peak times greater than 4 seconds get recorded.
+11:42:07 (ARCGIS) (@ARCGIS-SLOG@) Time: Fri Oct 09 2015 11:42:07 New Zealand Daylight Time
+11:42:07 (ARCGIS) (@ARCGIS-SLOG@) In-house operation time, when, #concurrent clients
+11:42:07 (ARCGIS) (@ARCGIS-SLOG@) 
+11:42:07 (ARCGIS) (@ARCGIS-SLOG@) === Active Connections Info ===
+11:42:07 (ARCGIS) (@ARCGIS-SLOG@) Peak active connections #34 attempted at Thu Oct 08 2015 14:24:52 New Zealand Daylight Time
+11:42:07 (ARCGIS) (@ARCGIS-SLOG@) 
+11:42:07 (ARCGIS) (@ARCGIS-SLOG@) === Memory Usage Info ===
+11:42:07 (ARCGIS) (@ARCGIS-SLOG@) Peak private bytes 7168K attempted at Fri Oct 09 2015 07:58:00 New Zealand Daylight Time
+11:42:07 (ARCGIS) (@ARCGIS-SLOG@) ===============================================
+11:43:36 (ARCGIS) OUT: "Editor" ralmeida@SGH402P41Y  
+11:43:36 (ARCGIS) OUT: "VBA" ralmeida@SGH402P41Y  
+11:43:37 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) ralmeida@SGH402P41Y  (License server system does not support this feature. (-18,327))
+11:56:45 (ARCGIS) IN: "VBA" rvrooyen@SGH227R9PD  
+11:56:45 (ARCGIS) IN: "Editor" rvrooyen@SGH227R9PD  
+12:02:12 (ARCGIS) TIMESTAMP 10/9/2015
+12:38:28 (ARCGIS) IN: "Editor" pshih@SGH227R9P9  
+12:58:00 (ARCGIS) IN: "ARC/INFO" mpatel1@SGH227R9P6  
+12:58:00 (ARCGIS) IN: "Publisher" mpatel1@SGH227R9P6  
+13:10:47 (ARCGIS) OUT: "Editor" ralmeida@SGH402P41Y  
+13:10:51 (ARCGIS) OUT: "VBA" ralmeida@SGH402P41Y  
+13:11:18 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) ralmeida@SGH402P41Y  (License server system does not support this feature. (-18,327))
+13:15:07 (ARCGIS) IN: "Editor" ctapp@AUD23904Y1  
+13:24:20 (ARCGIS) OUT: "Editor" ctapp@AUD23904Y1  
+13:24:24 (ARCGIS) OUT: "VBA" ctapp@AUD23904Y1  
+13:24:41 (ARCGIS) OUT: "Editor" ctapp@AUD23904Y1  
+13:25:00 (ARCGIS) OUT: "Editor" rvrooyen@SGH227R9PD  
+13:25:14 (ARCGIS) OUT: "VBA" rvrooyen@SGH227R9PD  
+13:25:22 (ARCGIS) OUT: "Editor" rvrooyen@SGH227R9PD  
+13:26:07 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) rvrooyen@SGH227R9PD  (License server system does not support this feature. (-18,327))
+13:26:29 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) rvrooyen@SGH227R9PD  (License server system does not support this feature. (-18,327))
+13:27:22 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) rvrooyen@SGH227R9PD  (License server system does not support this feature. (-18,327))
+13:27:36 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) rvrooyen@SGH227R9PD  (License server system does not support this feature. (-18,327))
+13:27:59 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) rvrooyen@SGH227R9PD  (License server system does not support this feature. (-18,327))
+13:28:18 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) rvrooyen@SGH227R9PD  (License server system does not support this feature. (-18,327))
+13:35:11 (ARCGIS) IN: "VBA" ralmeida@SGH402P41Y  
+13:35:11 (ARCGIS) IN: "Editor" ralmeida@SGH402P41Y  
+13:43:50 (ARCGIS) IN: "Editor" rvrooyen@SGH227R9PD  
+13:43:51 (ARCGIS) IN: "VBA" rvrooyen@SGH227R9PD  
+13:43:51 (ARCGIS) IN: "Editor" rvrooyen@SGH227R9PD  
+13:49:24 (ARCGIS) OUT: "ARC/INFO" rvrooyen@SGH227R9PD  
+13:50:03 (ARCGIS) OUT: "ARC/INFO" mpatel1@SGH227R9P6  
+13:51:29 (ARCGIS) IN: "ARC/INFO" rvrooyen@SGH227R9PD  
+13:51:31 (ARCGIS) OUT: "ARC/INFO" rvrooyen@SGH227R9PD  
+13:52:11 (ARCGIS) OUT: "Editor" ralmeida@SGH402P41Y  
+13:52:15 (ARCGIS) OUT: "VBA" ralmeida@SGH402P41Y  
+13:56:53 (ARCGIS) OUT: "Viewer" ralmeida@SGH402P41Y  
+13:56:53 (ARCGIS) IN: "Viewer" ralmeida@SGH402P41Y  
+14:19:23 (ARCGIS) IN: "ARC/INFO" mpatel1@SGH227R9P6  
+14:26:24 (ARCGIS) IN: "Editor" ctapp@AUD23904Y1  
+14:26:25 (ARCGIS) IN: "VBA" ctapp@AUD23904Y1  
+14:26:25 (ARCGIS) IN: "Editor" ctapp@AUD23904Y1  
+14:26:37 (ARCGIS) IN: "VBA" mpatel1@SGH227R9P6  
+14:26:37 (ARCGIS) IN: "ARC/INFO" mpatel1@SGH227R9P6  
+14:26:37 (ARCGIS) IN: "Publisher" mpatel1@SGH227R9P6  
+14:29:02 (ARCGIS) OUT: "Editor" rvrooyen@SGH227R9PD  
+14:29:02 (ARCGIS) IN: "Editor" rvrooyen@SGH227R9PD  
+14:29:03 (ARCGIS) OUT: "Editor" rvrooyen@SGH227R9PD  
+14:29:05 (ARCGIS) IN: "Editor" rvrooyen@SGH227R9PD  
+14:35:17 (ARCGIS) IN: "VBA" ctapp@AUD23904Y1  
+14:35:17 (ARCGIS) IN: "Editor" ctapp@AUD23904Y1  
+14:40:19 (ARCGIS) OUT: "ARC/INFO" mpatel1@SGH227R9P6  
+14:40:20 (ARCGIS) OUT: "VBA" mpatel1@SGH227R9P6  
+14:40:20 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) mpatel1@SGH227R9P6  (License server system does not support this feature. (-18,327))
+14:42:42 (ARCGIS) IN: "VBA" mpatel1@SGH227R9P6  
+14:42:42 (ARCGIS) IN: "ARC/INFO" mpatel1@SGH227R9P6  
+14:42:55 (ARCGIS) OUT: "Editor" ctapp@AUD23904Y1  
+14:42:57 (ARCGIS) OUT: "VBA" ctapp@AUD23904Y1  
+14:43:07 (ARCGIS) OUT: "Editor" ctapp@AUD23904Y1  
+14:51:15 (ARCGIS) OUT: "ARC/INFO" mpatel1@SGH227R9P6  
+14:51:16 (ARCGIS) OUT: "VBA" mpatel1@SGH227R9P6  
+14:51:16 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) mpatel1@SGH227R9P6  (License server system does not support this feature. (-18,327))
+14:55:05 (ARCGIS) IN: "VBA" mpatel1@SGH227R9P6  
+14:55:05 (ARCGIS) IN: "ARC/INFO" mpatel1@SGH227R9P6  
+14:59:46 (ARCGIS) OUT: "Editor" ralmeida@SGH402P41Y  
+14:59:50 (ARCGIS) OUT: "VBA" ralmeida@SGH402P41Y  
+15:00:18 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) ralmeida@SGH402P41Y  (License server system does not support this feature. (-18,327))
+15:07:07 (ARCGIS) OUT: "ARC/INFO" mpatel1@SGH227R9P6  
+15:07:11 (ARCGIS) OUT: "VBA" mpatel1@SGH227R9P6  
+15:07:12 (ARCGIS) OUT: "Publisher" mpatel1@SGH227R9P6  
+15:07:18 (ARCGIS) OUT: "ARC/INFO" mpatel1@SGH227R9P6  
+15:08:00 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) mpatel1@SGH227R9P6  (License server system does not support this feature. (-18,327))
+15:14:40 (ARCGIS) DENIED: "ARC/INFO" snaidoo@SGH227R9PB  (Licensed number of users already reached. (-4,342))
+15:14:40 (ARCGIS) DENIED: "ARC/INFO" snaidoo@SGH227R9PB  (Licensed number of users already reached. (-4,342:10054 ""))
+15:14:40 (ARCGIS) OUT: "Editor" snaidoo@SGH227R9PB  
+15:15:09 (ARCGIS) IN: "Editor" snaidoo@SGH227R9PB  
+15:15:48 (ARCGIS) DENIED: "ARC/INFO" snaidoo@SGH227R9PB  (Licensed number of users already reached. (-4,342))
+15:15:48 (ARCGIS) DENIED: "ARC/INFO" snaidoo@SGH227R9PB  (Licensed number of users already reached. (-4,342:10054 ""))
+15:15:48 (ARCGIS) OUT: "Editor" snaidoo@SGH227R9PB  
+15:15:58 (ARCGIS) IN: "Editor" snaidoo@SGH227R9PB  
+15:16:10 (ARCGIS) DENIED: "ARC/INFO" snaidoo@SGH227R9PB  (Licensed number of users already reached. (-4,342))
+15:16:10 (ARCGIS) DENIED: "ARC/INFO" snaidoo@SGH227R9PB  (Licensed number of users already reached. (-4,342:10054 ""))
+15:16:10 (ARCGIS) OUT: "Editor" snaidoo@SGH227R9PB  
+15:17:09 (ARCGIS) IN: "Editor" snaidoo@SGH227R9PB  
+15:19:52 (ARCGIS) OUT: "Editor" snaidoo@SGH227R9PB  
+15:19:52 (ARCGIS) OUT: "VBA" snaidoo@SGH227R9PB  
+15:19:53 (ARCGIS) DENIED: "ARC/INFO" snaidoo@SGH227R9PB  (Licensed number of users already reached. (-4,342))
+15:19:53 (ARCGIS) DENIED: "ARC/INFO" snaidoo@SGH227R9PB  (Licensed number of users already reached. (-4,342:10054 ""))
+15:19:53 (ARCGIS) OUT: "Editor" snaidoo@SGH227R9PB  
+15:19:56 (ARCGIS) OUT: "Editor" snaidoo@SGH227R9PB  
+15:19:58 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) snaidoo@SGH227R9PB  (License server system does not support this feature. (-18,327))
+15:20:12 (ARCGIS) IN: "Editor" snaidoo@SGH227R9PB  
+15:20:40 (ARCGIS) DENIED: "ARC/INFO" snaidoo@SGH227R9PB  (Licensed number of users already reached. (-4,342))
+15:20:40 (ARCGIS) DENIED: "ARC/INFO" snaidoo@SGH227R9PB  (Licensed number of users already reached. (-4,342:10054 ""))
+15:20:40 (ARCGIS) OUT: "Editor" snaidoo@SGH227R9PB  
+15:21:08 (ARCGIS) IN: "Editor" snaidoo@SGH227R9PB  
+15:21:11 (ARCGIS) OUT: "ARC/INFO" mpatel1@SGH227R9P6  
+15:21:11 (ARCGIS) OUT: "VBA" mpatel1@SGH227R9P6  
+15:21:12 (ARCGIS) UNSUPPORTED: "Tracking" (PORT_AT_HOST_PLUS   ) mpatel1@SGH227R9P6  (License server system does not support this feature. (-18,327))
+15:22:16 (ARCGIS) DENIED: "ARC/INFO" snaidoo@SGH227R9PB  (Licensed number of users already reached. (-4,342))
+15:22:16 (ARCGIS) DENIED: "ARC/INFO" snaidoo@SGH227R9PB  (Licensed number of users already reached. (-4,342:10054 ""))
+15:22:16 (ARCGIS) OUT: "Editor" snaidoo@SGH227R9PB  
+15:23:27 (ARCGIS) IN: "Editor" snaidoo@SGH227R9PB  
+15:23:43 (ARCGIS) DENIED: "ARC/INFO" snaidoo@SGH227R9PB  (Licensed number of users already reached. (-4,342))
+15:23:43 (ARCGIS) DENIED: "ARC/INFO" snaidoo@SGH227R9PB  (Licensed number of users already reached. (-4,342:10054 ""))
+15:23:43 (ARCGIS) OUT: "Editor" snaidoo@SGH227R9PB  
+15:24:07 (ARCGIS) DENIED: "ARC/INFO" snaidoo@SGH227R9PB  (Licensed number of users already reached. (-4,342))
+15:24:07 (ARCGIS) DENIED: "ARC/INFO" snaidoo@SGH227R9PB  (Licensed number of users already reached. (-4,342:10054 ""))
+15:24:07 (ARCGIS) OUT: "Editor" snaidoo@SGH227R9PB  
+15:25:22 (ARCGIS) IN: "Editor" snaidoo@SGH227R9PB  
+15:25:25 (ARCGIS) IN: "Editor" snaidoo@SGH227R9PB  
+15:27:03 (ARCGIS) IN: "Editor" snaidoo@SGH227R9PB  
+15:27:05 (ARCGIS) IN: "VBA" snaidoo@SGH227R9PB  
+15:27:05 (ARCGIS) IN: "Editor" snaidoo@SGH227R9PB  
+15:27:09 (ARCGIS) DENIED: "ARC/INFO" snaidoo@SGH227R9PB  (Licensed number of users already reached. (-4,342))
+15:27:09 (ARCGIS) DENIED: "ARC/INFO" snaidoo@SGH227R9PB  (Licensed number of users already reached. (-4,342:10054 ""))
+15:27:09 (ARCGIS) OUT: "Editor" snaidoo@SGH227R9PB  
