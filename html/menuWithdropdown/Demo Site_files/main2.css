@@ -1,0 +1,31 @@
+body {
+	font-family: "Ubuntu", sans-serif; font-size: 12px;
+}
+
+div.drop {
+	margin: auto; height: 58px; background-color: rgb(0, 0, 0); width:120px;
+}
+.drop_menu {
+	background: rgb(0, 85, 85); margin: 0px; padding: 0px; text-transform: uppercase; font-size: 12px; list-style-type: none;
+}
+.drop_menu li {
+	float: left;
+}
+.drop_menu li a {
+	padding: 7px 30px; color: rgb(255, 255, 255); text-decoration: none; display: block;
+}
+.drop_menu li:hover {
+	background: rgb(1, 93, 164); position: relative;
+}
+.drop_menu li:hover ul {
+	background: rgb(1, 93, 164); padding: 0px; left: 130px; top: 0px;
+}
+.drop_menu li:hover ul li a {
+	padding: 5px 10px; width: 200px; height: 14px; text-indent: 15px; border-bottom-color: rgb(65, 129, 178); border-bottom-width: 1px; border-bottom-style: solid; display: block; background-color: rgb(1, 93, 164);
+}
+.drop_menu li:hover ul li a:hover {
+	background: rgb(1, 71, 141);
+}
+.drop_menu ul {
+	left: -9999px; top: -9999px; list-style-type: none; position: absolute;
+}
