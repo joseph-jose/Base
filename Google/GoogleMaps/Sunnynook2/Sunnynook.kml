@@ -1,0 +1,154 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<kml xmlns='http://www.opengis.net/kml/2.2'>
+	<Document>
+		<name>Sunnynook</name>
+		<Placemark>
+			<styleUrl>#poly-DB4436-1-163</styleUrl>
+			<name>New Wastewater pipeline</name>
+			<ExtendedData>
+			</ExtendedData>
+			<description><![CDATA[Section1]]></description>
+			<Polygon>
+				<outerBoundaryIs>
+					<LinearRing>
+						<tessellate>1</tessellate>
+						<coordinates>174.7390294,-36.7614328,0.0 174.7400701,-36.7606936,0.0 174.7405851,-36.76030680000001,0.0 174.7408319,-36.7600317,0.0 174.7411323,-36.7592581,0.0 174.7408855,-36.7592237,0.0 174.7405958,-36.7600145,0.0 174.740274,-36.7603154,0.0 174.739641,-36.7608139,0.0 174.7388899,-36.7613038,0.0 174.7390294,-36.7614328,0.0</coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#poly-DB4436-1-119</styleUrl>
+			<name>New wastewater pipeline</name>
+			<ExtendedData>
+			</ExtendedData>
+			<description><![CDATA[Section2]]></description>
+			<Polygon>
+				<outerBoundaryIs>
+					<LinearRing>
+						<tessellate>1</tessellate>
+						<coordinates>174.7411323,-36.7592581,0.0 174.7415614,-36.7584415,0.0 174.7418296,-36.757857,0.0 174.742173,-36.7574788,0.0 174.740113,-36.7560262,0.0 174.7393513,-36.7554932,0.0 174.73923330000002,-36.75557919999999,0.0 174.7410035,-36.7567826,0.0 174.7419691,-36.7574788,0.0 174.7416472,-36.7578141,0.0 174.7413683,-36.7583642,0.0 174.7411215,-36.7588112,0.0 174.7408855,-36.7592237,0.0 174.7411323,-36.7592581,0.0</coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#poly-DB4436-1-112</styleUrl>
+			<name>New wastewater pipeline</name>
+			<ExtendedData>
+			</ExtendedData>
+			<description><![CDATA[Section 4]]></description>
+			<Polygon>
+				<outerBoundaryIs>
+					<LinearRing>
+						<tessellate>1</tessellate>
+						<coordinates>174.7393513,-36.7554932,0.0 174.7391689,-36.7547797,0.0 174.7398877,-36.754178,0.0 174.7398019,-36.7538858,0.0 174.7396195,-36.75397170000001,0.0 174.7396839,-36.7541694,0.0 174.7389919,-36.7547583,0.0 174.73923330000002,-36.75557919999999,0.0 174.7393513,-36.7554932,0.0</coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#poly-4186F0-2-76</styleUrl>
+			<name>Construction site office</name>
+			<ExtendedData>
+			</ExtendedData>
+			<description><![CDATA[At the end of pipeline works]]></description>
+			<Polygon>
+				<outerBoundaryIs>
+					<LinearRing>
+						<tessellate>1</tessellate>
+						<coordinates>174.7393969,-36.7554782,0.0 174.7395819,-36.75560500000001,0.0 174.7397215,-36.75548239999999,0.0 174.7395471,-36.7553578,0.0 174.7393969,-36.7554782,0.0</coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#poly-4186F0-2-76</styleUrl>
+			<name>Construction site office</name>
+			<ExtendedData>
+			</ExtendedData>
+			<description><![CDATA[In front of Sunnynook Park]]></description>
+			<Polygon>
+				<outerBoundaryIs>
+					<LinearRing>
+						<tessellate>1</tessellate>
+						<coordinates>174.7419342,-36.7574762,0.0 174.7418142,-36.7574133,0.0 174.7417136,-36.757445,0.0 174.7416674,-36.7574912,0.0 174.7418377,-36.7575901,0.0 174.7419342,-36.7574762,0.0</coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#icon-503-DB4436</styleUrl>
+			<name>Construction site</name>
+			<ExtendedData>
+			</ExtendedData>
+			<description><![CDATA[At start point]]></description>
+			<Point>
+				<coordinates>174.7395551,-36.7554416,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#icon-503-DB4436</styleUrl>
+			<name>Construction office</name>
+			<ExtendedData>
+			</ExtendedData>
+			<description><![CDATA[At park center]]></description>
+			<Point>
+				<coordinates>174.7418082,-36.7574874,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Style id='icon-503-DB4436'>
+			<IconStyle>
+				<color>ff3644DB</color>
+				<scale>1.1</scale>
+				<Icon>
+					<href>http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+				</Icon>
+			</IconStyle>
+		</Style>
+		<Style id='poly-4186F0-2-76'>
+			<LineStyle>
+				<color>ffF08641</color>
+				<width>2</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>4CF08641</color>
+				<fill>1</fill>
+				<outline>1</outline>
+			</PolyStyle>
+		</Style>
+		<Style id='poly-DB4436-1-112'>
+			<LineStyle>
+				<color>ff3644DB</color>
+				<width>1</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>703644DB</color>
+				<fill>1</fill>
+				<outline>1</outline>
+			</PolyStyle>
+		</Style>
+		<Style id='poly-DB4436-1-119'>
+			<LineStyle>
+				<color>ff3644DB</color>
+				<width>1</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>773644DB</color>
+				<fill>1</fill>
+				<outline>1</outline>
+			</PolyStyle>
+		</Style>
+		<Style id='poly-DB4436-1-163'>
+			<LineStyle>
+				<color>ff3644DB</color>
+				<width>1</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>A33644DB</color>
+				<fill>1</fill>
+				<outline>1</outline>
+			</PolyStyle>
+		</Style>
+	</Document>
+</kml>
