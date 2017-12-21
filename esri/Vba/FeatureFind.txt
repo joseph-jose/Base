@@ -1,0 +1,43 @@
+Sub FindFeature(ByVal inFeat As IEnumFeature, ByVal inFeature As IFeature)
+    Dim inRow As IRow
+    Set inRow = inFeature
+    
+    Dim vFeat As IFeature
+    inFeat.Reset
+    Set vFeat = inFeat.Next
+   
+    Dim pRow As IRow
+    While (Not (vFeat Is Nothing))
+        'MsgBox vFeat.FeatureType
+        Set pRow = vFeat
+        
+        MsgBox pRow.Value(pRow.Fields.FindField("GIS_ID"))
+        pRow.Value(pRow.Fields.FindField("GIS_ID")) = pRow.Value(pRow.Fields.FindField("GIS_ID")) + 10
+        If (inRow.Value(pRow.Fields.FindField("GIS_ID")) = pRow.Value(pRow.Fields.FindField("GIS_ID"))) Then
+            MsgBox "Found"
+        End If
+        
+        Set vFeat = inFeat.Next
+    Wend
+End Sub
+
+
+Sub FFeat()
+    Dim vDoc As IMxDocument
+    Set vDoc = ThisDocument
+ 
+    Dim vMap As IMap
+    Set vMap = vDoc.FocusMap
+    
+    
+    Dim vEnumFeat As IEnumFeature
+    Set vEnumFeat = vMap.FeatureSelection
+    vEnumFeat.Reset
+    
+    Dim vFeat As IFeature
+    Set vFeat = vEnumFeat.Next
+    Set vFeat = vEnumFeat.Next
+    Set vFeat = vEnumFeat.Next
+    FindFeature vEnumFeat, vFeat
+    
+End Sub

@@ -1,0 +1,14 @@
+'------iterate layers------------
+'    Dim vDoc As IMxDocument
+'    Set vDoc = ThisDocument
+'
+'    Dim vEnmLyr As IEnumLayer
+'    Set vEnmLyr = vDoc.FocusMap.Layers(Nothing, True)
+'
+'    Dim pFeatLyr As IFeatureLayer
+'    Dim vLyr As ILayer
+'    Set vLyr = vEnmLyr.Next
+'    While Not (vLyr Is Nothing)
+'            MsgBox vLyr.Name
+'        Set vLyr = vEnmLyr.Next
+'    Wend

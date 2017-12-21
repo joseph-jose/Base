@@ -1,0 +1,184 @@
+Sub QryJoin()
+    Dim vDoc As IMxDocument
+    Set vDoc = ThisDocument
+ 
+    Dim vVw As IActiveView
+    Set vVw = vDoc.activeView
+    
+    ' Get the TOC
+    Dim vIContentsView As IContentsView
+    Set vIContentsView = vDoc.CurrentContentsView
+
+    Dim layer As ILayer
+    If (TypeOf vIContentsView.selectedItem Is IFeatureLayer) Then
+        Set layer = vIContentsView.selectedItem
+        MsgBox layer.Name
+    End If
+
+    Dim featureWorkspace As IFeatureWorkspace
+    Dim vLyr As ILayer
+    
+    Dim vFeatLyr As IFeatureLayer
+    Set vFeatLyr = layer
+    Set featureWorkspace = vFeatLyr.FeatureClass.FeatureDataset.Workspace
+
+    Dim queryDef As IQueryDef
+    Set queryDef = featureWorkspace.CreateQueryDef()
+
+    ' Provide a list of tables to join.
+    queryDef.Tables = "GISNet1.GISWSL.WT_Pipe, GISNet1.GISWSL.WAT_SAP"
+
+    ' Set the subfields and the WhereClause (in this case, the join condition).
+    queryDef.SubFields = "GISNet1.GISWSL.WT_Pipe.ObjectId, GISNet1.GISWSL.WT_Pipe.GIS_Id, GISNet1.GISWSL.WT_Pipe.Equip_Id, GISNet1.GISWSL.WAT_SAP.Equipment, GISNet1.GISWSL.WAT_SAP.Equidescr"
+    queryDef.WhereClause = "GISNet1.GISWSL.WT_Pipe.Equip_Id = GISNet1.GISWSL.WAT_SAP.Equipment and GISNet1.GISWSL.WAT_SAP.GISREF='PR11039'"
+    'queryDef.WhereClause = "GISNet1.GISWSL.WT_Pipe.Equip_Id = GISNet1.GISWSL.WAT_SAP.Equipment"
+
+    ' Get a cursor of the results and find the indexes of the fields to display.
+    'Dim ComReleaser As  ComReleaser
+    'With ComReleaser = New ComReleaser
+        Dim cursor As ICursor
+        Set cursor = queryDef.Evaluate
+        'ComReleaser.ManageLifetime (cursor)
+        Dim streetsNameIndex As Integer
+        streetsNameIndex = cursor.FindField("GISNet1.GISWSL.WT_Pipe.GIS_Id")
+        Dim streetsTypeIndex As Integer
+        streetsTypeIndex = cursor.FindField("GISNet1.GISWSL.WT_Pipe.Equip_Id")
+        Dim altnameNameIndex As Integer
+        altnameNameIndex = cursor.FindField("GISNet1.GISWSL.WAT_SAP.Equidescr")
+        Dim altnameTypeIndex As Integer
+        altnameTypeIndex = cursor.FindField("GISNet1.GISWSL.WT_Pipe.ObjectId")
+        ' Use the cursor to step through the results, displaying the names and altnames of each
+        ' street.
+        Dim row As IRow
+        Set row = Nothing
+        Set row = cursor.NextRow()
+        
+        
+        Do While Not row Is Nothing
+            'Console.WriteLine("Street name: {0} {1}. - Alt. name: {2} {3}.", row.Value(streetsNameIndex), row.Value(streetsTypeIndex), row.Value(altnameNameIndex), row.Value(altnameTypeIndex))
+            MsgBox row.Value(altnameNameIndex) 'row.Value(streetsNameIndex) + row.Value(streetsTypeIndex) + row.Value(altnameNameIndex) + row.Value(altnameTypeIndex)
+            Set row = cursor.NextRow()
+        Loop
+    
+    'End
+'Using comReleaser As ComReleaser = New ComReleaser()
+'Dim cursor As ICursor = queryDef.Evaluate()
+'ComReleaser.ManageLifetime (cursor)
+'Dim streetsNameIndex As Integer = cursor.FindField("streets.NAME")
+'Dim streetsTypeIndex As Integer = cursor.FindField("streets.TYPE")
+'Dim altnameNameIndex As Integer = cursor.FindField("altname.ST_NAME")
+'Dim altnameTypeIndex As Integer = cursor.FindField("altname.ST_TYPE")
+
+'' Use the cursor to step through the results, displaying the names and altnames of each
+'' street.
+'Dim row As IRow = Nothing
+'Do While Not row Is Nothing
+'    Console.WriteLine("Street name: {0} {1}. - Alt. name: {2} {3}.", row.Value(streetsNameIndex), row.Value(streetsTypeIndex), row.Value(altnameNameIndex), row.Value(altnameTypeIndex))
+'    row = cursor.NextRow()
+'Loop
+'End Using
+End Sub
+
+
+
+
+
+=============================================================================================
+[C#]
+// Create the query definition.
+IQueryDef queryDef = featureWorkspace.CreateQueryDef();
+
+// Provide a list of tables to join.
+queryDef.Tables = "streets, altname";
+
+// Set the subfields and the WhereClause (in this case, the join condition).
+queryDef.SubFields = "streets.NAME, streets.TYPE, altname.ST_NAME, altname.ST_TYPE";
+queryDef.WhereClause = "streets.OBJECTID = altname.JOINID";
+
+// Get a cursor of the results and find the indexes of the fields to display.
+using(ComReleaser comReleaser = new ComReleaser())
+{
+    ICursor cursor = queryDef.Evaluate();
+    comReleaser.ManageLifetime(cursor);
+    int streetsNameIndex = cursor.FindField("streets.NAME");
+    int streetsTypeIndex = cursor.FindField("streets.TYPE");
+    int altnameNameIndex = cursor.FindField("altname.ST_NAME");
+    int altnameTypeIndex = cursor.FindField("altname.ST_TYPE");
+
+    // Use the cursor to step through the results, displaying the names and altnames of each 
+    // street.
+    IRow row = null;
+    while ((row = cursor.NextRow()) != null)
+    {
+        Console.WriteLine("Street name: {0} {1}. - Alt. name: {2} {3}.",
+            row.get_Value(streetsNameIndex), row.get_Value(streetsTypeIndex),
+            row.get_Value(altnameNameIndex), row.get_Value(altnameTypeIndex));
+    }
+}
+[VB.NET]
+' Create the query definition.
+Dim queryDef As IQueryDef = featureWorkspace.CreateQueryDef()
+
+' Provide a list of tables to join.
+queryDef.Tables = "streets, altname"
+
+' Set the subfields and the WhereClause (in this case, the join condition).
+queryDef.SubFields = "streets.NAME, streets.TYPE, altname.ST_NAME, altname.ST_TYPE"
+queryDef.WhereClause = "streets.OBJECTID = altname.JOINID"
+
+' Get a cursor of the results and find the indexes of the fields to display.
+Using comReleaser As ComReleaser = New ComReleaser()
+Dim cursor As ICursor = queryDef.Evaluate()
+comReleaser.ManageLifetime(cursor)
+Dim streetsNameIndex As Integer = cursor.FindField("streets.NAME")
+Dim streetsTypeIndex As Integer = cursor.FindField("streets.TYPE")
+Dim altnameNameIndex As Integer = cursor.FindField("altname.ST_NAME")
+Dim altnameTypeIndex As Integer = cursor.FindField("altname.ST_TYPE")
+
+' Use the cursor to step through the results, displaying the names and altnames of each
+' street.
+Dim row As IRow = Nothing
+Do While Not row Is Nothing
+    Console.WriteLine("Street name: {0} {1}. - Alt. name: {2} {3}.", row.Value(streetsNameIndex), row.Value(streetsTypeIndex), row.Value(altnameNameIndex), row.Value(altnameTypeIndex))
+    row = cursor.NextRow()
+Loop
+End Using
+With the QueryDef defined, the TableQueryName class can be used to create the query table. The following code example shows a function that takes a QueryDef, the geodatabase workspace containing the tables, and the name of the new query table. It also takes an argument for the comma-delimited list of key fields to use to manufacture the ObjectIDs. If this is not an option, set the makeCopy parameter (or the CopyLocally property) to true and provide an empty string for the key fields.
+[C#]
+// Make the new TableQueryName.
+IQueryName2 queryName2 = (IQueryName2)new TableQueryNameClass();
+queryName2.QueryDef = queryDef;
+queryName2.PrimaryKey = "streets.StreetID";
+queryName2.CopyLocally = true;
+
+// Set the workspace and name of the new QueryTable.
+IDatasetName datasetName = (IDatasetName)queryName2;
+datasetName.WorkspaceName = workspaceName;
+datasetName.Name = "StreetsJoin";
+
+// Open the virtual table.
+IName name = (IName)queryName2;
+ITable table = (ITable)name.Open();
+[VB.NET]
+' Make the new TableQueryName.
+Dim queryName2 As IQueryName2 = CType(New TableQueryNameClass(), IQueryName2)
+queryName2.QueryDef = queryDef
+queryName2.PrimaryKey = "streets.StreetID"
+queryName2.CopyLocally = True
+
+' Set the workspace and name of the new QueryTable.
+Dim datasetName As IDatasetName = CType(queryName2, IDatasetName)
+datasetName.WorkspaceName = workspaceName
+datasetName.Name = tableName
+
+' Open the virtual table.
+Dim Name As IName = CType(queryName2, IName)
+Dim table As ITable = CType(Name.Open(), ITable)
+
+
+
+
+
+
+
+

@@ -1,0 +1,117 @@
+Declare Sub Sleep Lib "kernel32" _
+(ByVal dwMilliseconds As Long)
+
+Public Sub FlashGeometry(ByVal geometry As IGeometry, ByVal color As IRgbColor, ByVal display As IDisplay, ByVal delay As Integer)
+
+
+  display.StartDrawing display.hDC, esriNoScreenCache
+
+
+  Select Case geometry.GeometryType
+  Case esriGeometryPolygon
+
+    'Set the flash geometry's symbol.
+    Dim simpleFillSymbol As ISimpleFillSymbol
+    Set simpleFillSymbol = New simpleFillSymbol
+    simpleFillSymbol.color = color
+    Dim symbol As ISymbol
+    Set symbol = simpleFillSymbol ' Dynamic Cast
+    symbol.ROP2 = esriROPNotXOrPen
+
+    'Flash the input polygon geometry.
+    display.SetSymbol symbol
+    display.DrawPolygon geometry
+    
+    Sleep delay
+    display.DrawPolygon geometry
+
+  Case esriGeometryPolyline
+
+    'Set the flash geometry's symbol.
+    MsgBox "polyline"
+
+  Case esriGeometryPoint
+
+    'Set the flash geometry's symbol.
+    MsgBox "Geometry point"
+
+    Dim pMarkerSymbol As ISimpleMarkerSymbol
+    Set pMarkerSymbol = New simpleMarkerSymbol
+    pMarkerSymbol.size = 12
+    pMarkerSymbol.Style = esriSimpleMarkerStyle.esriSMSCircle
+    pMarkerSymbol.color = color
+    pMarkerSymbol.OutlineColor = color
+    Dim pSymbol As ISymbol
+    Set pSymbol = pMarkerSymbol
+    pSymbol.ROP2 = esriRasterOpCode.esriROPNotXOrPen
+    
+    display.SetSymbol symbol
+    display.DrawPoint geometry
+    Sleep delay
+    display.DrawPolygon geometry
+    
+'    pemerFeatureselection.SetSelectionSymbol = True
+'    pemerFeatureselection.SelectionSymbol = pSimpleMarkerSymbol
+'    AxMapControl.activeView.ScreenDisplay.SetSymbol (pSymbol)
+                    
+  Case esriGeometryMultipoint
+
+    'Set the flash geometry's symbol.
+    MsgBox "multipoint"
+
+  End Select
+
+  display.FinishDrawing
+
+End Sub
+
+Sub F2()
+    Dim vDoc As IMxDocument
+    Set vDoc = ThisDocument
+ 
+    Dim vMap As IMap
+    Set vMap = vDoc.FocusMap
+    
+    
+    Dim vEnumFeat As IEnumFeature
+    
+    Set vEnumFeat = vMap.FeatureSelection
+    vEnumFeat.Reset
+
+    Dim vFeat As IFeature
+    Set vFeat = vEnumFeat.Next
+
+    Dim geometry As IGeometry, color As IRgbColor, display As IDisplay, delay As Integer
+    Set geometry = vFeat.Shape
+    'Set display = vDoc.FocusMap
+    Dim vAcView As IActiveView
+    Set vAcView = vDoc.activeView
+    Set display = vAcView.ScreenDisplay
+    Set color = New RgbColor
+    color.Green = 255
+    FlashGeometry geometry, color, display, 500
+    
+'    vDoc.activeView.Extent = geometry
+
+'    Dim pnt As IPoint
+'    Set pnt = Program.CurrentOperation.BreakPoint
+
+'Exit Sub
+'
+'    Dim clr As IRgbColor
+'    Set clr = New RgbColor
+'    clr.Red = 0
+'    clr.Green = 255
+'    clr.Blue = 0
+'
+'    Dim sf As ISimpleMarkerSymbol
+'    Set sf = New simpleMarkerSymbol
+'    sf.color = clr
+'    sf.size = 20
+'    'sf.Style = esriSimpleMarkerStyle.esriSMSCross
+'
+'    Dim pMapControl As
+'    Set pMapControl = ThisDocument  Document.MapControl1.Object
+'
+'    axMapControl1.FlashShape vFeat, 6, 400, sf
+End Sub

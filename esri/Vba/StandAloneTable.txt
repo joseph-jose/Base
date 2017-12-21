@@ -1,4 +1,36 @@
-Public Sub getStandAloneLayers()
+Sub QryFltr(vLyr As IStandaloneTable, vStr As String)
+    Dim vQryFltr As IQueryFilter
+    Set vQryFltr = New QueryFilter
+    vQryFltr.WhereClause = vStr
+    
+    Dim vFtCursr As ICursor
+    Dim vFtCls As ITable
+    Set vFtCls = vLyr.Table
+    
+    Set vFtCursr = vFtCls.Search(vQryFltr, False)
+    
+    Dim vRow As IRow
+    'Dim vFeat As IFeature
+    Set vRow = vFtCursr.NextRow
+    While Not (vRow Is Nothing)
+        'Set vRow = vFeat
+        Dim vStrVal As String
+        vStrVal = vRow.Value(vRow.Fields.FindField("Equipment"))
+        MsgBox vStrVal
+        
+        Set vRow = vFtCursr.NextRow
+    Wend
+    
+    
+End Sub
+
+Public Sub v2()
+    Dim vStnTbl As IStandaloneTable
+    Set vStnTbl = getStandAloneLayers()
+    MsgBox vStnTbl.Name
+    QryFltr vStnTbl, "GISSTATE='IN Progress'"
+End Sub
+Public Function getStandAloneLayers() As IStandaloneTable
 '------iterate layers------------
     Dim vDoc As IMxDocument
     Set vDoc = ThisDocument
@@ -9,11 +41,24 @@ Public Sub getStandAloneLayers()
     Dim pSTC As IStandaloneTableCollection
     Set pSTC = vMap
     Dim pST As IStandaloneTable
-    Set pST = pSTC.StandaloneTable(X) ' x is index number
+    'Set pST = pSTC.StandaloneTable(0) ' x is index number
     
-    MsgBox pSTC.StandaloneTableCount
+    Dim vDocCnt As Integer
+    vDocCnt = pSTC.StandaloneTableCount
+    For vI = 0 To vDocCnt
+        Set pST = pSTC.StandaloneTable(vI) ' x is index number
+        If (pST.Name = "WAT_SAPGIS") Then
+            Set getStandAloneLayers = pST
+            Exit For
+        End If
+    Next
     
-    MsgBox pST.Name
+    
+    
+    'MsgBox pSTC.StandaloneTableCount
+    
+    'MsgBox pST.Name
 '    pSTC.RemoveStandaloneTable (pST)
-End Sub
+End Function
+
 

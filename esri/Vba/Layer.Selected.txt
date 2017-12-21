@@ -1,0 +1,28 @@
+    Dim vDoc As IMxDocument
+    Set vDoc = ThisDocument
+ 
+    Dim vVw As IActiveView
+    Set vVw = vDoc.activeView
+    
+    ' Get the TOC
+    Dim vIContentsView As IContentsView
+    Set vIContentsView = vDoc.CurrentContentsView
+
+'      ' Get the selected layer
+'    Dim selectedItem As Object
+'    Set selectedItem = vIContentsView.selectedItem
+'    If Not (TypeOf selectedItem Is ILayer) Then
+'        Return
+'    End If
+'    Dim layer As ILayer
+'    Set layer = selectedItem
+'    'Set layer = TryCast(selectedItem, ILayer)
+'      ' Zoom to the extent of the layer and refresh the map
+
+    If (TypeOf vIContentsView.selectedItem Is IFeatureLayer) Then
+        Dim layer As ILayer
+        Set layer = vIContentsView.selectedItem
+        MsgBox layer.Name
+        vVw.Extent = layer.AreaOfInterest
+        vVw.Refresh
+    End If

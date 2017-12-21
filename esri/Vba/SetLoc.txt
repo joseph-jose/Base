@@ -1,0 +1,51 @@
+Sub setGeom(ByVal inFeat As IFeature)
+    If inFeat.FeatureType = esriFTSimple Then
+        Dim vPoint As IPoint
+        Set vPoint = inFeat.Shape
+        MsgBox vPoint.X & "," & vPoint.Y
+        
+        
+        
+        Dim trans2D As ITransform2D
+        Set trans2D = inFeat.Shape
+        
+        Dim dx As Double
+        Dim dy As Double
+        dx = vPoint.X - 100
+        dy = vPoint.Y
+        trans2D.Move dx, dy
+        inFeat.Store
+    End If
+End Sub
+Sub F2()
+    Dim vDoc As IMxDocument
+    Set vDoc = ThisDocument
+ 
+    Dim vMap As IMap
+    Set vMap = vDoc.FocusMap
+    
+    
+    Dim vEnumFeat As IEnumFeature
+    
+    Set vEnumFeat = vMap.FeatureSelection
+    vEnumFeat.Reset
+
+    Dim vFeat As IFeature
+    Set vFeat = vEnumFeat.Next
+    setGeom vFeat
+    
+    vDoc.ActiveView.Refresh
+    
+    
+'
+'    Dim geometry As IGeometry, color As IRgbColor, display As IDisplay, delay As Integer
+'    Set geometry = vFeat.Shape
+'    'Set display = vDoc.FocusMap
+'    Dim vAcView As IActiveView
+'    Set vAcView = vDoc.ActiveView
+'    Set display = vAcView.ScreenDisplay
+'    Set color = New RgbColor
+'    color.Green = 255
+'    FlashGeometry geometry, color, display, 500
+    
+End Sub

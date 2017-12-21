@@ -1,0 +1,28 @@
+Sub getLyrFFeat(ByVal inFeature As IFeature)
+
+    Dim vFeatCls As IFeatureClass
+    Set vFeatCls = inFeature.Class
+    
+    MsgBox vFeatCls.AliasName
+    
+
+End Sub
+Sub FFeat()
+    Dim vDoc As IMxDocument
+    Set vDoc = ThisDocument
+ 
+    Dim vMap As IMap
+    Set vMap = vDoc.FocusMap
+    
+    
+    Dim vEnumFeat As IEnumFeature
+    Set vEnumFeat = vMap.FeatureSelection
+    vEnumFeat.Reset
+    
+    Dim vFeat As IFeature
+    Set vFeat = vEnumFeat.Next
+    Set vFeat = vEnumFeat.Next
+    Set vFeat = vEnumFeat.Next
+    
+    getLyrFFeat vFeat
+End Sub

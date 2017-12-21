@@ -1,0 +1,18 @@
+Public Sub getDataLayer()
+'------iterate layers------------
+    Dim vDoc As IMxDocument
+    Set vDoc = ThisDocument
+    Dim pID As New UID
+    pID = "{6CA416B1-E160-11D2-9F4E-00C04F6BC78E}"
+
+    Dim vEnmLyr As IEnumLayer
+    Set vEnmLyr = vDoc.FocusMap.Layers(pID, True)
+
+    Dim vLyr As ILayer
+    Set vLyr = vEnmLyr.Next
+    While Not (vLyr Is Nothing)
+            MsgBox vLyr.Name
+        Set vLyr = vEnmLyr.Next
+    Wend
+
+End Sub

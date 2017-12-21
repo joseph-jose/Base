@@ -1,0 +1,22 @@
+Sub FieldsVisile()
+    Dim vDoc As IMxDocument
+    Set vDoc = ThisDocument
+    
+  
+    
+    Dim pFieldInfo As IFieldInfo
+    Dim pLayerFields As ILayerFields
+    
+    Set pLayerFields = vDoc.SelectedLayer
+    Dim vI As Integer
+    For vI = 0 To pLayerFields.FieldCount - 1
+        Set pFieldInfo = pLayerFields.FieldInfo(vI)
+        If Not pFieldInfo.Visible Then
+            'pFieldInfo.Visible = False
+            MsgBox pFieldInfo.Alias
+        End If
+    Next
+    
+    
+
+End Sub

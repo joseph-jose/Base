@@ -1,0 +1,24 @@
+Sub QryFltr(vLyr As IFeatureLayer, vStr As String)
+    Dim vQryFltr As IQueryFilter
+    Set vQryFltr = New QueryFilter
+    vQryFltr.WhereClause = vStr
+    
+    Dim vFtCursr As IFeatureCursor
+    Dim vFtCls As IFeatureClass
+    Set vFtCls = vLyr.FeatureClass
+    
+    Set vFtCursr = vFtCls.Search(vQryFltr, False)
+    
+    Dim vRow As IRow
+    Dim vFeat As IFeature
+    Set vFeat = vFtCursr.NextFeature
+    While Not (vFeat Is Nothing)
+        Set vRow = vFeat
+        Dim vStrVal As String
+        vStrVal = vRow.Value(vRow.Fields.FindField("FAC_DESC"))
+        MsgBox vStrVal
+        Set vFeat = vFtCursr.NextFeature
+    Wend
+    
+    
+End Sub

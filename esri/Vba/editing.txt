@@ -1,0 +1,132 @@
+public void UseUpdateCursor(IFeatureClass featureClass)
+{
+    // Restrict the number of features to be updated.
+    IQueryFilter queryFilter = new QueryFilterClass();
+    queryFilter.WhereClause = "NAME = 'Highway 104'";
+    queryFilter.SubFields = "TYPE";
+
+    // Use IFeatureClass.Update to populate IFeatureCursor.
+    IFeatureCursor updateCursor = featureClass.Update(queryFilter, false);
+
+    int typeFieldIndex = featureClass.FindField("TYPE");
+    IFeature feature = null;
+    try
+    {
+        while ((feature = updateCursor.NextFeature()) != null)
+        {
+            feature.set_Value(typeFieldIndex, "Toll Highway");
+            updateCursor.UpdateFeature(feature);
+        }
+    }
+    catch (COMException comExc)
+    {
+        // Handle any errors that might occur on NextFeature().
+    }
+
+    // If the cursor is no longer needed, release it.
+    Marshal.ReleaseComObject(updateCursor);
+}
+
+
+public void EditsOutsideAnEditSession(IWorkspace workspace)
+{
+    // Cast the workspace to the IWorkspaceEdit2 interface to confirm whether the workspace
+    // is in an edit operation. If so, raise an exception.
+    IWorkspaceEdit2 workspaceEdit2 = (IWorkspaceEdit2)workspace;
+    if (workspaceEdit2.IsInEditOperation)
+    {
+        throw new Exception("Cannot use ITransactions during an edit operation.");
+    }
+    // Begin a transaction.
+    ITransactions transactions = (ITransactions)workspace;
+    transactions.StartTransaction();
+    try
+    {
+        // Perform updates and inserts here.
+        // If the updates and inserts are successful, commit the changes.
+        transactions.CommitTransaction();
+    }
+    catch (COMException comExc)
+    {
+        // If an error occurs during the inserts and updates, rollback the transaction.
+        transactions.AbortTransaction();
+    }
+}
+
+
+       Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
+
+        Dim pEnumFeature As ESRI.ArcGIS.Geodatabase.IEnumFeature
+        Dim pFeature As ESRI.ArcGIS.Geodatabase.IFeature
+        Dim pEditor As ESRI.ArcGIS.Editor.IEditor
+
+        pEditor = My.ArcMap.Application.FindExtensionByName("esriEditor.Editor")
+        pEnumFeature = pEditor.EditSelection
+        pEnumFeature.Reset()
+        pFeature = pEnumFeature.Next
+        pEditor.StartOperation()
+
+        Do Until pFeature Is Nothing
+            pFeature.Value(pFeature.Fields.FindField("Source")) = "Coordinates"
+            pFeature.Store()
+            pFeature = pEnumFeature.Next
+        Loop
+
+        pEditor.StopOperation("UpdateFields")
+
+    End Sub
+
+
+
+
+Sub t1()
+    Dim vDoc As IMxDocument
+    Set vDoc = ThisDocument
+    MsgBox vDoc.ActiveView.FocusMap.SelectionCount
+    
+    
+    Dim vMap As IMap
+    Set vMap = vDoc.ActiveView.FocusMap
+    
+    Dim vEnumFeat As IEnumFeature
+    Set vEnumFeat = vMap.FeatureSelection
+    
+    Dim vFeat As IFeature
+    vEnumFeat.Reset
+    Set vFeat = vEnumFeat.Next
+   
+    Dim pRow As IRow
+    Dim pTbl As ITable
+    Dim pDtSet As IDataset
+    Dim pWrkSpcEdt As IWorkspaceEdit
+    If Not vFeat Is Nothing Then
+        Set pRow = vFeat
+        Set pTbl = pRow.Table
+        Set pDtSet = pTbl
+        
+        Set pWrkSpcEdt = pDtSet.Workspace
+        If pWrkSpcEdt.IsBeingEdited Then
+            MsgBox "True"
+        Else
+            MsgBox "False"
+        End If
+    End If
+    
+    
+'    While (Not (vFeat Is Nothing))
+'        'MsgBox vFeat.FeatureType
+'        MsgBox pRow.Value(pRow.Fields.FindField("GIS_ID"))
+'        'MsgBox pRow.Value(pRow.Fields.Field(0).Name)
+'        'MsgBox pRow.Fields.Field(0).Name
+'        pRow.Value(pRow.Fields.FindField("GIS_ID")) = pRow.Value(pRow.Fields.FindField("GIS_ID")) + 10
+'        pRow.Store
+'        Set vFeat = vEnumFeat.Next
+'    Wend
+    
+
+
+End Sub
+
+
+
+

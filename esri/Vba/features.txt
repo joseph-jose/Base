@@ -1,0 +1,60 @@
+Sub t1()
+    Dim vDoc As IMxDocument
+    Set vDoc = ThisDocument
+    MsgBox vDoc.ActiveView.FocusMap.SelectionCount
+    
+    
+    Dim vMap As IMap
+    Set vMap = vDoc.ActiveView.FocusMap
+    
+    Dim vEnumFeat As IEnumFeature
+    Set vEnumFeat = vMap.FeatureSelection
+    
+    Dim vFeat As IFeature
+    vEnumFeat.Reset
+    Set vFeat = vEnumFeat.Next
+   
+    If vFeat Is Nothing Then
+    End If
+    
+    
+    Dim pRow As IRow
+    While (Not (vFeat Is Nothing))
+        'MsgBox vFeat.FeatureType
+        Set pRow = vFeat
+        MsgBox pRow.Value(pRow.Fields.FindField("GIS_ID"))
+        'MsgBox pRow.Value(pRow.Fields.Field(0).Name)
+        'MsgBox pRow.Fields.Field(0).Name
+        pRow.Value(pRow.Fields.FindField("GIS_ID")) = pRow.Value(pRow.Fields.FindField("GIS_ID")) + 10
+        pRow.Store
+        Set vFeat = vEnumFeat.Next
+    Wend
+    
+
+    
+    Exit Sub
+    
+    
+    'Dim vPCur As ICursor
+    
+    'Dim vFeatSel As IFeatureSelection
+    'Set vFeatSel = vDoc.ActiveView.FocusMap.FeatureSelection
+    'Set vFeatSel = vDoc.ActiveView.FocusMap
+    'vFeatSel.SelectionSet.Search Nothing, False, vPCur
+    
+    'Dim pRow As IRow
+    'Set pRow = vPCur.NextRow
+    
+    'For i = 0 To pRow.Fields.FieldCount - 1
+    '    MsgBox pRow.Fields.Field(i).Name
+    'Next i
+    
+    
+    'vPCur.Fields.Field
+    
+    'Dim vFeatLyr As IFeatureLayer2
+    'Set vFeatLyr = vDoc.SelectedLayer
+    'MsgBox vFeatLyr.FeatureClass.AliasName
+    'Dim vFeatSel As IFeatureSelection
+
+End Sub

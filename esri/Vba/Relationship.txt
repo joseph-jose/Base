@@ -1,0 +1,129 @@
+http://help.arcgis.com/en/sdk/10.0/arcobjects_net/conceptualhelp/index.html#/d/000100000104000000.htm
+
+
+
+
+
+
+
+
+
+
+
+
+Creating a simple relationship class in a feature dataset using IRelationshipClassContainer
+The following code example shows how to create a simple relationship class in a feature dataset:
+[C#]
+public IRelationshipClass CreateRelClassInFeatureDataset(IFeatureDataset
+    featureDataset, String nameOfRelClass, IObjectClass originClass, IObjectClass
+    destinationClass)
+{
+    // Cast the feature dataset to the IRelationshipClassContainer interface.
+    IRelationshipClassContainer relClassContainer = (IRelationshipClassContainer)
+        featureDataset;
+
+    // Create the relationship class.
+    IRelationshipClass relClass = relClassContainer.CreateRelationshipClass
+        (nameOfRelClass, originClass, destinationClass, "owns", "is owned by",
+        esriRelCardinality.esriRelCardinalityOneToMany,
+        esriRelNotification.esriRelNotificationNone, false, false, null, 
+        "PROPERTY_ID", "", "PROPERTY_ID", "");
+
+    return relClass;
+}
+[VB.NET]
+Public Function CreateRelClassInFeatureDataset(ByVal featureDataset As IFeatureDataset, ByVal nameOfRelClass As String, _
+                                               ByVal originClass As IObjectClass, ByVal destinationClass As IObjectClass) As IRelationshipClass
+    ' Cast the feature dataset to the IRelationshipClassContainer interface.
+    Dim relClassContainer As IRelationshipClassContainer = CType(featureDataset, IRelationshipClassContainer)
+    
+    ' Create the relationship class.
+    Dim relClass As IRelationshipClass = relClassContainer.CreateRelationshipClass(nameOfRelClass, originClass, _
+                                         destinationClass, "owns", "is owned by", esriRelCardinality.esriRelCardinalityOneToMany, _
+                                         esriRelNotification.esriRelNotificationNone, False, False, Nothing, "PROPERTY_ID", "", "PROPERTY_ID", "")
+    
+    Return relClass
+End Function
+Creating a composite stand-alone relationship class using IFeatureWorkspace
+The following code example shows how to create a composite stand-alone relationship class:
+ 
+[C#]
+public IRelationshipClass CreateCompositeRelClass(IFeatureWorkspace featureWorkspace,
+    String nameOfRelClass, IObjectClass originClass, IObjectClass destinationClass)
+{
+    // Create the relationship class.
+    IRelationshipClass relClass = featureWorkspace.CreateRelationshipClass
+        (nameOfRelClass, originClass, destinationClass, "owns", "is owned by",
+        esriRelCardinality.esriRelCardinalityOneToMany,
+        esriRelNotification.esriRelNotificationNone, true, false, null, 
+        "PROPERTY_ID", "", "PROPERTY_ID", "");
+
+    return relClass;
+}
+[VB.NET]
+Public Function CreateCompositeRelClass(ByVal featureWorkspace As IFeatureWorkspace, ByVal nameOfRelClass As String, _
+                                        ByVal originClass As IObjectClass, ByVal destinationClass As IObjectClass) As IRelationshipClass
+    ' Create the relationship class.
+    Dim relClass As IRelationshipClass = featureWorkspace.CreateRelationshipClass(nameOfRelClass, originClass, _
+                                         destinationClass, "owns", "is owned by", esriRelCardinality.esriRelCardinalityOneToMany, _
+                                         esriRelNotification.esriRelNotificationNone, True, False, Nothing, "PROPERTY_ID", "", "PROPERTY_ID", "")
+    
+    Return relClass
+End Function
+Creating an attributed relationship class using IFeatureWorkspace
+The following code example shows how to create an attributed relationship class:
+ 
+[C#]
+public IRelationshipClass CreateAttributedRelClass(IFeatureWorkspace
+    featureWorkspace)
+{
+    // Open the participating classes from the workspace.
+    IObjectClass originClass = featureWorkspace.OpenFeatureClass("Parcels");
+    IObjectClass destinationClass = (IObjectClass)featureWorkspace.OpenTable(
+        "Owners");
+
+    // Create a fields collection for the relationship class.
+    IFields fields = new FieldsClass();
+    IFieldsEdit fieldsEdit = (IFieldsEdit)fields;
+
+    // Create a "percent owned" field and add it to the collection.
+    IField field = new FieldClass();
+    IFieldEdit fieldEdit = (IFieldEdit)field;
+    fieldEdit.Name_2 = "PercentOwned";
+    fieldEdit.Type_2 = esriFieldType.esriFieldTypeInteger;
+    fieldsEdit.AddField(fieldEdit);
+
+    // Create the attributed relationship class.
+    IRelationshipClass relClass = featureWorkspace.CreateRelationshipClass(
+        "ParcelsToOwners", originClass, destinationClass, "owns", "is owned by",
+        esriRelCardinality.esriRelCardinalityOneToMany,
+        esriRelNotification.esriRelNotificationNone, false, true, fields, 
+        "PROPERTY_ID", "OWNER_ID", "PROPERTY_ID", "OWNER_ID");
+
+    return relClass;
+}
+[VB.NET]
+Public Function CreateAttributedRelClass(ByVal featureWorkspace As IFeatureWorkspace) As IRelationshipClass
+    ' Open the participating classes from the workspace.
+    Dim originClass As IObjectClass = featureWorkspace.OpenFeatureClass("Parcels")
+    Dim destinationClass As IObjectClass = CType(featureWorkspace.OpenTable("Owners"), IObjectClass)
+    
+    ' Create a fields collection for the relationship class.
+    Dim fields As IFields = New FieldsClass()
+    Dim fieldsEdit As IFieldsEdit = CType(fields, IFieldsEdit)
+    
+    ' Create a "percent owned" field and add it to the collection.
+    Dim field As IField = New FieldClass()
+    Dim fieldEdit As IFieldEdit = CType(field, IFieldEdit)
+    fieldEdit.Name_2 = "PercentOwned"
+    fieldEdit.Type_2 = esriFieldType.esriFieldTypeInteger
+    fieldsEdit.AddField(fieldEdit)
+    
+    ' Create the attributed relationship class.
+    Dim relClass As IRelationshipClass = featureWorkspace.CreateRelationshipClass("ParcelsToOwners", originClass, _
+                                         destinationClass, "owns", "is owned by", esriRelCardinality.esriRelCardinalityOneToMany, _
+                                         esriRelNotification.esriRelNotificationNone, False, True, fields, "PROPERTY_ID", "OWNER_ID", _
+                                         "PROPERTY_ID", "OWNER_ID")
+    
+    Return relClass
+End Function

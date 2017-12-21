@@ -1,0 +1,41 @@
+
+Public Function GetFeatureClassFromShapefileOnDisk(ByVal string_ShapefileDirectory As String, ByVal string_ShapefileName As String) As IFeatureClass
+
+
+      Dim workspaceFactory As IWorkspaceFactory
+      Set workspaceFactory = New ShapefileWorkspaceFactory
+      Dim workspace As IWorkspace
+      Set workspace = workspaceFactory.OpenFromFile(string_ShapefileDirectory, 0)
+      Dim featureWorkspace As IFeatureWorkspace
+      Set featureWorkspace = workspace
+      Dim featureClass As IFeatureClass
+      Set featureClass = featureWorkspace.OpenFeatureClass(string_ShapefileName)
+
+      Set GetFeatureClassFromShapefileOnDisk = featureClass
+
+
+End Function
+
+
+
+
+Sub WorkFn()
+    Dim vFtCls As IFeatureClass
+    Set vFtCls = GetFeatureClassFromShapefileOnDisk("C:\Joseph\temp\LineFeatureCompare\20151210", "WL_Pipe")
+    
+    Dim vFtCursr As IFeatureCursor
+    
+    MsgBox vFtCls.FeatureCount(Nothing)
+    
+'    Set vFtCursr = vFtCls.GetFeatures(Null, False)
+'    Dim vRow As IRow
+'    Dim vFeat As IFeature
+'    Set vFeat = vFtCursr.NextFeature
+'    While Not (vFeat Is Nothing)
+'        Set vRow = vFeat
+'        Dim vStrVal As String
+'        vStrVal = vRow.Value(vRow.Fields.FindField("FAC_DESC"))
+'        MsgBox vStrVal
+'        Set vFeat = vFtCursr.NextFeature
+'    Wend
+End Sub

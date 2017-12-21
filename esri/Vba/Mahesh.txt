@@ -1,0 +1,63 @@
+Public Function getLyrByName(ByVal inLyrName As String, ByVal inEnmLyr As IEnumLayer) As ILayer
+
+    'Dim pFeatLyr As IFeatureLayer
+    Dim vLyr As ILayer
+    Set vLyr = inEnmLyr.Next
+    Do While Not (vLyr Is Nothing)
+            MsgBox vLyr.Name
+        If (vLyr.Name = inLyrName) Then
+            Exit Do
+        End If
+        Set vLyr = inEnmLyr.Next
+    Loop
+    Set getLyrByName = vLyr
+End Function
+
+Sub Main(ByVal inTargetLyrName As String, ByVal inSrcLyrName As String)
+    Dim vDoc As IMxDocument
+    Set vDoc = ThisDocument
+
+    Dim vSrcLyr As ILayer
+    Dim vTgtLyr As ILayer
+    
+    Dim i As Integer
+    Dim vLyr As ILayer
+    For i = 0 To vDoc.FocusMap.LayerCount - 1
+        Set vLyr = vDoc.FocusMap.Layer(i)
+        If vLyr.Name = inTargetLyrName Then
+            Set vSrcLyr = vLyr
+        End If
+        If vLyr.Name = inSrcLyrName Then
+            Set vTgtLyr = vLyr
+        End If
+    Next
+    If vSrcLyr.Visible Then
+        MsgBox "Y"
+    End If
+    If vTgtLyr.Visible Then
+        MsgBox "Y"
+    End If
+    
+'    Set vSrcLyr = Nothing
+'    Set vTgtLyr = Nothing
+    
+'    Exit Sub
+'
+'    Dim vEnmLyr As IEnumLayer
+'    Set vEnmLyr = vDoc.FocusMap.Layers(Nothing, True)
+'
+'
+'
+'
+'    Dim vSrcLyr As ILayer
+'    Set vSrcLyr = getLyrByName(inSrcFeatName, vEnmLyr)
+'
+'    Dim vTgtLyr As ILayer
+'    Set vTgtLyr = getLyrByName(inTargetFeatName, vEnmLyr)
+'
+'    Set vSrcLyr = Nothing
+'    Set vTgtLyr = Nothing
+End Sub
+Sub CallMain()
+    Main "Source", "Dest"
+End Sub

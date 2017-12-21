@@ -1,0 +1,56 @@
+Sub ChkValueOfDomain(ByVal inFld As IField, ByVal inFldVal As String)
+    If inFld.Domain Is Nothing Then
+        MsgBox "NoDomain"
+    Else
+        If (inFld.Domain.MemberOf(inFldVal) = True) Then
+            MsgBox "True"
+        Else
+            MsgBox "False"
+        End If
+    End If
+End Sub
+Sub FindFeature(ByVal inFeature As IFeature)
+    Dim inRow As IRow
+    Set inRow = inFeature
+    
+    Dim inFld As IField
+    
+    Set inFld = inRow.Fields.Field(inRow.Fields.FindField("PROCESS"))
+    
+    If Not inFld Is Nothing Then
+'        If (inFld.Domain.MemberOf("FEED") = True) Then
+'            MsgBox "True"
+'        Else
+'            MsgBox "False"
+'        End If
+        ChkValueOfDomain inFld, "FEED"
+    End If
+    
+    Set inFld = inRow.Fields.Field(inRow.Fields.FindField("PROCESS"))
+    If Not inFld Is Nothing Then
+        ChkValueOfDomain inFld, "joseph"
+    End If
+    
+    Set inFld = inRow.Fields.Field(inRow.Fields.FindField("FAC_DESC"))
+    If Not inFld Is Nothing Then
+        ChkValueOfDomain inFld, "FEED"
+    End If
+    
+End Sub
+Sub FFeat()
+    Dim vDoc As IMxDocument
+    Set vDoc = ThisDocument
+ 
+    Dim vMap As IMap
+    Set vMap = vDoc.FocusMap
+    
+    
+    Dim vEnumFeat As IEnumFeature
+    Set vEnumFeat = vMap.FeatureSelection
+    vEnumFeat.Reset
+    
+    Dim vFeat As IFeature
+    Set vFeat = vEnumFeat.Next
+    FindFeature vFeat
+End Sub
+

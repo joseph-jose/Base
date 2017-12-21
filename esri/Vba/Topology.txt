@@ -1,0 +1,41 @@
+
+Sub F2()
+    Dim vDoc As IMxDocument
+    Set vDoc = ThisDocument
+ 
+    Dim vMap As IMap
+    Set vMap = vDoc.FocusMap
+    
+    
+    Dim vEnumFeat As IEnumFeature
+    
+    Set vEnumFeat = vMap.FeatureSelection
+    vEnumFeat.Reset
+
+    Dim vFeat As IFeature
+    Set vFeat = vEnumFeat.Next
+
+    Dim geometry1, geom2 As IGeometry
+    Dim geom3 As IGeometry
+    Set geometry1 = vFeat.Shape
+    Set vFeat = vEnumFeat.Next
+    Set geom2 = vFeat.Shape
+    
+    Dim vTopOp As ITopologicalOperator
+    Set vTopOp = geometry1
+    Set geom3 = vTopOp.Buffer(10)
+    
+    Dim vRelOp As IRelationalOperator
+    Set vRelOp = geom3
+    Dim vFeatTch As Boolean
+'    vFeatTch = vRelOp.Crosses(geom2)
+    vFeatTch = vRelOp.Contains(geom2)
+    If vFeatTch Then
+        MsgBox "True"
+    Else
+        MsgBox "False"
+    End If
+    
+
+    
+End Sub

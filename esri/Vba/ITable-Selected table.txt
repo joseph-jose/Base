@@ -1,0 +1,26 @@
+Public Function GetSelectedTableInContentsView(ByVal currentContentsView As IContentsView) As ITable
+    Dim vTbl As ITable
+    If Not currentContentsView Is Nothing Then
+        Set vTbl = currentContentsView.SelectedItem
+    End If
+    Set GetSelectedTableInContentsView = vTbl
+
+End Function
+
+
+Public Sub Main()
+
+  Dim vDoc As IMxDocument
+  Set vDoc = ThisDocument
+  
+  Dim contentsView As IContentsView
+  Set contentsView = vDoc.contentsView(1) ' 0 = usually the Display tab, 1 = usually the Source tab
+
+    Dim vTbl As ITable
+    Set vTbl = GetSelectedTableInContentsView(contentsView)
+    MsgBox vTbl.RowCount(Nothing)
+  
+  Dim vTblProp As ITableProperties
+  Set vTblProp = vDoc.TableProperties()
+  
+End Sub

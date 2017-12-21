@@ -1,0 +1,63 @@
+Sub setGeom(ByVal inFeat As IFeature, ByVal inX As Double, ByVal inY As Double)
+    If inFeat.FeatureType = esriFTSimple Then
+        Dim vPoint As IPoint
+        Set vPoint = inFeat.Shape
+        'MsgBox vPoint.X & "," & vPoint.Y
+
+        vPoint.PutCoords inX, inY
+        inFeat.Store
+    End If
+End Sub
+
+
+
+Sub getGeom(ByVal inFeat As IFeature, ByRef outX As Double, ByRef outY As Double)
+    If inFeat.FeatureType = esriFTSimple Then
+        Dim vPoint As IPoint
+        Set vPoint = inFeat.Shape
+        
+        outX = vPoint.X
+        outY = vPoint.Y
+        
+    End If
+End Sub
+
+Sub t1()
+    Dim vDoc As IMxDocument
+    Set vDoc = ThisDocument
+    MsgBox vDoc.ActiveView.FocusMap.SelectionCount
+    
+    
+    Dim vMap As IMap
+    Set vMap = vDoc.ActiveView.FocusMap
+    
+    Dim vEnumFeat As IEnumFeature
+    Set vEnumFeat = vMap.FeatureSelection
+    
+    Dim vFeat As IFeature
+    vEnumFeat.Reset
+    Set vFeat = vEnumFeat.Next
+   
+    If vFeat Is Nothing Then
+        Return
+    End If
+    
+    Dim vDtSt As IDataset
+    Set vDtSt = vFeat.Table
+    Dim vWrkSpcEdt As IWorkspaceEdit
+    Set vWrkSpcEdt = vDtSt.Workspace
+    vWrkSpcEdt.StartEditOperation
+    
+    
+    Dim vgetPx As Double
+    Dim vgetPy As Double
+    getGeom vFeat, vgetPx, vgetPy
+    vgetPx = vgetPx + 13
+    vgetPy = vgetPy + 13
+    setGeom vFeat, vgetPx, vgetPy
+    
+    vWrkSpcEdt.StopEditOperation
+    
+End Sub
+
+
