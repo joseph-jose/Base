@@ -1,0 +1,9 @@
+C:\Joseph\Source\Other\dotNet\clsOps\winApp\winApp\bin\Debug\winApp.exe.config
+C:\Joseph\Source\Other\dotNet\clsOps\winApp\winApp\obj\Debug\winApp.csprojResolveAssemblyReference.cache
+C:\Joseph\Source\Other\dotNet\clsOps\winApp\winApp\obj\Debug\winApp.Form1.resources
+C:\Joseph\Source\Other\dotNet\clsOps\winApp\winApp\obj\Debug\winApp.Properties.Resources.resources
+C:\Joseph\Source\Other\dotNet\clsOps\winApp\winApp\obj\Debug\winApp.csproj.GenerateResource.Cache
+C:\Joseph\Source\Other\dotNet\clsOps\winApp\winApp\bin\Debug\winApp.exe
+C:\Joseph\Source\Other\dotNet\clsOps\winApp\winApp\bin\Debug\winApp.pdb
+C:\Joseph\Source\Other\dotNet\clsOps\winApp\winApp\obj\Debug\winApp.exe
+C:\Joseph\Source\Other\dotNet\clsOps\winApp\winApp\obj\Debug\winApp.pdb
