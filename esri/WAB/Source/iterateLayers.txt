@@ -1,0 +1,9 @@
+              this.map.graphics.clear();
+              arrayUtils.map(this.map.graphicsLayerIds, lang.hitch(this, function(glid){
+                 var lyr = this.map.getLayer(glid);
+                 if(lyr instanceof FeatureLayer){
+                   lyr.clearSelection();
+                 } else {
+                   this.map.getLayer(glid).clear();
+                 }
+              }));

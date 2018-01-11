@@ -1,0 +1,13 @@
+define([
+...
+  'jimu/WidgetManager',
+...
+],
+  function (
+...
+  WidgetManager
+...
+) {
+  var wm = WidgetManager.getInstance();
+  var esWidget = this.wManager.getWidgetByLabel("eSearch");
+  esWidget.clear();
