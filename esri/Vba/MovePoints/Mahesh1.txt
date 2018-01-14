@@ -1,0 +1,130 @@
+Function QryFltr(ByRef vLyr As IFeatureLayer, ByVal vFltrStr As String) As IFeature
+    Dim vQryFltr As IQueryFilter
+    Set vQryFltr = New QueryFilter
+    vQryFltr.WhereClause = vFltrStr
+    
+    Dim vFtCursr As IFeatureCursor
+    Dim vFtCls As IFeatureClass
+    Set vFtCls = vLyr.FeatureClass
+    
+    Set vFtCursr = vFtCls.Search(vQryFltr, False)
+    
+    Dim vRow As IRow
+    Dim vFeat As IFeature
+    Set vFeat = vFtCursr.NextFeature
+    Set QryFltr = vFeat
+    
+
+End Function
+Sub setGeom(ByVal inFeat As IFeature, ByVal inX As Double, ByVal inY As Double)
+    If inFeat.FeatureType = esriFTSimple Then
+        Dim vPoint As IPoint
+        Set vPoint = inFeat.Shape
+        'MsgBox vPoint.X & "," & vPoint.Y
+
+        vPoint.PutCoords inX, inY
+        inFeat.Store
+    End If
+End Sub
+Sub getIDVal(ByVal inFeat As IFeature, ByVal inJoinFldName As String, ByRef OutId As String)
+    If inFeat.FeatureType = esriFTSimple Then
+        
+        Dim vRow As IRow
+        Set vRow = inFeat
+        OutId = vRow.Value(vRow.Fields.FindField(inJoinFldName))
+    End If
+End Sub
+
+
+Sub getGeom(ByVal inFeat As IFeature, ByRef outX As Double, ByRef outY As Double)
+    If inFeat.FeatureType = esriFTSimple Then
+        Dim vPoint As IPoint
+        Set vPoint = inFeat.Shape
+        
+        outX = vPoint.X
+        outY = vPoint.Y
+        
+    End If
+End Sub
+
+Public Function getLyrByName(ByVal inLyrName As String, ByVal inEnmLyr As IEnumLayer) As ILayer
+
+
+    Dim vLyr As ILayer
+    Set vLyr = inEnmLyr.Next
+    Do While Not (vLyr Is Nothing)
+            MsgBox vLyr.Name
+        If (vLyr.Name = inLyrName) Then
+            Exit Do
+        End If
+        Set vLyr = inEnmLyr.Next
+    Loop
+    Set getLyrByName = vLyr
+End Function
+Sub Main(ByVal inTargetLyrName As String, ByVal inSrcLyrName As String, ByVal inJoinFldName As String)
+    Dim vDoc As IMxDocument
+    Set vDoc = ThisDocument
+
+    Dim vSrcLyr As ILayer
+    Dim vTgtLyr As ILayer
+    
+    Dim i As Integer
+    Dim vLyr As ILayer
+    For i = 0 To vDoc.FocusMap.LayerCount - 1
+        Set vLyr = vDoc.FocusMap.Layer(i)
+        If vLyr.Name = inSrcLyrName Then
+            Set vSrcLyr = vLyr
+        End If
+        If vLyr.Name = inTargetLyrName Then
+            Set vTgtLyr = vLyr
+        End If
+    Next
+    
+    Dim vSrcFLyr As IFeatureLayer
+    Dim vTgtFLyr As IFeatureLayer
+    Set vSrcFLyr = vSrcLyr
+    Set vTgtFLyr = vTgtLyr
+    
+    Dim vSrcFCls As IFeatureClass
+    Set vSrcFCls = vSrcFLyr.FeatureClass
+    
+    Dim vSrcFSel As IFeatureSelection
+    Set vSrcFSel = vSrcFLyr
+    
+    Dim vFId As Long
+    Dim vSrcFeat, vTgtFeat As IFeature
+    Dim vEnmIds As IEnumIDs
+    
+'    Dim vXPos As Long, vYPos As Long
+    Dim vXPos As Double, vYPos As Double
+    Dim vId As String
+    
+    Set vEnmIds = vSrcFSel.SelectionSet.IDs
+    
+    Dim vQryStr As String
+    
+    vFId = vEnmIds.Next
+    While Not (vFId = -1)
+        Set vSrcFeat = vSrcFCls.GetFeature(vFId)
+        
+        getIDVal vSrcFeat, inJoinFldName, vId
+        
+        'getGeom vSrcFeat, vXPos, vYPos, vId
+        MsgBox vId
+        vQryStr = inJoinFldName & "=" & "'" & vId & "'"
+        
+        Set vTgtFeat = QryFltr(vTgtLyr, vQryStr)
+        'Get geometry of target layer
+        getGeom vTgtFeat, vXPos, vYPos
+        setGeom vSrcFeat, vXPos, vYPos
+        
+        vFId = vEnmIds.Next
+    Wend
+    
+   
+    Set vSrcLyr = Nothing
+    Set vTgtLyr = Nothing
+End Sub
+Sub CallMain()
+    Main "Dest", "Source", "ID"
+End Sub
