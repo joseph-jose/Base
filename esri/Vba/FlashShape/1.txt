@@ -1,0 +1,87 @@
+Imports System.Threaing
+Public Class MapForm     ‘This is your form where your mapcontrol is present
+   Inherits Form
+
+Public Delegate Sub FlashDelegate()
+Public myDelegate As FlashDelegate
+
+Private myThread As Thread
+Public Sub New()
+      myDelegate = New FlashDelegate (AddressOf FlashGeometry)
+   End Sub 'New
+
+
+Private Sub Button_Click(sender As Object, e As EventArgs)  ‘Button click event handler where you want to start flashing geometries, this could be any event handler like Form_Load also
+      myThread = New Thread(New ThreadStart(AddressOf ThreadFunction))
+      myThread.Start()
+   End Sub 'Button_Click
+
+Private Sub ThreadFunction()
+      Dim objGeometryFlasher As New GeometryFlasher (Me)
+      objGeometryFlasher.Run()
+   End Sub 'ThreadFunction
+
+Public Sub FlashGeometry() ‘Flash Geometry Continuously
+  Dim pMarkerSymbol As ESRI.ArcGIS.Display.ISimpleMarkerSymbol
+                Dim pSymbol As ISymbol
+                Dim pRGBColor As ESRI.ArcGIS.Display.IRgbColor
+                Dim pGeometry As IGeometry
+                Dim pQueryfilter As IQueryFilter
+                Dim outlinecolor As IRgbColor
+                Dim PColor As IColor = New RgbColor()
+                PColor.RGB = RGB(0, 0, 0) 'RGB(Drawing.SystemColors.HighlightText.R, Drawing.SystemColors.HighlightText.G, Drawing.SystemColors.HighlightText.B)
+                Dim pOutlineColor As IRgbColor = New RgbColor()
+                pOutlineColor.RGB = RGB(255, 0, 0)
+                pOutlineColor.Transparency = 255
+                Dim pSimpleMarkerSymbol As ISimpleMarkerSymbol = New SimpleMarkerSymbol()
+                pRGBColor = New RgbColor
+                outlinecolor = New RgbColor
+                pemerFeatureselection = pLayer
+                pSimpleMarkerSymbol.Style = esriSimpleMarkerStyle.esriSMSCircle
+                pSimpleMarkerSymbol.Outline = True
+                pSimpleMarkerSymbol.OutlineColor = PColor
+                pSimpleMarkerSymbol.OutlineSize = 1.5
+                pSimpleMarkerSymbol.Size = 9
+                pSimpleMarkerSymbol.Color = pOutlineColor
+                pemerFeatureselection.Add(pFeature)
+                
+                If                     pGeometry = pFeature.Shape
+                    outlinecolor.Red = 0
+                    outlinecolor.Green = 0
+                    outlinecolor.Blue = 0
+                    pRGBColor.Red = 255
+                    pRGBColor.Green = 0
+                    pRGBColor.Blue = 0
+                    pMarkerSymbol = New SimpleMarkerSymbol
+                    pMarkerSymbol.Size = 12
+                    pMarkerSymbol.Style = esriSimpleMarkerStyle.esriSMSCircle
+                    pMarkerSymbol.Color = pRGBColor
+                    pMarkerSymbol.OutlineColor = outlinecolor
+                    pSymbol = pMarkerSymbol
+                    pSymbol.ROP2 = esriRasterOpCode.esriROPNotXOrPen
+                    pemerFeatureselection.SetSelectionSymbol = True
+                    pemerFeatureselection.SelectionSymbol = pSimpleMarkerSymbol
+                    AxMapControl.ActiveView.ScreenDisplay.SetSymbol(pSymbol)
+                    AxMapControl.FlashShape(pGeometry, 3, 100, pSymbol)
+   End If
+   Next i
+End Sub 
+
+End Class 'MapForm     
+
+
+
+Public Class GeometryFlasher
+   Private myFormControl1 As MyFormControl
+
+   Public Sub New(myForm As MyFormControl)
+      myFormControl1 = myForm
+   End Sub 'New
+
+   Public Sub Run()
+      ' Execute the specified delegate on the thread that owns
+      ' 'myFormControl1' control's underlying window handle.
+      myFormControl1.Invoke(myFormControl1.myDelegate)
+   End Sub 'Run
+
+End Class 'MyThreadClass

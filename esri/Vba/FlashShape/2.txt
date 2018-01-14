@@ -1,0 +1,39 @@
+    Dim pFCursor As ESRI.ArcGIS.Geodatabase.IFeatureCursor
+    Dim pFeature As ESRI.ArcGIS.Geodatabase.IFeature
+    Dim pGeometry As ESRI.ArcGIS.Geometry.IGeometry
+    Dim pGeometryBag As ESRI.ArcGIS.Geometry.IGeometryCollection = New ESRI.ArcGIS.Geometry.GeometryBag
+    Dim pPolygon As ESRI.ArcGIS.Geometry.IPolygon
+    Dim pPolyline As ESRI.ArcGIS.Geometry.IPolyline
+    Dim pQFilter As New ESRI.ArcGIS.Geodatabase.QueryFilter
+    Dim pRgbColor As New ESRI.ArcGIS.Display.RgbColor
+    Dim pTopoOp As ESRI.ArcGIS.Geometry.ITopologicalOperator4
+
+    Using releaser As New ESRI.ArcGIS.ADF.ComReleaser
+       releaser.ManageLifetime(pFCursor)
+
+       pQFilter.WhereClause = [String].Format("{0} in ({1})", pFClass.OIDFieldName, sender.Rows(e.RowIndex).Cells("colAdjacentOIDs").value)
+       pFCursor = pFClass.Search(pQFilter, True)
+       pFeature = pFCursor.NextFeature
+
+       Do Until pFeature Is Nothing
+           pGeometryBag.AddGeometry(pFeature.ShapeCopy)
+           pFeature = pFCursor.NextFeature
+       Loop
+
+       Select Case pFClass.ShapeType
+           Case ESRI.ArcGIS.Geometry.esriGeometryType.esriGeometryPolygon
+                pTopoOp = New ESRI.ArcGIS.Geometry.Polygon
+                pTopoOp.ConstructUnion(pGeometryBag)
+                pPolygon = pTopoOp
+                pGeometry = pPolygon
+           Case ESRI.ArcGIS.Geometry.esriGeometryType.esriGeometryPolyline
+                pTopoOp = New ESRI.ArcGIS.Geometry.Polyline
+                pTopoOp.ConstructUnion(pGeometryBag)
+                pPolyline = pTopoOp
+                pGeometry = pPolyline
+       End Select
+
+       pRgbColor.Red = 255
+
+       FlashGeometry(pGeometry, pRgbColor, My.ArcMap.Document.ActiveView.ScreenDisplay, 500)
+   End Using
