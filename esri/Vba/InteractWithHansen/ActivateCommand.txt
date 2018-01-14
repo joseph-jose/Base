@@ -1,0 +1,56 @@
+Public pCmdItmHSDisp As ICommandItem
+
+Public Sub act_hansen()
+AppActivate "Hansen Information Technologies - Version 7.7 ( HANSEN )"
+'AppActivate "Hansen Information Technologies - Version 7.7 ( HansenTRG )"
+End Sub
+
+Private Sub chk_hs()
+Dim objWMIService, colProcesses
+Dim Process As String
+
+Process = "IMSV732.exe"
+Set objWMIService = GetObject("winmgmts:")
+Set colProcesses = objWMIService.ExecQuery("Select * from Win32_Process where name='" & Process & "'")
+
+  If colProcesses.Count Then
+    hsrun = "y"
+  Else
+    hsrun = "n"
+  End If
+End Sub
+Private Sub txfmref()
+    Dim newabn As String
+    newabn = "JOSEPH"
+
+    Dim time1, time2
+  
+'    pCmdItmHSDisp.Execute
+'    SendKeys "%(l)"
+'    SendKeys "%(o)"
+'    SendKeys "{TAB 4}"
+'    SendKeys newabn
+'    SendKeys "^(l)"
+'    SendKeys "^(u)"
+'    DoEvents
+'    time1 = Now
+'    time2 = Now + TimeValue("0:00:02")
+'    Do Until time1 >= time2
+'        time1 = Now()
+'    Loop
+   
+   'SendKeys "^{F4}"
+   
+    SendKeys "^(l)"
+   DoEvents
+End Sub
+
+Sub SendMessage()
+    Dim pUID3 As New UID
+'    pUID3.Value = "{846A7FB7-0175-41D6-AAF1-1B588C2ABC75}"
+'    Set pCmdItmHSDisp = ThisDocument.CommandBars.Find(pUID3)
+    chk_hs
+    act_hansen
+    txfmref
+End Sub
+
