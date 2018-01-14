@@ -1,0 +1,48 @@
+'This sample adds a feature bookmark
+'there is a Spatial Bookmark sample
+'on ArcObjects Online
+Sub AddBookmark()
+Dim pDoc As IMxDocument
+Set pDoc = ThisDocument
+'Gets the selected layer
+Dim pSelLyr As IFeatureLayer
+Set pSelLyr = pDoc.SelectedLayer
+If pSelLyr Is Nothing Then
+  MsgBox "Select a Layer from the TOC"
+  Exit Sub
+End If
+
+'Get the selected feature
+Dim pMap As IMap
+Set pMap = pDoc.FocusMap
+
+'Make sure only one feature is selected
+Dim pFSel As IFeatureSelection
+Set pFSel = pSelLyr
+If Not pFSel.SelectionSet.Count = 1 Then
+  MsgBox "Select One Feature"
+  Exit Sub
+End If
+'get the selected feature
+Dim pFeat As IFeature
+Set pFeat = pSelLyr.FeatureClass.GetFeature(pFSel.SelectionSet.IDs.Next)
+
+
+'Create a bookmark for the feature
+'use a value from the attribute table
+'for the bookmark name
+Dim pMapBookMarks As IMapBookmarks
+Set pMapBookMarks = pMap
+
+Dim pFeatBookMark As IFeatureBookmark
+Set pFeatBookMark = New FeatureBookmark
+
+With pFeatBookMark
+  .Name = pFeat.Value(pFeat.Fields.FindField("STATE_NAME"))
+  .FeatureClass = pSelLyr.FeatureClass
+  .FeatureId = pFeat.OID
+End With
+'Add the bookmark to the map
+pMapBookMarks.AddBookmark pFeatBookMark
+
+End Sub

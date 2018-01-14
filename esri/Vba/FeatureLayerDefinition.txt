@@ -1,0 +1,12 @@
+'Displays only the features that meet the definition expression
+'in this case only oregon
+Sub DefineLayer()
+Dim PDoc As IMxDocument
+Dim pMap As IMap
+Dim pFLayerDef As IFeatureLayerDefinition
+Set PDoc = ThisDocument
+Set pMap = PDoc.FocusMap
+Set pFLayerDef = pMap.Layer(0)
+pFLayerDef.DefinitionExpression = "STATE_NAME = 'Oregon'"
+PDoc.ActiveView.PartialRefresh esriViewGeography, Nothing, Nothing
+End Sub

@@ -1,0 +1,23 @@
+'Change the default selection symbol
+Sub HighlightSelected()
+Dim pDoc As IMxDocument
+Dim pLayer As IFeatureLayer
+Dim pFSel As IFeatureSelection
+
+'Get the first layer in the map
+Set pDoc = ThisDocument
+Set pLayer = pDoc.FocusMap.Layer(0)
+Set pFSel = pLayer
+
+'Create a new selection symbol
+Dim pFillSym As ISimpleFillSymbol
+Set pFillSym = New SimpleFillSymbol
+pFillSym.Style = esriSFSDiagonalCross
+
+'Apply the new selection symbol
+pFSel.SetSelectionSymbol = True
+Set pFSel.SelectionSymbol = pFillSym
+
+'Refresh the view
+pDoc.ActiveView.Refresh
+End Sub

@@ -1,0 +1,40 @@
+'Create a form and add a list box (leave the default names)
+'Add  sorted values from a field in a layers attribute table
+'to a list box.
+
+Sub SortListbox()
+Dim pDoc As IMxDocument
+Dim pLayer As IFeatureLayer
+Dim pTable As ITable
+Dim pTableSort As ITableSort
+Dim sFieldName As String
+Dim pCur As ICursor
+Dim pRow As IRow
+
+'Get the attribute table for the first layer
+Set pDoc = ThisDocument
+Set pLayer = pDoc.FocusMap.Layer(0)
+Set pTable = pLayer.FeatureClass
+
+'This example sorts the STATE_NAME field.
+'Modify the line below to suit your data
+sFieldName = "STATE_NAME"
+Set pTableSort = New esriCore.TableSort
+With pTableSort
+  .Fields = sFieldName
+  .Ascending(sFieldName) = True
+  Set .Table = pTable
+End With
+'Sort the table
+pTableSort.Sort Nothing
+
+'loop through the sorted records and add
+'to a list box
+Set pCur = pTableSort.Rows
+Set pRow = pCur.NextRow
+Do Until pRow Is Nothing
+ UserForm1.ListBox1.AddItem pRow.Value(pTable.FindField(sFieldName))
+ Set pRow = pCur.NextRow
+Loop
+UserForm1.Show
+End Sub

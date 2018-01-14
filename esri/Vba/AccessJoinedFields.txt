@@ -1,0 +1,22 @@
+'Access the fields from a joined table 
+Sub AccessJoinedFields()
+Dim pDoc As IMxDocument
+Dim pFeatureLayer As IFeatureLayer
+Dim pTable As ITable
+Dim pDisplayTable As IDisplayTable
+
+'Get the first layer in the map
+Set pDoc = ThisDocument
+Set pFeatureLayer = pDoc.FocusMap.Layer(0)
+
+Set pDisplayTable = pFeatureLayer
+Set pTable = pDisplayTable.DisplayTable
+
+Dim pFields As IFields
+Dim pField As IField
+Set pFields = pTable.Fields
+For i = 0 To pFields.FieldCount - 1
+  Debug.Print pFields.Field(i).Name
+Next
+End Sub
+          

@@ -1,0 +1,34 @@
+'Activates the selected map
+Sub MakeFocusMap()
+Dim pMap As IMap
+Dim pActiveView As IActiveView
+Dim pMxDoc As IMxDocument
+Set pMxDoc = ThisDocument
+    
+'Get the Currently selected map
+Dim pCV As IContentsView
+Set pCV = pMxDoc.CurrentContentsView
+Dim pVar As Variant
+Dim mySet As esriCore.ISet
+Set mySet = New esriCore.Set
+If Not IsNull(pCV.SelectedItem) Then
+ Set pVar = pCV.SelectedItem
+  If TypeOf pVar Is IMap Then
+    Set pMap = pVar
+  ElseIf TypeOf pVar Is ISet Then
+    MsgBox "More than one map is selected"
+    Exit Sub
+  End If
+Else
+  MsgBox "Map must be selected "
+End If
+Set pActiveView = pMxDoc.ActiveView
+If Not pActiveView.FocusMap Is pMap Then
+'Check for Layout View or Map View
+   If TypeOf pActiveView Is IPageLayout Then
+     Set pMxDoc.ActiveView.FocusMap = pMap
+   Else
+     Set pMxDoc.ActiveView = pMap
+   End If
+End If
+End Sub

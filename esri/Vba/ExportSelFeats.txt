@@ -1,0 +1,49 @@
+'Export selected features to a new shapefile
+'similar to right-clicking the layer and choosing
+'Data > Export Data
+Sub ExportFc()
+Dim pDoc As IMxDocument
+Dim pFLayer As IFeatureLayer
+Dim pFc As IFeatureClass
+Dim pInFeatureClassName As IFeatureClassName
+Dim pDataset As IDataset
+Dim pInDsName As IDatasetName
+Dim pFSel As IFeatureSelection
+Dim pSelSet As ISelectionSet
+Dim pFeatureClassName As IFeatureClassName
+Dim pOutDatasetName As IDatasetName
+Dim pWorkspaceName As IWorkspaceName
+Dim pExportOp As IExportOperation
+
+'Get the first layer in the map
+Set pDoc = ThisDocument
+Set pFLayer = pDoc.FocusMap.Layer(0)
+Set pFc = pFLayer.FeatureClass
+
+'Get the Featureclassname from the featureclass
+Set pDataset = pFc
+Set pInFeatureClassName = pDataset.FullName
+Set pInDsName = pInFeatureClassName
+
+'Get the selected features
+Set pFSel = pFLayer
+Set pSelSet = pFSel.SelectionSet
+
+'Define the output featureclass
+'give it the name of the input feature class + exp
+Set pFeatureClassName = New FeatureClassName
+Set pOutDatasetName = pFeatureClassName
+pOutDatasetName.Name = pFc.AliasName & "exp"
+Set pWorkspaceName = New WorkspaceName
+pWorkspaceName.PathName = "c:\temp"
+pWorkspaceName.WorkspaceFactoryProgID = "esriCore.shapefileworkspacefactory.1"
+Set pOutDatasetName.WorkspaceName = pWorkspaceName
+'Give the output shapefile the same props as the input dataset
+pFeatureClassName.FeatureType = pFc.FeatureType
+pFeatureClassName.ShapeType = pFc.ShapeType
+pFeatureClassName.ShapeFieldName = pFc.ShapeFieldName
+
+'Export selected features
+Set pExportOp = New ExportOperation
+pExportOp.ExportFeatureClass pInDsName, Nothing, pSelSet, Nothing, pOutDatasetName, 0
+End Sub

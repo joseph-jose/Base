@@ -1,0 +1,69 @@
+'Change the fill symbol used to render a polygon layer
+'The first sample gets a symbol from the style gallery
+'the second sample creates a new fill symbol
+Sub RenderLayer()
+Dim pDoc As IMxDocument
+Dim pLayer As IGeoFeatureLayer
+Dim pRend As ISimpleRenderer
+Dim pFillSym As IFillSymbol
+
+'Get the first layer in the map
+Set pDoc = ThisDocument
+Set pLayer = pDoc.FocusMap.Layer(0)
+
+'Get the renderer for the layer
+'this sample assumes you are using a simple renderer
+'not something like a unique value renderer
+Set pRend = pLayer.Renderer
+
+'Get a fill symbol from the style gallery
+Dim pStyleGall As IStyleGallery
+Dim pStyleGallItem As IStyleGalleryItem
+Dim pEnumStyle As IEnumStyleGalleryItem
+'Loop through the fill symbols and find one named yellow
+Set pStyleGall = pDoc.StyleGallery
+Set pEnumStyle = pStyleGall.Items("Fill Symbols", "esri.style", "")
+pEnumStyle.Reset
+Set pStyleGallItem = pEnumStyle.Next
+Do Until pStyleGallItem Is Nothing
+    If pStyleGallItem.Name = "Yellow" Then
+        Set pFillSym = pStyleGallItem.Item
+        Exit Do
+    End If
+Set pStyleGallItem = pEnumStyle.Next
+Loop
+
+'Apply the new color and refresh
+Set pRend.Symbol = pFillSym
+pDoc.UpdateContents
+pDoc.ActiveView.Refresh
+
+End Sub
+
+
+Sub RenderLayer2()
+Dim pDoc As IMxDocument
+Dim pLayer As IGeoFeatureLayer
+Dim pRend As ISimpleRenderer
+Dim pFillSym As IFillSymbol
+Dim pColor As IRgbColor
+
+'Get the first layer in the map
+Set pDoc = ThisDocument
+Set pLayer = pDoc.FocusMap.Layer(0)
+
+'Get the renderer
+Set pRend = pLayer.Renderer
+
+'Create a new fill symbol
+Set pFillSym = New SimpleFillSymbol
+Set pColor = New RgbColor
+pColor.Red = 255
+pFillSym.Color = pColor
+
+'Apply the new color and refresh
+Set pRend.Symbol = pFillSym
+pDoc.UpdateContents
+pDoc.ActiveView.Refresh
+
+End Sub
