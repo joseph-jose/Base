@@ -1,0 +1,26 @@
+Sub SelectRows()
+Dim pDoc As IMxDocument
+Dim pStandaloneTableColl As IStandaloneTableCollection
+Dim pStandaloneTable As IStandaloneTable
+Dim pSelectionSet As ISelectionSet
+Dim pTableSelection As ITableSelection
+
+'Get the table collection from the map
+Set pDoc = ThisDocument
+Set pStandaloneTableColl = pDoc.FocusMap
+
+'Get the first table
+Set pStandaloneTable = pStandaloneTableColl.StandaloneTable(0)
+
+'Select rows based on a query filter
+Dim pQf As IQueryFilter
+Set pQf = New QueryFilter
+pQf.WhereClause = "PROPERTY_ID = 54463"
+Set pSelectionSet = pStandaloneTable.Table.Select _
+(pQf, esriSelectionTypeIDSet, esriSelectionOptionNormal, Nothing)
+
+'Apply the selection
+Set pTableSelection = pStandaloneTable
+Set pTableSelection.SelectionSet = pSelectionSet
+
+End Sub

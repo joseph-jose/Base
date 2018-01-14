@@ -1,0 +1,11 @@
+'Enter the following into your "ThisDocument" module under the "Normal" section to set the default map 
+'units to feet 
+Private sub MxDocument_NewDocument ()
+Dim pMxDoc as IMxDocument
+Set pMxDoc = ThisDocument
+
+Dim pMap as IMap
+Set pMap = pMxDoc.FocusMap
+
+pMap.MapUnits = esriFeet
+End sub  

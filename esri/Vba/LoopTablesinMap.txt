@@ -1,0 +1,20 @@
+Sub LoopTables()
+'Loop through the standalone tables in a map
+Dim pDoc As IMxDocument
+Dim pMap As IMap
+Dim pStandaloneTableCollection As IStandaloneTableCollection
+Dim pStandaloneTable As IStandaloneTable
+Dim pTable As ITable
+
+'Get the current map from the document
+Set pDoc = ThisDocument
+Set pMap = pDoc.FocusMap
+    
+'Get the table collection from the map
+Set pStandaloneTableCollection = pMap
+For i = 0 To pStandaloneTableCollection.StandaloneTableCount - 1
+    Set pStandaloneTable = pStandaloneTableCollection.StandaloneTable(i)
+    MsgBox pStandaloneTable.Name
+Next
+
+End Sub

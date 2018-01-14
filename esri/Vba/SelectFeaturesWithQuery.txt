@@ -1,0 +1,36 @@
+'Select features using a  query filter
+
+Sub SelectFeatures()
+Dim pDoc As IMxDocument
+Dim pMap As IMap
+Dim pLayer As IFeatureLayer
+Dim pFc As IFeatureClass
+Dim pQF As IQueryFilter
+Dim pSelSet As ISelectionSet
+Dim pFSel As IFeatureSelection
+
+'Get the current map
+Set pDoc = ThisDocument
+Set pMap = pDoc.FocusMap
+
+'Get the first layer in the map and
+'the featureclass
+Set pLayer = pMap.Layer(0)
+Set pFc = pLayer.FeatureClass
+
+'Create the query filter
+Set pQF = New QueryFilter
+pQF.WhereClause = "STATE_NAME = 'California'"
+
+'Get the features that meet the where clause
+Set pSelSet = pFc.Select(pQF, esriSelectionTypeIDSet, esriSelectionOptionNormal, Nothing)
+
+'Apply the selection
+Set pFSel = pLayer
+Set pFSel.SelectionSet = pSelSet
+
+'Refresh the map
+pDoc.ActiveView.Refresh
+pDoc.UpdateContents
+
+End Sub

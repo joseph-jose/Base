@@ -1,0 +1,29 @@
+'Label features for the first layer in the map
+'Modify sLabelField to fit your data
+'This code sample labels all features. To label only selected features see:
+http://support.esri.com/search/KbDocument.asp?dbid=21092
+Sub LabelFeatures()
+Dim pDoc As IMxDocument
+Dim pLayer As IGeoFeatureLayer
+Dim sLabelField As String
+
+'Get the first layer in the map
+Set pDoc = ThisDocument
+Set pLayer = pDoc.FocusMap.Layer(0)
+'Label field
+sLabelField = "STATE_NAME"
+'Get the label properties
+Dim pLabelProps As ILabelEngineLayerProperties
+Dim pAnnoPropsCollection As IAnnotateLayerPropertiesCollection
+Set pAnnoPropsCollection = pLayer.AnnotationProperties
+pAnnoPropsCollection.QueryItem 0, pLabelProps
+
+'Set the label expression
+pLabelProps.Expression = "[" & sLabelField & "]"
+
+'Turn on the labels
+pLayer.DisplayAnnotation = True
+
+'Refresh
+pDoc.ActiveView.Refresh
+End Sub

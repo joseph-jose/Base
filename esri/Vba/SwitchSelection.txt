@@ -1,0 +1,27 @@
+Sub SwitchSelection()
+Dim pDoc As IMxDocument
+Dim pMap As IMap
+Dim pFLayer As IFeatureLayer
+Dim pFSel As IFeatureSelection
+Dim pSelSet As ISelectionSet
+Dim pAllSel As ISelectionSet
+Dim pNewSel As ISelectionSet
+
+'Get the Feature Selection
+'from the layer
+Set pDoc = ThisDocument
+Set pMap = pDoc.FocusMap
+Set pFLayer = pMap.Layer(0)
+Set pFSel = pFLayer
+
+'Get the selected features
+Set pSelSet = pFSel.SelectionSet
+'Get a selection set for all the features
+Set pAllSel = pFLayer.FeatureClass.Select(Nothing, esriSelectionTypeIDSet, esriSelectionOptionNormal, Nothing)
+
+'Switch the Selection
+pAllSel.Combine pSelSet, esriSetDifference, pNewSel
+Set pFSel.SelectionSet = pNewSel
+'Refresh the view
+pDoc.ActiveView.Refresh
+End Sub
