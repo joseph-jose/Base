@@ -1,0 +1,26 @@
+Sub GetFeatureValues()
+'This sample returns values for the specified field
+'for all features in the first layer in ArcMap
+Dim pDoc As IMxDocument
+Dim pFLayer As IFeatureLayer
+Dim pCur As IFeatureCursor
+Dim pFeat As IFeature
+
+'Field name to get values from
+Dim sFieldName As String
+sFieldName = "STATE_NAME"
+
+'Get the first layer in the map
+Set pDoc = ThisDocument
+Set pFLayer = pDoc.FocusMap.Layer(0)
+
+'Return a cursor for all the features
+Set pCur = pFLayer.Search(Nothing, False)
+Set pFeat = pCur.NextFeature
+Do Until pFeat Is Nothing
+   'Debug.print writes values to immediate window. Use
+   'CTRL+G to open the immediate window in the Visual Basic Editor
+   Debug.Print pFeat.Value(pFeat.Fields.FindField(sFieldName))
+Set pFeat = pCur.NextFeature
+Loop
+End Sub

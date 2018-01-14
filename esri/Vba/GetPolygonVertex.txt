@@ -1,0 +1,48 @@
+'Gets the xy values for all the vertices in a polygon layer 
+Sub GetVertices()
+Dim pDoc As IMxDocument
+Dim pFLayer As IFeatureLayer
+Dim pFc As IFeatureClass
+Dim pCur As IFeatureCursor
+Dim pPoly As IPointCollection
+Dim pFeat As IFeature
+Dim pEnumVertices As IEnumVertex
+Dim outIndex As Long
+Dim verIndex As Long
+Dim pPoint As IPoint
+
+Set pDoc = ThisDocument
+
+'Get the selected layer and make sure it's a polygon feature class
+If Not pDoc.SelectedLayer Is Nothing Then
+    Set pFLayer = pDoc.SelectedLayer
+    Set pFc = pFLayer.FeatureClass
+    If Not pFc.ShapeType = esriGeometryPolygon Then
+        MsgBox "Please selecte a polygon layer"
+        Exit Sub
+    End If
+Else
+    MsgBox "Please select a polygon layer"
+    Exit Sub
+End If
+
+'Get a cursor that contains all the features in the layer
+'Loop through all the features in the selected
+'layer and return the xy values for the vertices
+Set pCur = pFc.Search(Nothing, False)
+Set pFeat = pCur.NextFeature
+Do Until pFeat Is Nothing
+    Set pPoly = pFeat.Shape
+    Set pEnumVertices = pPoly.EnumVertices
+    
+    'Loop through the polygon vertices and get the xy values
+    'this sample just sends xy values to immmediate window
+    'could be modified to write values to text file
+    For i = 0 To pPoly.PointCount - 1
+      pEnumVertices.Next pPoint, outIndex, verIndex
+      Debug.Print outIndex & " " & verIndex & " "; pPoint.x & " " & pPoint.y
+    Next i
+Set pFeat = pCur.NextFeature
+Loop
+
+End Sub

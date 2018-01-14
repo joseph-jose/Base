@@ -1,0 +1,16 @@
+'Get the number of rows in the table
+Sub GetFeatureCount()
+Dim pDoc As IMxDocument
+Dim pStTable As IStandaloneTable
+Dim pSTColl As IStandaloneTableCollection
+Dim pTable As ITable
+
+'Get the first table in the map
+Set pDoc = ThisDocument
+Set pSTColl = pDoc.FocusMap
+Set pStTable = pSTColl.StandaloneTable(0)
+Set pTable = pStTable.Table
+
+'Get the count
+MsgBox "There are " & pTable.RowCount(Nothing) & " rows in " & pStTable.Name
+End Sub

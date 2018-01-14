@@ -1,0 +1,6 @@
+'Gets the path for the mxd
+Sub GetAppPath()
+Dim VbProj As Object
+Set VbProj = Application.Document.VbProject
+MsgBox VbProj.FileName
+End Sub

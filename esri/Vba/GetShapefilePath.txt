@@ -1,0 +1,20 @@
+Sub GetShapefilePath()
+Dim pDoc As IMxDocument
+Set pDoc = ThisDocument
+'Get the first map in the document
+Dim pMap As IMap
+Set pMap = pDoc.FocusMap
+'Get the first layer in the map
+Dim pLayer As IFeatureLayer
+Set pLayer = pMap.Layer(0)
+'Get the feature class for the first layer
+Dim pFc As IFeatureClass
+Set pFc = pLayer.FeatureClass
+'Gets the dataset for standalone feature class
+Dim pDataset As IDataset
+Set pDataset = pFc
+Dim pWorkspace As IWorkspace
+Set pWorkspace = pDataset.Workspace
+'Returns the path
+MsgBox pWorkspace.PathName
+End Sub

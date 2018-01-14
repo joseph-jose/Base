@@ -1,0 +1,48 @@
+'Gets the selected layer in the table of contents
+
+Sub GetSelectedLayer()
+Dim pDoc As IMxDocument
+Dim pLayer As ILayer
+
+Set pDoc = ThisDocument
+If Not pDoc.SelectedLayer Is Nothing Then
+    Set pLayer = pDoc.SelectedLayer
+    MsgBox pLayer.Name
+Else
+    MsgBox "No Layers Selected in TOC"
+    Exit Sub
+End If
+End Sub
+
+
+'or
+
+
+Sub GetSelectedLayers()
+Dim pDoc As IMxDocument
+Dim pCV As IContentsView
+Dim LayerSet As esriCore.ISet
+Dim pLayer As ILayer
+Dim sLayerNames As String
+
+'Get the current contents view from the map
+Set pDoc = ThisDocument
+Set pCV = pDoc.CurrentContentsView
+Set LayerSet = New esriCore.Set
+
+'Get the selected layer(s) from the contents view
+If TypeOf pCV.SelectedItem Is IFeatureLayer Then
+    'one layer selected
+    Set pLayer = pCV.SelectedItem
+    MsgBox "The selected layer is " & pLayer.Name
+ElseIf TypeOf pCV.SelectedItem Is ISet Then
+    'multiple layers selected
+     Set LayerSet = pCV.SelectedItem
+     Set pLayer = LayerSet.Next
+     Do Until pLayer Is Nothing
+        sLayerNames = sLayerNames & " " & pLayer.Name
+     Set pLayer = LayerSet.Next
+     Loop
+     MsgBox "The selected layers are " & sLayerNames
+End If
+End Sub

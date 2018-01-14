@@ -1,0 +1,28 @@
+Sub GetRowValues()
+'This sample returns values for the specified field
+'for all rows for the first table in ArcMap
+Dim pDoc As IMxDocument
+Dim pStandaloneTableCollection As IStandaloneTableCollection
+Dim pStandaloneTable As IStandaloneTable
+Dim pCur As ICursor
+Dim pRow As IRow
+
+'Field name to get values from
+Dim sFieldName As String
+sFieldName = "POPULATION"
+
+'Get the first table in the map
+Set pDoc = ThisDocument
+Set pStandaloneTableCollection = pDoc.FocusMap
+Set pStandaloneTable = pStandaloneTableCollection.StandaloneTable(0)
+
+'Return a cursor for all the rows
+Set pCur = pStandaloneTable.Table.Search(Nothing, False)
+Set pRow = pCur.NextRow
+Do Until pRow Is Nothing
+   'Debug.print writes values to immediate window. Use
+   'CTRL+G to open the immediate window in the Visual Basic Editor
+   Debug.Print pRow.Value(pRow.Fields.FindField(sFieldName))
+Set pRow = pCur.NextRow
+Loop
+End Sub

@@ -1,0 +1,21 @@
+'Finds a layer by name rather than index number
+Sub GetLayerByName()
+Dim pDoc As IMxDocument
+Dim pMap As IMap
+Dim pLayer As ILayer
+
+'Layer name to find
+Dim sLayerName As String
+sLayerName = "States"
+
+Set pDoc = ThisDocument
+Set pMap = pDoc.FocusMap
+
+For i = 0 To pMap.LayerCount - 1
+    If UCase(pMap.Layer(i).Name) = UCase(sLayerName) Then
+        Set pLayer = pMap.Layer(i)
+        Exit For
+    End If
+Next
+End Sub
+

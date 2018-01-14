@@ -1,0 +1,44 @@
+'Get values for specified field for selected features
+'in layer
+
+Sub GetValues()
+Dim pDoc As IMxDocument
+Dim pMap As IMap
+Dim pLayer As IFeatureLayer
+Dim pFSel As IFeatureSelection
+Dim pFeat As IFeature
+Dim pSelSet As ISelectionSet
+Dim pCur As IFeatureCursor
+
+'Get the field to return values for
+Dim sFieldName As String
+sFieldName = "STATE_NAME"
+
+'Get the current map
+Set pDoc = ThisDocument
+Set pMap = pDoc.FocusMap
+
+'Get the first layer in the map
+Set pLayer = pMap.Layer(0)
+
+'Get the selected features from the layer
+Set pFSel = pLayer
+Set pSelSet = pFSel.SelectionSet
+
+'Make sure at least one feature is selected
+If pFSel.SelectionSet.Count < 1 Then
+    MsgBox "NO features selected in layer " & pLayer.Name
+    Exit Sub
+End If
+
+'Get a cursor from the selected features
+pSelSet.Search Nothing, False, pCur
+
+'Loop through the features using the cursor
+Set pFeat = pCur.NextFeature
+Do Until pFeat Is Nothing
+   Debug.Print pFeat.Value(pFeat.Fields.FindField(sFieldName))
+Set pFeat = pCur.NextFeature
+Loop
+
+End Sub

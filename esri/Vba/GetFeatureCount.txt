@@ -1,0 +1,14 @@
+'Get the number of features in the layer
+Sub GetFeatureCount()
+Dim pDoc As IMxDocument
+Dim pLayer As IFeatureLayer
+Dim pFc As IFeatureClass
+
+'Get the first layer in the map
+Set pDoc = ThisDocument
+Set pLayer = pDoc.FocusMap.Layer(0)
+Set pFc = pLayer.FeatureClass
+
+'Get the count
+MsgBox "There are " & pFc.FeatureCount(Nothing) & " features in " & pLayer.Name
+End Sub
