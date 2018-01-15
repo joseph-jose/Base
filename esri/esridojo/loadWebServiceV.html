@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+<title>FeatureLayer</title>
+
+<link rel="stylesheet" href="https://js.arcgis.com/3.16/esri/css/esri.css">
+<script src="https://js.arcgis.com/3.16/"></script>
+
+<style>
+html, body, #map {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+}
+</style>
+
+<script>
+require([
+    "esri/map",
+    "esri/geometry/Extent",
+    "esri/layers/ArcGISTiledMapServiceLayer",
+    //"esri/layers/ArcGISDynamicMapServiceLayer",
+    //"esri/dijit/BasemapLayer", 
+    "esri/layers/FeatureLayer",
+    "dojo/domReady!"
+  ],
+  function(
+    Map,
+    Extent,
+    ArcGISTiledMapServiceLayer,
+    FeatureLayer
+  ) {
+
+    var map = new Map("map", {
+      //basemap: "hybrid",
+        //center: [174.928897, -36.994083],
+        //center: [5917701.652, 1758760.390],
+        extent: new Extent({ xmin: 1611699.161, ymin: 6020895.041, xmax: 1881925.317, ymax: 5822003.754, spatialReference: { wkid: 2193 } }),
+        center: [1763948.646, 9917707.504],
+        zoom: 7
+    });
+
+    //var map = new Map("map", {
+      //    extent: new Extent({ xmin: -20098296, ymin: -2804413, xmax: 5920428, ymax: 15813776, spatialReference: { wkid: 2193 } })
+      //});
+    //1611699.161  6020895.041 Meters
+    //1881925.317  5822003.754 Meters
+
+    var baseMapLayer = new ArcGISTiledMapServiceLayer("https://services.arcgisonline.co.nz/arcgis/rest/services/Imagery/newzealand/MapServer");
+    map.addLayer(baseMapLayer);
+
+
+    //map.addLayer(featureLayer);
+    var featureLayer = new FeatureLayer("http://services5.arcgis.com/PnnKqtqi3qfxnaPc/ArcGIS/rest/services/LabOfflineGdbT3/FeatureServer/0");
+    map.addLayer(featureLayer);
+
+    //  //map.addLayer(featureLayer);
+    //var featureLayer = new FeatureLayer("http://gisonlinetest.water.co.nz:9494/arcgis/rest/services/Services/Water/MapServer");
+    //map.addLayer(featureLayer);
+
+
+      });
+    //require(["esri/map", "esri/layers/ArcGISTiledMapServiceLayer", "dojo/domReady!"],
+    //function (Map, ArcGISTiledMapServiceLayer) {
+    //    var map;
+    //    map = new Map("map", {
+    //        center: [-76.756, 40.241],
+    //        zoom: 8
+    //    });
+    //    var customBasemap = new ArcGISTiledMapServiceLayer(
+    //    "http://services.arcgisonline.com/ArcGIS/rest/services/NatGeo_World_Map/MapServer");
+    //    map.addLayer(customBasemap);
+    //});
+</script>
+</head>
+
+<body>
+  <div id="map"></div>
+</body>
+
+</html>

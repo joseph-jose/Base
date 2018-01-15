@@ -1,0 +1,11 @@
+queryTask = new QueryTask(MyFeatureLayer);
+query = new Query();
+query.where = myWhereClause;
+query.returnGeometry = true;
+query.outSpatialReference = this.map.spatialReference;
+queryTask.execute(query, function (results) {
+   var geo = results.features[0].geometry;
+	this.map.centerAndZoom(geo);	
+   //this.map.setExtent(geo.getExtent(),true);
+
+});

@@ -1,0 +1,104 @@
+startup: function() {
+        this.inherited(arguments);
+        var map = this.map;
+        var featureLayer;
+        //create a feature collection 
+        var featureCollection = {
+           "layerDefinition": null,
+           "featureSet": {
+              "features": [],
+              "geometryType": "esriGeometryPoint"
+           }
+        };
+        featureCollection.layerDefinition = {
+           "geometryType": "esriGeometryPoint",
+           "objectIdField": "ObjectID",
+           "drawingInfo": {
+            "renderer": {
+              "type": "simple",
+              "symbol": {
+                "type": "esriPMS",
+                "url": "images/carElt.png",
+                "contentType": "image/png",
+                "width": 15,
+                "height": 15
+              }
+            }
+          },
+           "fields": [{
+              "name": "ObjectID",
+              "alias": "ObjectID",
+              "type": "esriFieldTypeOID"
+           }, {
+              "name": "car_spz",
+              "alias": "Vozidlo (SPZ)",
+              "type": "esriFieldTypeString"
+           }, {
+              "name": "Locality",
+              "alias": "Lokalita",
+              "type": "esriFieldTypeString"
+           }, {
+              "name": "Age",
+              "alias": "Stárí",
+              "type": "esriFieldTypeString"
+           }]
+        };
+        //define a popup template
+        var popupTemplate = new PopupTemplate({
+           title: "{Vozidlo (SPZ)}",
+           //description: "{description}"
+        });
+        //create a feature layer based on the feature collection
+        featureLayer = new FeatureLayer(featureCollection, {
+           id: 'carPosition',
+           infoTemplate: popupTemplate
+        });
+
+        //associate the features with the popup on click
+        featureLayer.on("click", function(evt) {
+          map.infoWindow.setFeatures([evt.graphic]);
+        });
+        map.on("layers-add-result", function(results) {
+          requestCar();
+        });
+        map.addLayers([featureLayer]);
+
+        function requestCar() {
+          var requestHandle = esriRequest({
+            url: "http://server.domain.cz/ws/?cmd=getrealtimevehiclelist&auser=carposition&apass=0dotlE&outproj=JTSK&resfields=id;fullname;name;locality;age;topgroup;position&grp=-2000&resgroups=carcontrol&output=js",
+            handleAs: "json"
+          });
+          requestHandle.then(requestSucceeded, requestFailed);
+        }
+        function requestSucceeded(response, io) {
+        //loop through the items and add to the feature layer
+        var features = [];
+        array.forEach(response.response.resultitems, function(item) {
+          //console.log(item)
+          var attr = {};
+          attr["car_spz"] = item.fullname;
+          attr["Locality"] = item.locality;
+          attr["Age"] = item.age;
+          //console.log(attr)
+          var geometry = new Point({"x":item.position.x,"y":item.position.y,"spatialReference":{"wkid":5514}});
+          //console.log(geometry)
+          var graphic = new Graphic(geometry);
+          graphic.setAttributes(attr);
+          features.push(graphic);
+        });
+        console.log(features)
+        featureLayer.applyEdits(features, null, null, function (add){
+          array.forEach(add, function (a){
+            console.log("success")
+            console.log(a.status)
+          })
+        }, function (error){
+          console.log("error")
+          console.log(error)
+        });
+      }
+      
+      function requestFailed(error) {
+        console.log('failed');
+      } 
+      }
