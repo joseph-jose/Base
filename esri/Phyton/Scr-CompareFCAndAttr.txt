@@ -1,0 +1,177 @@
+
+#NAME:  delta_road.py  
+#AUTHOR:  Kevin Bell  
+#EMAIL:  kevin.bell@slcgov.com  
+#DATE:  20071207  
+# edited by Kim Ollivier  
+  
+#PURPOSE:  create adds/deletes layer files by comparing 2 point  
+#          feature classes shape and attributes. If the shape has  
+#          not changed, but any of the attributes have, the feature  
+#          will show as a delete, and an add.  
+  
+#NOTE:  buildDict method has hard coded primary key and attribute names.  
+# mods :  
+# use sets for del/add  
+# write out featureclass differences  
+# do not use centroid for lines, they have changed in a year! suggest length  
+# do not use shape for non-points  
+# dont forget to index keys for definition layers  
+  
+def buildDeltaLayers(inFC1, inFC2):  
+    '''build an adds and deletes lyr for a given chrono FC '''  
+    print inFC1, inFC2  
+    d1 = buildDict(inFC1)  
+    d2 = buildDict(inFC2)  
+  
+#   find set differences and intersections to reduce dictionary comparisons  
+    startTime = time.clock()  
+    s1 = set(d1.keys())  
+    s2 = set(d2.keys())  
+    sNew = s2 - s1  
+    print "New",len(sNew)  
+    sDel = s1 - s2  
+    print "Del",len(sDel)  
+    sInt = s1.intersection(s2)  
+    print "Int",len(sInt)  
+    print "sets done"  
+    stopTime = time.clock()  
+    elapsedTime = stopTime - startTime  
+    print "elapsed time = " + str(round(elapsedTime, 1)) + " seconds"  
+  
+    # could weed the dictionaries but will that be slower than just using the intersection set?  
+    compareList = valuesChanged(d1,d2,sInt)  
+    print "Changes",len(compareList)  
+    stopTime = time.clock()  
+    elapsedTime = stopTime - startTime  
+    print "elapsed time = " + str(round(elapsedTime, 1)) + " seconds"  
+    changes = len(compareList)  
+    if changes > 0 and changes < 50000:  
+        print "Changes to be written",changes  
+        makeLYR(inFC2, compareList, "rdchg")  
+          
+    else :  
+        print "no changes, or too many to be believed",changes  
+    # must create delete layer first  
+    # to allow new features to be filtered for ID renumbering  
+    if len(sDel) > 0 :  
+        makeLYR(inFC1, sDel,"rddel")  
+    if len(sNew) > 0 :  
+        makeLYR(inFC2, sNew,"rdnew")  
+      
+  
+def valuesChanged(dict1, dict2,sBoth):  
+    '''get a list of keys from one dict if a corresponding dict's values are different'''  
+    ##    outList = [key for key in set(dict1.keys() + dict2.keys()) if dict1.get(key) != dict2.get(key)]  
+    outList = [key for key in sBoth if dict1.get(key) != dict2.get(key)]  
+  
+    return outList  
+  
+def buildDict(inputFC): #-----BEWARE OF HARDCODED PRIMARY KEY AND ATTRIBUTES BELOW!!!!!  
+    '''Build a dictionary of the primary key, and its fields'''  
+    startTime = time.clock()  
+    d = {}  
+    cur = gp.SearchCursor(inputFC)  
+    row = cur.Next()  
+    while row:  
+        # only need to check primary keys and shape  
+        # oops row.shape.centroid always fails - why?? because its only an object reference  
+        # you have to get out the coordinates and put it in a real Python object  
+        d[row.GetValue(pk)] = [row.name.upper().strip() ]#, round(row.shape.length)]  
+        # d[row.GetValue(pk)] = [round(row.shape.length)]  
+        row = cur.Next()  
+    del cur  
+    print inputFC,  
+    stopTime = time.clock()  
+    elapsedTime = stopTime - startTime  
+    print "dict created, elapsed time = " + str(round(elapsedTime, 1)) + " seconds"  
+    return d  
+  
+def makeLYR(fc, inList, outLyrName): # BEWARE OF HARDCODED PRIMARY KEY BELOW  
+    '''Given a list, return a LYR file'''  
+      
+    startTime = time.clock()  
+    wc = str(tuple(inList))  
+    print outLyrName,len(inList)  
+    whereclause = pk+" IN " + wc # <----IF DATA ISN'T FILE GDB, YOU MAY NEED QUOTES/BRACKETS  
+    # print whereclause  
+    gp.MakeFeatureLayer_management (fc, outLyrName, whereclause)  
+    print outLyrName,"ORIG layer count",gp.GetCount(outLyrName).GetOutput(0)  
+    # remove changes of just RCL_ID  
+    if outLyrName == 'rdnew':  
+        print "RDDEL layer count",gp.GetCount("rddel").GetOutput(0)   
+        gp.SelectLayerByLocation_management(outLyrName, "WITHIN", "rddel","","REMOVE_FROM_SELECTION")  
+        print "Made NEW layer",outLyrName,round(time.clock() - startTime)," seconds"  
+        print outLyrName,"NEW layer count",gp.GetCount(outLyrName).GetOutput(0)  
+    gp.RefreshCatalog(delta_gdb)  
+    print outLyrName,"layer count",gp.GetCount(outLyrName).GetOutput(0)  
+    layerfn = os.path.dirname(delta_gdb)+"/"+outLyrName +".lyr"  
+    if gp.Exists(layerfn) :  
+        gp.Delete(layerfn)  
+      
+    ##gp.SaveToLayerFile_management(outLyrName, layerfn)  
+    # print "saved layer",round(time.clock() - startTime)  
+    deltaFC = delta_gdb+"/"+outLyrName  
+    # Warning, featureclass MUST be indexed on PK!  
+    if not gp.Exists(fc) :  
+        print fc,"not found"  
+    ## gp.AddIndex_management(fc,pk,fc+"_"+pk+"_idx")  
+    if gp.Exists(deltaFC):  
+        gp.Delete(deltaFC)  
+    gp.CopyFeatures_management(outLyrName,deltaFC)  
+    stopTime = time.clock()  
+    elapsedTime = stopTime - startTime  
+    print outLyrName,"elapsed time = " + str(round(elapsedTime, 1)) + " seconds"  
+#----------------------------------------------------------------------  
+  
+print "-----------  delta road  ----------------"  
+  
+import arcgisscripting, time,os,sys  
+  
+gp = arcgisscripting.create(9.3)  
+gp.overwriteoutput = True  
+  
+try :  
+    last_gdb = sys.argv[1]  
+    current_gdb = sys.argv[2]  
+    delta_gdb = sys.argv[3]  
+except :  
+    last_gdb    = "E:/road_jan2009.gdb"  
+    current_gdb = "e:/crs/mobile/mobile.gdb"  
+    delta_gdb   = "E:/crs/road_roadname.gdb"  
+  
+if not os.path.exists(delta_gdb) :  
+    gp.CreateFileGDB_management(os.path.dirname(delta_gdb), os.path.basename(delta_gdb))  
+gp.Workspace = delta_gdb  
+gp.OverwriteOutput = 1  
+print  
+  
+for laydef in [["road","RCL_ID"]] :  
+    layer = laydef[0]  
+    pk = laydef[1]  
+    startTime = time.clock()  
+    print "Start"  
+    old = last_gdb+"/"+layer  
+    new = current_gdb+"/"+layer  
+    ready = True  
+    if not gp.Exists(old) :  
+        print old,'not found'  
+        ready = False  
+    if not gp.Exists(new) :  
+        print new,'not found'  
+        ready = False  
+    if ready :     
+        buildDeltaLayers(old,new)   
+        msg = "Your del/change/add fc's are in:"  
+        gp.AddMessage(msg)  
+        print str(gp.workspace)  
+        gp.AddMessage(str(gp.workspace))  
+        stopTime = time.clock()  
+        elapsedTime = stopTime - startTime  
+        print layer,"total elapsed time = " + str(round(elapsedTime, 1)) + " seconds"  
+    else :  
+        print "not ready"  
+# del gp  
+  
+print "-------------------------------------------------------------"  
+gp.AddMessage("finished")  
