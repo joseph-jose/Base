@@ -1,0 +1,12 @@
+//Open program by argument
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string vApp = args[0];
+            string vLocation = args[1];
+            Process.Start (vApp, vLocation);
+        }
+    }
+	
+	
