@@ -1,0 +1,5 @@
+http://resources.esri.com/help/9.3/arcgisdesktop/com/gp_toolref/data_management_tools/select_layer_by_attribute_data_management_.htm
+http://pro.arcgis.com/en/pro-app/tool-reference/data-management/select-layer-by-attribute.htm
+https://www.e-education.psu.edu/geog485/book/export/html/17
+
+https://www.e-education.psu.edu/geog485/book/export/html/17
