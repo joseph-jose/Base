@@ -1,0 +1,3 @@
+GUID Location	C:\Program Files (x86)\ArcGIS\Desktop10.5\bin\Categories.exe
+	
+Register tools	C:\Program Files (x86)\Common Files\ArcGIS\bin\EsriRegAddIn.exe
