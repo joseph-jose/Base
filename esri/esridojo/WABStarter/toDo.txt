@@ -1,0 +1,4 @@
+https://geonet.esri.com/thread/191904-is-it-possible-to-add-a-video-to-the-splash-widget
+https://gis.yakimawa.gov/demo/positionAlong.html
+https://dojotoolkit.org/reference-guide/1.10/dojo/promise/all.html
+https://geonet.esri.com/thread/191640-training-wab-for-custom-widgets
