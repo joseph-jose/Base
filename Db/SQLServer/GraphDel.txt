@@ -1,0 +1,109 @@
+
+Delete from [GISAdmin].[GISWSL].[RawLogs] 
+            where source in ( 
+            'Utilities/Geometry.GeometryServer', 'Utilities/PrintingTools.GPServer' 
+             ) 
+
+Delete from [GISAdmin].[GISWSL].[RawLogs] 
+            where source in ( 
+            'Printing/ExportWebMap.GPServer', 'Printing/Printing.GPServer' 
+             ) 
+
+Delete from [GISAdmin].[GISWSL].[RawLogs] 
+            where source in ( 
+            'Property/CatchmentsAndZones.MapServer', 'Property/Property.MapServer'
+             ) 
+
+
+Delete from [GISAdmin].[GISWSL].[RawLogs] 
+            where source in ( 
+            'Property/Worksover.MapServer'
+             ) 
+
+Delete from [GISAdmin].[GISWSL].[RawLogs] 
+            where source in ( 
+            'Property/RegionalInformation.MapServer'
+             ) 
+
+
+Delete from [GISAdmin].[GISWSL].[RawLogs] 
+            where source in ( 
+            'Other/CPELectrical.MapServer'
+             ) 
+
+Delete from [GISAdmin].[GISWSL].[RawLogs] 
+            where source in ( 
+             'Other/HazardsAndRestrictions.MapServer'
+             ) 
+
+Delete from [GISAdmin].[GISWSL].[RawLogs] 
+            where source in ( 
+ 'Other/KeyCustomer.MapServer'
+ )
+
+ Delete from [GISAdmin].[GISWSL].[RawLogs] 
+            where source in ( 
+ 'Other/OtherNonWatercare.MapServer'
+ )
+
+  Delete from [GISAdmin].[GISWSL].[RawLogs] 
+            where source in ( 
+  'Other/OtherWatercare.MapServer'
+ )
+
+   Delete from [GISAdmin].[GISWSL].[RawLogs] 
+            where source in ( 
+            'Services/Wastewater.MapServer'
+ )
+
+    Delete from [GISAdmin].[GISWSL].[RawLogs] 
+            where source in ( 
+  'Services/Water.MapServer'
+ )
+
+     Delete from [GISAdmin].[GISWSL].[RawLogs] 
+            where source in ( 
+  'Admin'
+ )
+
+
+Delete from [GISAdmin].[GISWSL].[RawLogs] 
+            where source in ( 
+  'Rest'
+ )
+
+ Delete from [GISAdmin].[GISWSL].[RawLogs] 
+            where source in ( 
+  'Base/Searches.MapServer'
+ )
+
+  Delete from [GISAdmin].[GISWSL].[RawLogs] 
+            where source in ( 
+  'Soap'
+ )
+
+  Delete from [GISAdmin].[GISWSL].[RawLogs] 
+            where source in ( 
+  'Server'
+ )
+
+   Delete from [GISAdmin].[GISWSL].[RawLogs] 
+            where source in ( 
+  'Base/AerialDynamic.MapServer'
+ )
+
+   Delete from [GISAdmin].[GISWSL].[RawLogs] 
+            where source in ( 
+   'Base/LandCache.MapServer'
+ )
+
+   Delete from [GISAdmin].[GISWSL].[RawLogs] 
+            where source in ( 
+    'Base/ParcelDynamic.MapServer'
+ )
+
+ Delete from [GISAdmin].[GISWSL].[RawLogs] 
+            where source in ( 'Base/LandDynamic.MapServer', 'Base/ParcelCache.MapServer', 'Topo/ContourCache.MapServer')
+
+
+Delete from  [GISAdmin].[GISWSL].[RawLogs] 

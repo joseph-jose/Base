@@ -1,0 +1,7 @@
+/****** Script for SelectTopNRows command from SSMS  ******/
+SELECT 
+      [LyrName]
+      ,[Hits]
+      ,[Fld1]
+      ,[CurrDt]
+  FROM [GISAdmin].[GISWSL].[RawLogsDaily] order by LyrName, Fld1

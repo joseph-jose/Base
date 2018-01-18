@@ -1,0 +1,5 @@
+
+
+
+Create index IX_RawLogsSource on
+[GISAdmin].[GISWSL].[RawLogs](Source) 

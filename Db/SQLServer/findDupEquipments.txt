@@ -1,0 +1,1 @@
+SELECT equip_id, count([fclass]) FROM GISWSL.[WA_SAP_View]  group by equip_id having count(fclass) > 1

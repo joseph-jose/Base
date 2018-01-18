@@ -1,0 +1,8 @@
+SELECT DATEADD(dd, 0, DATEDIFF(dd, 0, GETDATE()))
+
+select max(time) from [GISAdmin].[GISWSL].[RawLogs]
+
+select * from [GISAdmin].[GISWSL].[RawLogs] where DATEADD(dd, 0, DATEDIFF(dd, 0, time)) =  DATEADD(dd, 0, DATEDIFF(dd, 0, GETDATE()))
+
+
+select count(*) from [GISAdmin].[GISWSL].[RawLogs] 

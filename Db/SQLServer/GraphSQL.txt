@@ -1,0 +1,64 @@
+
+select year(GETDATE()) as SrlNo, datepart(mm, GETDATE()) as month, Replace( source, '.MapServer', '') as XValue, count(*) as YValue from [GISAdmin].[GISWSL].[RawLogs] 
+            where source in ( 
+            'Services/Wastewater.MapServer', 'Services/Water.MapServer', 
+            'Other/CPELectrical.MapServer', 'Other/HazardsAndRestrictions.MapServer', 'Other/KeyCustomer.MapServer',  'Other/OtherNonWatercare.MapServer', 'Other/OtherWatercare.MapServer', 
+            'Property/CatchmentsAndZones.MapServer', 'Property/Property.MapServer', 'Property/RegionalInformation.MapServer', 'Property/Worksover.MapServer', 
+            'Printing/ExportWebMap.GPServer', 'Printing/Printing.GPServer', 
+            'Utilities/Geometry.GeometryServer', 'Utilities/PrintingTools.GPServer' 
+             ) 
+            group by source 
+            order by YValue desc
+
+
+
+
+insert into [GISAdmin].[GISWSL].[RawLogsDaily] (dtTime, lyrName, hits) 
+(
+select getdate() as currdt,  source as XValue, count(*) as YValue 
+from [GISAdmin].[GISWSL].[RawLogs] 
+            group by source 
+)
+
+
+
+insert into [GISAdmin].[GISWSL].[RawLogsDaily] (dtTime, lyrName, Fld1, hits) 
+(
+select getdate() as currdt,  source as XValue, methodname, count(*) as YValue 
+from [GISAdmin].[GISWSL].[RawLogs] 
+            group by source , methodname
+)
+
+
+
+insert into [GISAdmin].[GISWSL].[RawLogsDaily] (dtTime, lyrName, Fld1, hits) 
+(
+
+	select dateadd(dd, 0, datediff(dd, 0, time) ) as currdt,  source as XValue, methodname, count(*) as YValue 
+	from [GISAdmin].[GISWSL].[RawLogs] 
+				group by dateadd(dd, 0, datediff(dd, 0, time) ), source , methodname
+
+)
+
+	select  dateadd(mi, datediff(mi, 0, time), 0 ) as currdt,  source as XValue, methodname, count(*) as YValue 
+	from [GISAdmin].[GISWSL].[RawLogs] 
+				group by  dateadd(mi, datediff(mi, 0, time), 0 ), source , methodname
+
+
+insert into [GISAdmin].[GISWSL].[RawLogsHourly] (dtTime, lyrName, Fld1, hits) 
+(
+
+	select dateadd(hh, datediff(hh, 0, time), 0 ) as currdt,  source as XValue, methodname, count(*) as YValue 
+	from [GISAdmin].[GISWSL].[RawLogs] 
+				group by  dateadd(hh, datediff(hh, 0, time), 0 ), source , methodname
+
+)
+
+insert into [GISAdmin].[GISWSL].[RawLogsHourly] (dtTime, lyrName, Fld1, hits) 
+(
+
+	select dateadd(hh, datediff(hh, 0, time), 0 ) as currdt,  source as XValue, methodname, count(*) as YValue 
+	from [GISAdmin].[GISWSL].[RawLogs] 
+				group by  dateadd(hh, datediff(hh, 0, time), 0 ), source , methodname
+
+)
