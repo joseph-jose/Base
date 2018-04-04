@@ -1,0 +1,4 @@
+c:\python27\arcgis10.5\python.exe 1.py "C:\Joseph\Task\EOD Validation\Inputs\EOD_20180215_133706.V64.1.2\EOD_20180215_133706.V64.1.2.xml"
+
+
+C:\Users\JEJYJO~1\AppData\Local\Temp\scratch.gdb\xml_AREA_geometry
