@@ -1,0 +1,30 @@
+https://support.esri.com/en/technical-article/000011656
+
+
+
+
+
+The procedures below describe how to connect to a SQL Server database and make SQL queries from Python.
+
+Download and install the appropriate pyodbc module for the installed Python release (for example, Python 2.6, 2.7) from the following URL:
+http://code.google.com/p/pyodbc/
+Note:
+Since ArcGIS Desktop by default installs the 32-bit version of Python, install the 32-bit version of pyodbc.
+Make a connection to the SQL Server database using database authentication or Windows authentication by passing in the appropriate parameters such as the server name, user ID (UID) and password (PWD):
+Database authentication string:
+Code:
+con = pyodbc.connect('DRIVER={SQL Server};SERVER=Prod1\SQL2008R2;DATABASE=SDE;UID=sa;PWD=sa')
+Windows authentication string:
+Code:
+con = pyodbc.connect('Trusted_Connection=yes', driver = '{SQL Server}',server = ‘Prod1\SQL2008R2 ‘, database = ‘SDE')
+Define a parameter to access the cursor method:
+Code:
+cur = con.cursor()
+Create a query string:
+Code:
+querystring = "select * into ParcelsA from ParcelsB"
+Pass the query string into the cursor method:
+Code:
+cur.execute(querystring)
+con
+.commit()
