@@ -1,0 +1,92 @@
+2018-06-26 09:11:56|   1.3|  1.3|INFORM|FME 2017.1.2.0 (20171213 - Build 17722 - WIN64)
+2018-06-26 09:11:56|   1.3|  0.0|INFORM|FME_HOME is 'C:\Program Files\FME\'
+2018-06-26 09:11:56|   1.3|  0.0|INFORM|FME Desktop Oracle Edition (floating)
+2018-06-26 09:11:56|   1.3|  0.0|INFORM|Permanent License.
+2018-06-26 09:11:56|   1.3|  0.0|INFORM|Machine host name is: AT15073-P
+2018-06-26 09:11:56|   1.3|  0.0|INFORM|START - ProcessID: 13132, peak process memory usage: 37260 kB, current process memory usage: 37260 kB
+2018-06-26 09:11:56|   1.3|  0.0|INFORM|FME Configuration: Command line arguments are `C:\Program Files\FME\fme.exe' `//atalfmet01/FME_Working/AT_Projects/Server_Monitor\wb-xlate-1529961112990_7652' `LOG_STANDARDOUT' `YES' `LogCountServerName' `{079e635a-5ad6-493b-8496-8e8fc4e9dfc5}' `DEBUG_PORT' `53939'
+2018-06-26 09:11:56|   1.4|  0.1|INFORM|Shared folders for formats are : C:\Program Files\FME\datasources;C:\Users\jejyjose1\Documents\FME\Formats
+2018-06-26 09:11:56|   1.4|  0.0|INFORM|Shared folders for transformers are : C:\Program Files\FME\transformers;C:\Users\jejyjose1\Documents\FME\Transformers;C:\Users\jejyjose1\AppData\Roaming\Safe Software\FME\FME Store\Transformers
+2018-06-26 09:11:56|   1.4|  0.0|INFORM|Shared folders for coordinate systems are : C:\Users\jejyjose1\Documents\FME\CoordinateSystems
+2018-06-26 09:11:56|   1.4|  0.0|INFORM|Shared folders for coordinate system exceptions are : C:\Users\jejyjose1\Documents\FME\CoordinateSystemExceptions
+2018-06-26 09:11:56|   1.4|  0.0|INFORM|Shared folders for coordinate system grid overrides are : C:\Users\jejyjose1\Documents\FME\CoordinateSystemGridOverrides
+2018-06-26 09:11:56|   1.4|  0.0|INFORM|Shared folders for CS-MAP transformation exceptions are : C:\Users\jejyjose1\Documents\FME\CsmapTransformationExceptions
+2018-06-26 09:11:56|   1.4|  0.0|INFORM|Shared folders for transformer categories are : C:\Users\jejyjose1\Documents\FME\TransformerCategories
+2018-06-26 09:11:56|   1.4|  0.0|INFORM|FME Configuration: Reader Keyword is `MULTI_READER'
+2018-06-26 09:11:56|   1.4|  0.0|INFORM|FME Configuration: Writer Keyword is `MULTI_WRITER'
+2018-06-26 09:11:56|   1.4|  0.0|INFORM|FME Configuration: Writer Group Definition Keyword is `MULTI_WRITER_DEF'
+2018-06-26 09:11:56|   1.4|  0.0|INFORM|FME Configuration: Reader type is `MULTI_READER'
+2018-06-26 09:11:56|   1.4|  0.0|INFORM|FME Configuration: Writer type is `MULTI_WRITER'
+2018-06-26 09:11:56|   1.4|  0.0|INFORM|FME Configuration: No destination coordinate system set
+2018-06-26 09:11:56|   1.4|  0.0|INFORM|FME Configuration: Current working folder is `\\atalfmet01\FME_Working\AT_Projects\Server_Monitor'
+2018-06-26 09:11:56|   1.4|  0.0|INFORM|FME Configuration: Temporary folder is `C:\Users\JEJYJO~1\AppData\Local\Temp', set from environment variable `TEMP'
+2018-06-26 09:11:56|   1.4|  0.0|INFORM|FME Configuration: FME_HOME is `C:\Program Files\FME\'
+2018-06-26 09:11:56|   1.4|  0.0|INFORM|FME Configuration: FME_BASE is 'no'
+2018-06-26 09:11:56|   1.4|  0.0|INFORM|FME Configuration: FME_MF_DIR is '\\atalfmet01\FME_Working\AT_Projects\Server_Monitor/'
+2018-06-26 09:11:56|   1.4|  0.0|INFORM|FME Configuration: FME_MF_NAME is 'Get_AGOL_Users.fmw'
+2018-06-26 09:11:56|   1.4|  0.0|INFORM|FME Configuration: FME_PRODUCT_NAME is 'FME(R) 2017.1.2.0'
+2018-06-26 09:11:56|   1.4|  0.0|INFORM|System Status: 358.35 GB of disk space available in the FME temporary folder (C:\Users\JEJYJO~1\AppData\Local\Temp)
+2018-06-26 09:11:56|   1.4|  0.0|INFORM|System Status: 128.00 TB of virtual memory available
+2018-06-26 09:11:56|   1.4|  0.0|INFORM|Operating System: Microsoft Windows 10 64-bit  (Build 14393)
+2018-06-26 09:11:56|   1.4|  0.0|INFORM|FME Platform: WIN64
+2018-06-26 09:11:56|   1.4|  0.0|INFORM|Locale: en_NZ
+2018-06-26 09:11:56|   1.4|  0.0|INFORM|Code Page: 1252  (ANSI - Latin I)
+2018-06-26 09:11:56|   1.4|  0.0|INFORM|FME Configuration: Process limit is 31.92 GB of physical memory
+2018-06-26 09:11:56|   1.4|  0.0|INFORM|FME Configuration: Start freeing memory when process usage exceeds 95.76 GB of virtual memory
+2018-06-26 09:11:56|   1.4|  0.0|INFORM|FME Configuration: Stop freeing memory when process usage is below 71.82 GB of virtual memory
+2018-06-26 09:11:57|   1.4|  0.0|INFORM|Creating writer for format: 
+2018-06-26 09:11:57|   1.4|  0.0|INFORM|Creating reader for format: 
+2018-06-26 09:11:57|   1.4|  0.0|INFORM|MULTI_READER(MULTI_READER): Will fail with first member reader failure
+2018-06-26 09:11:57|   1.4|  0.0|INFORM|MULTI_READER(MULTI_READER): Adding XLSXR Reader with keyword XLSXR_1
+2018-06-26 09:11:57|   1.4|  0.0|INFORM|MULTI_READER(MULTI_READER): Adding CSV2 Reader with keyword CSV2_1
+2018-06-26 09:11:57|   1.4|  0.0|INFORM|Using Multi Reader with keyword `MULTI_READER' to read multiple datasets
+2018-06-26 09:11:57|   1.5|  0.0|INFORM|Creating reader for format: Microsoft Excel
+2018-06-26 09:11:57|   1.5|  0.0|INFORM|Trying to find a DYNAMIC plugin for reader named `XLSXR'
+2018-06-26 09:11:57|   1.5|  0.0|INFORM|Loaded module 'XLSXR' from file 'C:\Program Files\FME\plugins/xlsx.dll'
+2018-06-26 09:11:57|   1.5|  0.0|INFORM|FME API version of module 'XLSXR' matches current internal version (3.8 20170315)
+2018-06-26 09:11:57|   1.5|  0.0|INFORM|Using MultiWriter with keyword `MULTI_WRITER' to output data (ID_ATTRIBUTE is `multi_writer_id')
+2018-06-26 09:11:57|   1.5|  0.0|INFORM|Writer output will be ordered by value of multi_writer_id
+2018-06-26 09:11:57|   1.5|  0.0|INFORM|Loaded module 'LogCount_func' from file 'C:\Program Files\FME\plugins/LogCount_func.dll'
+2018-06-26 09:11:57|   1.5|  0.0|INFORM|FME API version of module 'LogCount_func' matches current internal version (3.8 20170315)
+2018-06-26 09:11:57|   1.5|  0.0|INFORM|Loaded module 'BreakpointFactory' from file 'C:\Program Files\FME\plugins/BreakpointFactory.dll'
+2018-06-26 09:11:57|   1.5|  0.0|INFORM|FME API version of module 'BreakpointFactory' matches current internal version (3.8 20170315)
+2018-06-26 09:11:57|   1.5|  0.0|INFORM|Feature Inspection module initialized. Workbench@53939 and FME@54187
+2018-06-26 09:11:57|   1.5|  0.0|INFORM|FME API version of module 'BreakpointFactory' matches current internal version (3.8 20170315)
+2018-06-26 09:11:57|   1.5|  0.0|INFORM|Loaded module 'Geometry_func' from file 'C:\Program Files\FME\plugins/Geometry_func.dll'
+2018-06-26 09:11:57|   1.5|  0.0|INFORM|FME API version of module 'Geometry_func' matches current internal version (3.8 20170315)
+2018-06-26 09:11:57|   1.5|  0.0|INFORM|FME API version of module 'BreakpointFactory' matches current internal version (3.8 20170315)
+2018-06-26 09:11:57|   1.5|  0.0|INFORM|... Last line repeated 2 times ...
+2018-06-26 09:11:57|   1.5|  0.0|INFORM|Loaded module 'HTTPFactory' from file 'C:\Program Files\FME\plugins/HTTPFactory.dll'
+2018-06-26 09:11:57|   1.5|  0.0|INFORM|FME API version of module 'HTTPFactory' matches current internal version (3.8 20170315)
+2018-06-26 09:11:57|   1.5|  0.0|INFORM|FME API version of module 'BreakpointFactory' matches current internal version (3.8 20170315)
+2018-06-26 09:11:57|   1.5|  0.0|INFORM|Loaded module 'JSONQueryFactory' from file 'C:\Program Files\FME\plugins/JSONQueryFactory.dll'
+2018-06-26 09:11:57|   1.5|  0.0|INFORM|FME API version of module 'JSONQueryFactory' matches current internal version (3.8 20170315)
+2018-06-26 09:11:57|   1.5|  0.0|INFORM|FME API version of module 'BreakpointFactory' matches current internal version (3.8 20170315)
+2018-06-26 09:11:57|   1.5|  0.0|INFORM|... Last line repeated 5 times ...
+2018-06-26 09:11:57|   1.5|  0.0|INFORM|FME API version of module 'HTTPFactory' matches current internal version (3.8 20170315)
+2018-06-26 09:11:57|   1.5|  0.0|INFORM|FME API version of module 'BreakpointFactory' matches current internal version (3.8 20170315)
+2018-06-26 09:11:57|   1.5|  0.0|INFORM|FME API version of module 'JSONQueryFactory' matches current internal version (3.8 20170315)
+2018-06-26 09:11:57|   1.5|  0.0|INFORM|FME API version of module 'BreakpointFactory' matches current internal version (3.8 20170315)
+2018-06-26 09:11:57|   1.5|  0.0|INFORM|... Last line repeated 2 times ...
+2018-06-26 09:11:57|   1.5|  0.0|INFORM|FME API version of module 'JSONQueryFactory' matches current internal version (3.8 20170315)
+2018-06-26 09:11:57|   1.5|  0.0|INFORM|FME API version of module 'BreakpointFactory' matches current internal version (3.8 20170315)
+2018-06-26 09:11:57|   1.5|  0.0|INFORM|... Last line repeated 14 times ...
+2018-06-26 09:11:57|   1.5|  0.0|INFORM|FME API version of module 'JSONQueryFactory' matches current internal version (3.8 20170315)
+2018-06-26 09:11:57|   1.5|  0.0|INFORM|FME API version of module 'BreakpointFactory' matches current internal version (3.8 20170315)
+2018-06-26 09:11:57|   1.5|  0.0|INFORM|FME API version of module 'BreakpointFactory' matches current internal version (3.8 20170315)
+2018-06-26 09:11:57|   1.5|  0.0|INFORM|Loaded module 'DuplicateRemoverFactory' from file 'C:\Program Files\FME\plugins/DuplicateRemoverFactory.dll'
+2018-06-26 09:11:57|   1.5|  0.0|INFORM|FME API version of module 'DuplicateRemoverFactory' matches current internal version (3.8 20170315)
+2018-06-26 09:11:57|   1.5|  0.0|INFORM|FME API version of module 'BreakpointFactory' matches current internal version (3.8 20170315)
+2018-06-26 09:11:57|   1.6|  0.0|INFORM|... Last line repeated 10 times ...
+2018-06-26 09:11:57|   1.6|  0.0|INFORM|Loaded module 'InspectorFactory' from file 'C:\Program Files\FME\plugins/InspectorFactory.dll'
+2018-06-26 09:11:57|   1.6|  0.0|INFORM|FME API version of module 'InspectorFactory' matches current internal version (3.8 20170315)
+2018-06-26 09:11:57|   1.6|  0.0|INFORM|FME API version of module 'InspectorFactory' matches current internal version (3.8 20170315)
+2018-06-26 09:11:57|   1.6|  0.0|INFORM|Excel Reader: Output cell formulas: 'false'
+2018-06-26 09:11:57|   1.6|  0.0|INFORM|Excel Reader: Output cell comments: 'false'
+2018-06-26 09:11:57|   1.6|  0.0|INFORM|Excel Reader: Force full datetime values: 'false'
+2018-06-26 09:11:57|   1.6|  0.0|INFORM|Excel Reader: Opening dataset '\\atalfmet01\FME_Working\AT_Projects\Server_Monitor\Data_Input_OrgChart\AT_OrgList.xlsx'...
+2018-06-26 09:11:57|   1.6|  0.0|ERROR |Excel Reader: Failed to open the dataset '\\atalfmet01\FME_Working\AT_Projects\Server_Monitor\Data_Input_OrgChart\AT_OrgList.xlsx'.  Error message was 'No such file or directory.' 
+2018-06-26 09:11:57|   1.6|  0.0|INFORM|Excel Reader: Closing dataset '\\atalfmet01\FME_Working\AT_Projects\Server_Monitor\Data_Input_OrgChart\AT_OrgList.xlsx'...
+2018-06-26 09:11:57|   1.6|  0.0|ERROR |A fatal error has occurred. Check the logfile above for details
+2018-06-26 09:11:57|   1.6|  0.0|INFORM|FME Session Duration: 2.6 seconds. (CPU: 0.2s user, 0.1s system)
+2018-06-26 09:11:57|   1.6|  0.0|INFORM|END - ProcessID: 13132, peak process memory usage: 78812 kB, current process memory usage: 59216 kB
