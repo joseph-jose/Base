@@ -1,0 +1,10 @@
+import arcpy
+
+mxd = arcpy.mapping.MapDocument("CURRENT")  # Uses your currently open MXD
+df = arcpy.mapping.ListDataFrames(mxd, '')[0] # Chooses the first dataframe
+
+destPath = r"N:/VisualStudio/Projects/GISSE/Output" # Set your destination folder path
+
+for lyr in arcpy.mapping.ListLayers(mxd, '', df): # Loop through layers
+    # Output layer to shapefile
+    arcpy.FeatureClassToFeatureClass_conversion(lyr, destPath, "{}.shp".format(lyr), "", "", "")
