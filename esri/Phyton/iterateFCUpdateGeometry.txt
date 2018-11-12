@@ -1,0 +1,14 @@
+rows = arcpy.UpdateCursor("C:\Users\Hannah\Desktop\Marcellus Shale data\GDB and Maps\Marcellus.gdb\Marcellus_Wells\Update_Cursor")
+for row in rows:
+    point = new arcpy.point()
+    latitude = float(raw_input('Latitude: '))
+    longitude = float(raw_input('Longitude: '))
+    row.Latitude = latitude
+    row.Longitude = longitude
+    point.Y = latitude
+    point.X = longitude        
+    pointGeometry = arcpy.PointGeometry(point)
+    row.setValue('SHAPE', pointGeometry)
+    rows.updateRow(row)
+del row
+del rows
