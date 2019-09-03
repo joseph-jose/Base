@@ -1,0 +1,3 @@
+mxd = arcpy.mapping.MapDocument("CURRENT")
+... layers = arcpy.mapping.ListLayers(mxd)
+... sel_layers=[str(i.name) for i in layers if arcpy.Describe(i.name).FIDSet]
