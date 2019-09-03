@@ -1,0 +1,7 @@
+mxd = arcpy.mapping.MapDocument("CURRENT")
+sel_lyrs = [lyr.name
+             for lyr
+             in arcpy.mapping.ListLayers(mxd)
+             if lyr.getSelectionSet()]
+for innerlyr in sel_lyrs:
+	print innerlyr
