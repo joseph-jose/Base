@@ -1,0 +1,2 @@
+//Write output of processing to a file
+"C:\Program Files\FME\fme.exe" C:\Joseph\Task\TASK_Moorings\05_Scripts\MooringFindConflicts.fmw >> c:\Temp\resultsFMELog.txt
