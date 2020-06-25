@@ -1,0 +1,15 @@
+﻿*****Open in Notepad++
+CodeRannge	NumericCode	Symbol
+[\x7F-\xFF]	127-255		⌂-(invisible char)
+[\x7B-\x7E]	123-126		{-~
+[\x61-\x122]	97-122		a-z	
+[\x5B-\x60]	91-96		[-`
+[\x41-x5A]	65-90		A-Z
+[\x3A-\x40]	58-64 		:-@
+[\x30-\x39]	48-57		0-9
+[\x21-\x2F]	33-47		!-/
+[0x00-0x20]	0-32		null-space
+
+
+
+https://www.codetable.net/
