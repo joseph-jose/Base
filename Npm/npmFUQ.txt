@@ -1,0 +1,36 @@
+
+>npm config set https-proxy http://proxy.[Company Name].com:8080                                                                   
+>npm config set https-proxy http://proxy.[Company Name].com:8080 
+
+
+-------------------------
+#npm set-proxy
+
+npm config set proxy http://proxy.company.com:8080
+npm config set https-proxy http://proxy.company.com:8080
+
+eg
+>npm config set https-proxy http://at-proxy.aucklandtransport.govt.nz/wpad.dat                                                                   
+>npm config set https-proxy http://at-proxy.aucklandtransport.govt.nz/wpad.dat 
+
+----------------------------------
+#npm set-proxy with pwd
+
+$ npm config set proxy http://<username>:<password>@<proxy-server-url>:<port>
+$ npm config set https-proxy http://<username>:<password>@<proxy-server-url>:<port>
+
+eg
+npm config set proxy http://TRANSPORT\svc_arcgis:9eYsSCxL4APDKoxXu4MT@http://TRANSPORT/svc_arcgis:9eYsSCxL4APDKoxXu4MT@at-proxy.aucklandtransport.govt.nz:8080
+npm config set https-proxy http://TRANSPORT\svc_arcgis:9eYsSCxL4APDKoxXu4MT@http://TRANSPORT/svc_arcgis:9eYsSCxL4APDKoxXu4MT@at-proxy.aucklandtransport.govt.nz:8080
+----------------------------------
+#npm clear-proxy
+
+npm config delete http-proxy
+npm config delete https-proxy
+
+npm config rm proxy
+npm config rm https-proxy
+
+set HTTP_PROXY=null
+set HTTPS_PROXY=null
+
