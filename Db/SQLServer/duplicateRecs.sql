@@ -26,3 +26,11 @@ SELECT UNITID
 Update cte set Direction = Direction + 'Mod' where row_num > 1;
 
  ---------------------------------------------------
+  */*******identify duplicate records using rank *******/
+  
+with cte as
+(
+	SELECT * , ROW_NUMBER() OVER(PARTITION BY ProjectNo_UniqueID  ORDER BY ProjectNo_UniqueID) AS RowNumberRank
+	FROM [AT].[gisadmin].[PG_MIWPROJECTAREASEDIT_TE] 
+)
+select * from cte where RowNumberRank > 1
