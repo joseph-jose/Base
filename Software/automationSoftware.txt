@@ -1,0 +1,3 @@
+Name, Link
+Autohotkey, https://www.bing.com/search?q=auto+hot+key&cvid=90dd43b0ef2a4ee4a1a4eb78088abc68&aqs=edge..69i57j0l6.4703j0j1&FORM=ANAB01&PC=U531
+Selenium, https://www.bing.com/search?q=selenium&qs=EP&pq=selen&sk=AS1&sc=6-5&cvid=9E2CCBEA4B504E988269323F1A4A29AC&FORM=QBRE&sp=2
