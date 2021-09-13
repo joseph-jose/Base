@@ -1,0 +1,3 @@
+Full Screen	1280 * 800
+iPad		600 * 1024
+Mobile		360 * 720
