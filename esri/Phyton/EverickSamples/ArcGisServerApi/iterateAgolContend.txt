@@ -1,0 +1,108 @@
+import arcgis
+from arcgis.gis import GIS
+import arcpy
+import json
+
+if __name__ == '__main__':
+
+    # Load parameters
+    project_id = arcpy.GetParameterAsText(0)
+    project_name = arcpy.GetParameterAsText(1)
+    cloning = True
+
+
+    # Open an authenticated GIS
+    arcpy.AddMessage("Authenticating with AGOL")
+    arcpy.SetProgressor('default' , "Authenticating with AGOL")
+    token = arcpy.GetSigninToken()['token']
+    everick_GIS = GIS(token=token)
+   
+    # Find the survey template
+    arcpy.AddMessage("Finding template survey")
+    arcpy.SetProgressorLabel("Finding template survey")
+    survey_manager = arcgis.apps.survey123.SurveyManager(everick_GIS)
+    survey = survey_manager.get('f92f87964be0430eaadc86719073f8bb')
+    survey_folder = survey.properties['ownerFolder']
+    
+    # Get the list of user folders
+    usr = arcgis.gis.User(everick_GIS, everick_GIS.users.get('Everick601300').username)
+    full_folder = usr.folders
+
+    # Identify the folder associated with the survey
+    fldr = next((f for f in full_folder if f['id'] == survey_folder), 0)
+
+    arcpy.AddMessage("Found template in folder: {0}".format(fldr['title']))
+    #List all the items within that folder to be cloned later on
+    fldr_items = usr.items(folder=fldr)
+    arcpy.AddMessage("Folder items:")
+    for fl in fldr_items:
+        arcpy.AddMessage(fl)
+
+
+    # Create Project Title
+    project_title = '{0} {1}'.format(project_id, project_name)
+    
+    # Create a new folder using Project ID and Project Name
+    arcpy.AddMessage("Creating new folder for project")
+    arcpy.AddMessage("Project Title: {0}".format(project_title))
+    arcpy.SetProgressorLabel("Creating new folder for project")
+    everick_GIS.content.create_folder(folder=project_title, owner='Everick601300')
+
+    while cloning:
+        try:
+            # Clone items to the new folder
+            arcpy.AddMessage("Cloning items from template to new project folder")
+            arcpy.SetProgressorLabel("Cloning items to project folder")
+            cloned_items = everick_GIS.content.clone_items(items=fldr_items, folder=project_title, copy_data=True,  owner='Everick601300', search_existing_items=False)
+            arcpy.AddMessage(cloned_items)
+            # Rename cloned items
+            arcpy.AddMessage("Renaming cloned items")
+            arcpy.SetProgressorLabel("Renaming cloned items")
+            new_survey_id = ''
+            new_map_id = ''
+            new_item_properties = {'title': project_title}
+            
+            for c_item in cloned_items:
+                
+                if c_item.type == 'Web Map':
+                    new_map_id = c_item.id
+                if c_item.type == 'Form':
+                    new_survey_id = c_item.id
+
+                c_item.update(item_properties=new_item_properties)
+                
+
+            # Update popup expressions to point to new items
+            arcpy.AddMessage("Updating popup expressions")
+            arcpy.SetProgressorLabel("Updating popup expressions")
+
+            arcpy.AddMessage("Updating field maps id to {0}".format(new_map_id))
+            arcpy.AddMessage("Updating survey123 id to {0}".format(new_survey_id))
+            for item in cloned_items:
+                # Update survey and fieldmaps id's in popup expressions
+                if item.type == "Web Map":
+                    item_data = item.get_data()
+                    op_layers = item_data['operationalLayers']
+                    for op in op_layers:
+                        layer_title = op['title']
+                        if "Basic Site" in layer_title:
+                            expr = op['popupInfo']['expressionInfos'][0]['expression']
+                            expr = expr.replace('survey_placeholder', new_survey_id)
+                            expr = expr.replace('map_placeholder', new_map_id)
+                            op['popupInfo']['expressionInfos'][0]['expression'] = expr
+
+                    item_properties = {"text": json.dumps(item_data)}
+                    
+                    item.update(item_properties=item_properties)
+                    arcpy.AddMessage("{0} updated".format(item))
+            
+            # Update item permissions.
+            arcpy.AddMessage("Updating sharing permissions")
+            arcpy.SetProgressorLabel("Updating sharing permissions")
+            for c in cloned_items:
+                c.share(everyone=False, org=True, groups=['1292db5171094415a1465b06359a6efb'])
+                arcpy.AddMessage('{0} shared with org and GIS group'.format(c.title))
+            cloning = False
+        except Exception as e:
+            arcpy.AddMessage("Cloning failed with error {0}".format(str(e)))
+            arcpy.AddMessage("Retrying")
